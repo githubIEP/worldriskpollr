@@ -23,14 +23,7 @@ issues.
 
 ## Installation
 
-You can install the released version of wrp from
-[CRAN](https://CRAN.R-project.org) with:
-
-``` r
-install.packages("wrp")
-```
-
-And the development version from [GitHub](https://github.com/) with:
+You can install the development version from [GitHub](https://github.com/) with:
 
 ``` r
 # install.packages("devtools")
