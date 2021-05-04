@@ -1,0 +1,155 @@
+---
+title: "wrp_vignette"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{wrp_vignette}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup, include = FALSE, message = FALSE, warning = FALSE}
+
+library(wrp)
+library(dplyr)
+library(stringr)
+
+```
+
+# Installation
+
+You can install the worldRiskpoll package with:
+
+TO DO: add installation information.
+
+# Introduction
+
+**The World Risk Poll is the first ever global study of worry and risk across the world. The poll was conducted by Gallup as part of its World Poll, and is based on interviews with over 150,000 people, including those living in places where little or no official data exists, yet where reported risks are often high.**
+
+The World Risk Polls covers the biggest risks faced globally including new findings on subjects such as risks faced by women, safety of food, experience of serious injury and violence and harassment in the workplace, climate change, and online safety.
+
+The poll will enable businesses, regulators, governments and academics to work with communities to develop policies and actions that save lives and make people feel safer. This landmark piece of research will be undertaken at least four times over eight years and the weight of knowledge accumulated will contribute in a more significant way than any past research, to making the world a safer place.
+
+The poll reveals new insights -- for example demonstrating that demographic factors are generally a better predictor of risk perception than experience; and new findings that tell us how across the world, different groups of people experience risk in very different ways.
+
+The poll highlights discrepancies between people's perception of risk and the actual likelihood of them experiencing those dangers. For the first time, we learn how safe people feel; how they perceive risk and what risks they experience everyday.
+
+You can access more details and findings related to the World Risk poll [here](https://wrp.lrfoundation.org.uk/).
+
+## Institute for Economics and Peace
+
+Lloyd's Register teamed up with the Institute for Economics and Peace to explore the complex relationship between peace and people's perceptions of risk and their safety and security. You can see our latest findings in the upcoming 2021 Global Peace Index.
+
+IEP created this package to provide you with easy, programmatic access to the World Risk Poll. We are responsible for maintaining it. We encourage you to reach out to us directly if you have any questions about the package or our broader work measuring trends in peace and security.
+
+## Country coverage
+
+The World Risk Poll surveyed people in `r wrp %>% distinct(country) %>% nrow()` countries, including countries with very low levels of peace where little or no official data exists, yet where reported risks are often high.
+
+# Getting started
+
+The `wrp` package is designed to give you quick and easy access to all data collected through the World Risk Poll. `wrp` provides you with a labeled dataset of all World Risk Poll data. This wide dataset can then be manipulated to suit your enquiry.
+
+```{r}
+
+head(wrp::wrp)
+
+```
+
+## Aggregating the data with `wrp_aggregate`
+
+The `wrp` package provides you with an easy function for aggregating the individual-level survey data to discover summaries by geographic and demographic factors. You can aggregate the following levels:
+
+-   country, respondent's country of residence;
+
+-   globalRegion, global region respondent lives in;
+
+-   year, global aggregate by year;
+
+-   countryIncomeLevel, World Bank Income classification of country;
+
+-   gender, respondent's gender;
+
+-   education, respondent's highest level of education;
+
+-   incomeFeelings, respondent's feelings about their household income;
+
+-   income5, respondent's per capita income quintile;
+
+-   urbanicity, respondent's residence: urban or rural;
+
+-   householdSize, total number of people in the respondent's household;
+
+-   childrenInHousehold, total number of children under 15 in the respondent's household.
+
+Provide the desired aggregation level to the `wrp_aggregation` function as a string. You then need to provide the question code (also as a string) and determine whether you want the data to be returned as a numeric and labeled value or as a more human-readable character value.
+
+```{r, message = FALSE, warning = FALSE}
+
+head(wrp_aggregate("country", "l2", FALSE))
+```
+
+## Accessing human-friendly variable labels
+
+The dataset is labeled to allow you to easily access the coded variables, the long titles for demographic variables and the full questions provided in the survey. You can access these labels using the process outlined in the [`labelled` package](https://cran.r-project.org/web/packages/labelled/vignettes/intro_labelled.html).
+
+```{r, message = FALSE, warning = FALSE}
+
+# Access the full question coded "L1"
+labelled::var_label(wrp$l1)
+
+```
+
+## Accessing human-friendly value labels
+
+The dataset is labeled to allow you to easily access the coded variables, including demographic information and responses. To convert the numeric factors to their human-readable labels, simply follow the processes outlined in the `labelled` package.
+
+```{r, message = FALSE, warning = FALSE}
+
+library(dplyr)
+
+wrp::wrp %>% 
+  mutate(across(starts_with("l"), labelled::to_factor)) %>% 
+  select(wpidRandom, l1, l2, l3A)
+
+```
+
+## Quick and easy visualisations
+
+The `wrp` package provides you with two functions to quickly and easily visualise the distribution of responses to survey questions at the aggregate level.
+
+### Get the whole picture
+
+The `wrp_graph` function creates a stacked bar chart of the proportion of people within a selected aggregation who provided each available response.
+
+The following graphs responses to the question *overall, compared to five years ago, do you feel more safe, less safe, or about as safe as you did five years ago?*
+
+```{r, message = FALSE, warning = FALSE, fig.dim = c(7, 8)}
+
+wrp_graph("globalRegion", "l2")
+
+```
+
+The following graphs responses to the question *have you or someone you PERSONALLY know, EXPERIENCED serious harm from any of the following things in the past TWO years? Eating food*
+
+```{r, message = FALSE, warning = FALSE, fig.dim = c(7, 6)}
+
+wrp_graph("countryIncomeLevel", "l8A")
+
+```
+
+### Comparing countries and regions
+
+The `wrp_map` function maps the proportion of people within each country who provided the selected response to the chosen question.
+
+```{r, message = FALSE, warning = FALSE, fig.dim = c(7, 5)}
+
+wrp_map("l3A", "Crime/violence/terrorism")
+
+```

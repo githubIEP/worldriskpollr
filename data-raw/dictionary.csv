@@ -1,0 +1,500 @@
+variable_name,question_description,code,response
+wpidRandom,Random Unique Case ID,NA,NA
+country,Respondent's country of residence,NA,NA
+iso3C,Country iso code,NA,NA
+year,Year of survey,NA,NA
+globalRegion,Global region respondent lives in,1,Eastern Africa
+globalRegion,Global region respondent lives in,2,Middle/Western Africa
+globalRegion,Global region respondent lives in,3,Northern Africa
+globalRegion,Global region respondent lives in,4,Southern Africa
+globalRegion,Global region respondent lives in,5,Latin America & Caribbean
+globalRegion,Global region respondent lives in,6,Northern America
+globalRegion,Global region respondent lives in,7,Central Asia
+globalRegion,Global region respondent lives in,8,Eastern Asia
+globalRegion,Global region respondent lives in,9,South-eastern Asia
+globalRegion,Global region respondent lives in,10,Southern Asia
+globalRegion,Global region respondent lives in,11,Middle East
+globalRegion,Global region respondent lives in,12,Eastern Europe
+globalRegion,Global region respondent lives in,13,Northern/Western Europe
+globalRegion,Global region respondent lives in,14,Southern Europe
+globalRegion,Global region respondent lives in,15,Australia & New Zealand
+countryIncomeLevel,World Bank Income classification of country,1,Low income
+countryIncomeLevel,World Bank Income classification of country,2,Lower middle income
+countryIncomeLevel,World Bank Income classification of country,3,Upper middle income
+countryIncomeLevel,World Bank Income classification of country,4,High income
+wgt,Weight,NA,NA
+projectionWeight,Weight to be used for multi-country analysis,NA,NA
+age,Age,NA,NA
+age,Age,99,99+
+age,Age,100,Refused
+gender,Gender,1,Male
+gender,Gender,2,Female
+education,Education Level,1,Up to 8 years of basic education
+education,Education Level,2,9-15 years of education
+education,Education Level,3,Completed four years of education beyond high school and/or received a 4-year college degree
+education,Education Level,4,DK
+education,Education Level,5,Refused
+incomeFeelings,Feelings About Household Income,1,Living comfortably on present income
+incomeFeelings,Feelings About Household Income,2,Getting by on present income
+incomeFeelings,Feelings About Household Income,3,Finding it difficult on present income
+incomeFeelings,Feelings About Household Income,4,Finding it very difficult on present income
+incomeFeelings,Feelings About Household Income,5,DK
+incomeFeelings,Feelings About Household Income,6,Refused
+income5,Per Capita Income Quintiles,1,Poorest 20%
+income5,Per Capita Income Quintiles,2,Second 20%
+income5,Per Capita Income Quintiles,3,Middle 20%
+income5,Per Capita Income Quintiles,4,Fourth 20%
+income5,Per Capita Income Quintiles,5,Richest 20%
+urbanicity,Urban/Rural,1,A rural area or on a farm/Small town or village
+urbanicity,Urban/Rural,2,A large city/Suburb of a large city
+urbanicity,Urban/Rural,9,DK/Refused
+householdSize,Total number of people in household,1,1-2 people
+householdSize,Total number of people in household,2,3-4 people
+householdSize,Total number of people in household,3,5-9 people
+householdSize,Total number of people in household,4,10 or more
+childrenInHousehold,Children under 15 in the household,0,None
+childrenInHousehold,Children under 15 in the household,1,1
+childrenInHousehold,Children under 15 in the household,2,2
+childrenInHousehold,Children under 15 in the household,3,3
+childrenInHousehold,Children under 15 in the household,4,4
+childrenInHousehold,Children under 15 in the household,5,5+
+childrenInHousehold,Children under 15 in the household,9,DK/Refused
+l1,"When you hear the word RISK, do you think more about opportunity or danger?",1,Opportunity
+l1,"When you hear the word RISK, do you think more about opportunity or danger?",2,Danger
+l1,"When you hear the word RISK, do you think more about opportunity or danger?",3,Both
+l1,"When you hear the word RISK, do you think more about opportunity or danger?",4,Neither
+l1,"When you hear the word RISK, do you think more about opportunity or danger?",98,DK
+l1,"When you hear the word RISK, do you think more about opportunity or danger?",99,Refused
+l2,"Overall, compared to five years ago, do you feel more safe, less safe, or about as safe as you did five years ago?",1,More safe
+l2,"Overall, compared to five years ago, do you feel more safe, less safe, or about as safe as you did five years ago?",2,Less safe
+l2,"Overall, compared to five years ago, do you feel more safe, less safe, or about as safe as you did five years ago?",3,About as safe
+l2,"Overall, compared to five years ago, do you feel more safe, less safe, or about as safe as you did five years ago?",98,DK
+l2,"Overall, compared to five years ago, do you feel more safe, less safe, or about as safe as you did five years ago?",99,Refused
+l3A,"In your own words, what is the greatest source of RISK TO YOUR SAFETY in your daily life?",1,"Road-related accidents/injuries such as using a bicycle, car, motorbike, truck, van, bus, etc."
+l3A,"In your own words, what is the greatest source of RISK TO YOUR SAFETY in your daily life?",2,"Other transportation-related accidents/injuries such as subway, train, plane, etc."
+l3A,"In your own words, what is the greatest source of RISK TO YOUR SAFETY in your daily life?",3,Crime/violence/terrorism
+l3A,"In your own words, what is the greatest source of RISK TO YOUR SAFETY in your daily life?",4,Cooking or other household accidents/injuries
+l3A,"In your own words, what is the greatest source of RISK TO YOUR SAFETY in your daily life?",5,Financial: not having enough money to pay for the things you need
+l3A,"In your own words, what is the greatest source of RISK TO YOUR SAFETY in your daily life?",6,"Economy-related, such as unemployment, high prices"
+l3A,"In your own words, what is the greatest source of RISK TO YOUR SAFETY in your daily life?",7,Politics/political situation/corruption
+l3A,"In your own words, what is the greatest source of RISK TO YOUR SAFETY in your daily life?",8,Internet/technology related risks
+l3A,"In your own words, what is the greatest source of RISK TO YOUR SAFETY in your daily life?",9,Health: personal health condition/illness
+l3A,"In your own words, what is the greatest source of RISK TO YOUR SAFETY in your daily life?",10,"Health: drugs, alcohol, smoking"
+l3A,"In your own words, what is the greatest source of RISK TO YOUR SAFETY in your daily life?",11,Water supply or drinking unclean water
+l3A,"In your own words, what is the greatest source of RISK TO YOUR SAFETY in your daily life?",12,Food-related: eating unsafe contaminated food
+l3A,"In your own words, what is the greatest source of RISK TO YOUR SAFETY in your daily life?",13,Pollution
+l3A,"In your own words, what is the greatest source of RISK TO YOUR SAFETY in your daily life?",14,Work-related accidents: physical injuries
+l3A,"In your own words, what is the greatest source of RISK TO YOUR SAFETY in your daily life?",15,Mental stress/exhaustion
+l3A,"In your own words, what is the greatest source of RISK TO YOUR SAFETY in your daily life?",16,"Climate change, natural disasters or weather-related events such as floods, drought, wild fires, etc."
+l3A,"In your own words, what is the greatest source of RISK TO YOUR SAFETY in your daily life?",17,Drowning
+l3A,"In your own words, what is the greatest source of RISK TO YOUR SAFETY in your daily life?",18,Other
+l3A,"In your own words, what is the greatest source of RISK TO YOUR SAFETY in your daily life?",19,Nothing/No risks
+l3A,"In your own words, what is the greatest source of RISK TO YOUR SAFETY in your daily life?",98,Dont know
+l3A,"In your own words, what is the greatest source of RISK TO YOUR SAFETY in your daily life?",99,Refused
+l3B,Other than what you just mentioned in your own words what is another MAJOR source of RISK TO YOUR SAFETY in your daily life,1,"Road-related accidents/injuries such as using a bicycle, car, motorbike, truck, van, bus, etc."
+l3B,Other than what you just mentioned in your own words what is another MAJOR source of RISK TO YOUR SAFETY in your daily life,2,"Other transportation-related accidents/injuries such as subway, train, plane, etc."
+l3B,Other than what you just mentioned in your own words what is another MAJOR source of RISK TO YOUR SAFETY in your daily life,3,Crime/violence/terrorism
+l3B,Other than what you just mentioned in your own words what is another MAJOR source of RISK TO YOUR SAFETY in your daily life,4,Cooking or other household accidents/injuries
+l3B,Other than what you just mentioned in your own words what is another MAJOR source of RISK TO YOUR SAFETY in your daily life,5,Financial: not having enough money to pay for the things you need
+l3B,Other than what you just mentioned in your own words what is another MAJOR source of RISK TO YOUR SAFETY in your daily life,6,"Economy-related, such as unemployment, high prices"
+l3B,Other than what you just mentioned in your own words what is another MAJOR source of RISK TO YOUR SAFETY in your daily life,7,Politics/political situation/corruption
+l3B,Other than what you just mentioned in your own words what is another MAJOR source of RISK TO YOUR SAFETY in your daily life,8,Internet/technology related risks
+l3B,Other than what you just mentioned in your own words what is another MAJOR source of RISK TO YOUR SAFETY in your daily life,9,Health: personal health condition/illness
+l3B,Other than what you just mentioned in your own words what is another MAJOR source of RISK TO YOUR SAFETY in your daily life,10,"Health: drugs, alcohol, smoking"
+l3B,Other than what you just mentioned in your own words what is another MAJOR source of RISK TO YOUR SAFETY in your daily life,11,Water supply or drinking unclean water
+l3B,Other than what you just mentioned in your own words what is another MAJOR source of RISK TO YOUR SAFETY in your daily life,12,Food-related: eating unsafe contaminated food
+l3B,Other than what you just mentioned in your own words what is another MAJOR source of RISK TO YOUR SAFETY in your daily life,13,Pollution
+l3B,Other than what you just mentioned in your own words what is another MAJOR source of RISK TO YOUR SAFETY in your daily life,14,Work-related accidents: physical injuries
+l3B,Other than what you just mentioned in your own words what is another MAJOR source of RISK TO YOUR SAFETY in your daily life,15,Mental stress/exhaustion
+l3B,Other than what you just mentioned in your own words what is another MAJOR source of RISK TO YOUR SAFETY in your daily life,16,"Climate change, natural disasters or weather-related events such as floods, drought, wild fires, etc."
+l3B,Other than what you just mentioned in your own words what is another MAJOR source of RISK TO YOUR SAFETY in your daily life,17,Drowning
+l3B,Other than what you just mentioned in your own words what is another MAJOR source of RISK TO YOUR SAFETY in your daily life,18,Other
+l3B,Other than what you just mentioned in your own words what is another MAJOR source of RISK TO YOUR SAFETY in your daily life,19,Nothing/No risks
+l3B,Other than what you just mentioned in your own words what is another MAJOR source of RISK TO YOUR SAFETY in your daily life,98,Dont know
+l3B,Other than what you just mentioned in your own words what is another MAJOR source of RISK TO YOUR SAFETY in your daily life,99,Refused
+l4A,Please tell me whether you think each of the following will mostly HELP or mostly HARM people in this country in the next 20 years. Genetically-modified food,1,Mostly help
+l4A,Please tell me whether you think each of the following will mostly HELP or mostly HARM people in this country in the next 20 years. Genetically-modified food,2,Mostly harm
+l4A,Please tell me whether you think each of the following will mostly HELP or mostly HARM people in this country in the next 20 years. Genetically-modified food,3,Don’t have opinion
+l4A,Please tell me whether you think each of the following will mostly HELP or mostly HARM people in this country in the next 20 years. Genetically-modified food,4,Neither
+l4A,Please tell me whether you think each of the following will mostly HELP or mostly HARM people in this country in the next 20 years. Genetically-modified food,98,DK
+l4A,Please tell me whether you think each of the following will mostly HELP or mostly HARM people in this country in the next 20 years. Genetically-modified food,99,Refused
+l4B,Please tell me whether you think each of the following will mostly HELP or mostly HARM people in this country in the next 20 years. The use of nuclear power for electricity,1,Mostly help
+l4B,Please tell me whether you think each of the following will mostly HELP or mostly HARM people in this country in the next 20 years. The use of nuclear power for electricity,2,Mostly harm
+l4B,Please tell me whether you think each of the following will mostly HELP or mostly HARM people in this country in the next 20 years. The use of nuclear power for electricity,3,Don’t have opinion
+l4B,Please tell me whether you think each of the following will mostly HELP or mostly HARM people in this country in the next 20 years. The use of nuclear power for electricity,4,Neither
+l4B,Please tell me whether you think each of the following will mostly HELP or mostly HARM people in this country in the next 20 years. The use of nuclear power for electricity,98,DK
+l4B,Please tell me whether you think each of the following will mostly HELP or mostly HARM people in this country in the next 20 years. The use of nuclear power for electricity,99,Refused
+l4C,"Please tell me whether you think each of the following will mostly HELP or mostly HARM people in this country in the next 20 years. Machines or robots that can think and make decisions, often known as artificial intelligence",1,Mostly help
+l4C,"Please tell me whether you think each of the following will mostly HELP or mostly HARM people in this country in the next 20 years. Machines or robots that can think and make decisions, often known as artificial intelligence",2,Mostly harm
+l4C,"Please tell me whether you think each of the following will mostly HELP or mostly HARM people in this country in the next 20 years. Machines or robots that can think and make decisions, often known as artificial intelligence",3,Don’t have opinion
+l4C,"Please tell me whether you think each of the following will mostly HELP or mostly HARM people in this country in the next 20 years. Machines or robots that can think and make decisions, often known as artificial intelligence",4,Neither
+l4C,"Please tell me whether you think each of the following will mostly HELP or mostly HARM people in this country in the next 20 years. Machines or robots that can think and make decisions, often known as artificial intelligence",98,DK
+l4C,"Please tell me whether you think each of the following will mostly HELP or mostly HARM people in this country in the next 20 years. Machines or robots that can think and make decisions, often known as artificial intelligence",99,Refused
+l5,"Do you think that climate change is a very serious threat, a somewhat serious threat, or not a threat at all to the people in this country in the next 20 years? If you do not know, please just say so",1,Very serious threat
+l5,"Do you think that climate change is a very serious threat, a somewhat serious threat, or not a threat at all to the people in this country in the next 20 years? If you do not know, please just say so",2,Somewhat serious threat
+l5,"Do you think that climate change is a very serious threat, a somewhat serious threat, or not a threat at all to the people in this country in the next 20 years? If you do not know, please just say so",3,Not a threat at all
+l5,"Do you think that climate change is a very serious threat, a somewhat serious threat, or not a threat at all to the people in this country in the next 20 years? If you do not know, please just say so",98,DK
+l5,"Do you think that climate change is a very serious threat, a somewhat serious threat, or not a threat at all to the people in this country in the next 20 years? If you do not know, please just say so",99,Refused
+l6A,"In general, how WORRIED are you that each of the following things could cause you serious harm? Are you very worried, somewhat worried, or not worried? The food you eat",1,Very worried
+l6A,"In general, how WORRIED are you that each of the following things could cause you serious harm? Are you very worried, somewhat worried, or not worried? The food you eat",2,Somewhat worried
+l6A,"In general, how WORRIED are you that each of the following things could cause you serious harm? Are you very worried, somewhat worried, or not worried? The food you eat",3,Not worried
+l6A,"In general, how WORRIED are you that each of the following things could cause you serious harm? Are you very worried, somewhat worried, or not worried? The food you eat",98,DK
+l6A,"In general, how WORRIED are you that each of the following things could cause you serious harm? Are you very worried, somewhat worried, or not worried? The food you eat",99,Refused
+l6B,"In general, how WORRIED are you that each of the following things could cause you serious harm? Are you very worried, somewhat worried, or not worried? The water you drink",1,Very worried
+l6B,"In general, how WORRIED are you that each of the following things could cause you serious harm? Are you very worried, somewhat worried, or not worried? The water you drink",2,Somewhat worried
+l6B,"In general, how WORRIED are you that each of the following things could cause you serious harm? Are you very worried, somewhat worried, or not worried? The water you drink",3,Not worried
+l6B,"In general, how WORRIED are you that each of the following things could cause you serious harm? Are you very worried, somewhat worried, or not worried? The water you drink",98,DK
+l6B,"In general, how WORRIED are you that each of the following things could cause you serious harm? Are you very worried, somewhat worried, or not worried? The water you drink",99,Refused
+l6C,"In general, how WORRIED are you that each of the following things could cause you serious harm? Are you very worried, somewhat worried, or not worried? Violent crime",1,Very worried
+l6C,"In general, how WORRIED are you that each of the following things could cause you serious harm? Are you very worried, somewhat worried, or not worried? Violent crime",2,Somewhat worried
+l6C,"In general, how WORRIED are you that each of the following things could cause you serious harm? Are you very worried, somewhat worried, or not worried? Violent crime",3,Not worried
+l6C,"In general, how WORRIED are you that each of the following things could cause you serious harm? Are you very worried, somewhat worried, or not worried? Violent crime",98,DK
+l6C,"In general, how WORRIED are you that each of the following things could cause you serious harm? Are you very worried, somewhat worried, or not worried? Violent crime",99,Refused
+l6D,"In general, how WORRIED are you that each of the following things could cause you serious harm? Are you very worried, somewhat worried, or not worried? Severe weather events, such as floods or violent storms",1,Very worried
+l6D,"In general, how WORRIED are you that each of the following things could cause you serious harm? Are you very worried, somewhat worried, or not worried? Severe weather events, such as floods or violent storms",2,Somewhat worried
+l6D,"In general, how WORRIED are you that each of the following things could cause you serious harm? Are you very worried, somewhat worried, or not worried? Severe weather events, such as floods or violent storms",3,Not worried
+l6D,"In general, how WORRIED are you that each of the following things could cause you serious harm? Are you very worried, somewhat worried, or not worried? Severe weather events, such as floods or violent storms",98,DK
+l6D,"In general, how WORRIED are you that each of the following things could cause you serious harm? Are you very worried, somewhat worried, or not worried? Severe weather events, such as floods or violent storms",99,Refused
+l6E,"In general, how WORRIED are you that each of the following things could cause you serious harm? Are you very worried, somewhat worried, or not worried? Electrical power lines",1,Very worried
+l6E,"In general, how WORRIED are you that each of the following things could cause you serious harm? Are you very worried, somewhat worried, or not worried? Electrical power lines",2,Somewhat worried
+l6E,"In general, how WORRIED are you that each of the following things could cause you serious harm? Are you very worried, somewhat worried, or not worried? Electrical power lines",3,Not worried
+l6E,"In general, how WORRIED are you that each of the following things could cause you serious harm? Are you very worried, somewhat worried, or not worried? Electrical power lines",98,DK
+l6E,"In general, how WORRIED are you that each of the following things could cause you serious harm? Are you very worried, somewhat worried, or not worried? Electrical power lines",99,Refused
+l6F,"In general, how WORRIED are you that each of the following things could cause you serious harm? Are you very worried, somewhat worried, or not worried? Household appliances, such as a washing machine, dryer, or refrigerator",1,Very worried
+l6F,"In general, how WORRIED are you that each of the following things could cause you serious harm? Are you very worried, somewhat worried, or not worried? Household appliances, such as a washing machine, dryer, or refrigerator",2,Somewhat worried
+l6F,"In general, how WORRIED are you that each of the following things could cause you serious harm? Are you very worried, somewhat worried, or not worried? Household appliances, such as a washing machine, dryer, or refrigerator",3,Not worried
+l6F,"In general, how WORRIED are you that each of the following things could cause you serious harm? Are you very worried, somewhat worried, or not worried? Household appliances, such as a washing machine, dryer, or refrigerator",98,DK
+l6F,"In general, how WORRIED are you that each of the following things could cause you serious harm? Are you very worried, somewhat worried, or not worried? Household appliances, such as a washing machine, dryer, or refrigerator",99,Refused
+l6G,"In general, how WORRIED are you that each of the following things could cause you serious harm? Are you very worried, somewhat worried, or not worried? Mental health issues",1,Very worried
+l6G,"In general, how WORRIED are you that each of the following things could cause you serious harm? Are you very worried, somewhat worried, or not worried? Mental health issues",2,Somewhat worried
+l6G,"In general, how WORRIED are you that each of the following things could cause you serious harm? Are you very worried, somewhat worried, or not worried? Mental health issues",3,Not worried
+l6G,"In general, how WORRIED are you that each of the following things could cause you serious harm? Are you very worried, somewhat worried, or not worried? Mental health issues",98,DK
+l6G,"In general, how WORRIED are you that each of the following things could cause you serious harm? Are you very worried, somewhat worried, or not worried? Mental health issues",99,Refused
+l7A,How LIKELY do you think it is that each of the following things COULD cause you serious harm in the next TWO years? The food you eat,1,Very likely
+l7A,How LIKELY do you think it is that each of the following things COULD cause you serious harm in the next TWO years? The food you eat,2,Somewhat likely
+l7A,How LIKELY do you think it is that each of the following things COULD cause you serious harm in the next TWO years? The food you eat,3,Not likely at all
+l7A,How LIKELY do you think it is that each of the following things COULD cause you serious harm in the next TWO years? The food you eat,98,DK
+l7A,How LIKELY do you think it is that each of the following things COULD cause you serious harm in the next TWO years? The food you eat,99,Refused
+l7B,How LIKELY do you think it is that each of the following things COULD cause you serious harm in the next TWO years? The water you drink,1,Very likely
+l7B,How LIKELY do you think it is that each of the following things COULD cause you serious harm in the next TWO years? The water you drink,2,Somewhat likely
+l7B,How LIKELY do you think it is that each of the following things COULD cause you serious harm in the next TWO years? The water you drink,3,Not likely at all
+l7B,How LIKELY do you think it is that each of the following things COULD cause you serious harm in the next TWO years? The water you drink,98,DK
+l7B,How LIKELY do you think it is that each of the following things COULD cause you serious harm in the next TWO years? The water you drink,99,Refused
+l7C,How LIKELY do you think it is that each of the following things COULD cause you serious harm in the next TWO years? Violent crime,1,Very likely
+l7C,How LIKELY do you think it is that each of the following things COULD cause you serious harm in the next TWO years? Violent crime,2,Somewhat likely
+l7C,How LIKELY do you think it is that each of the following things COULD cause you serious harm in the next TWO years? Violent crime,3,Not likely at all
+l7C,How LIKELY do you think it is that each of the following things COULD cause you serious harm in the next TWO years? Violent crime,98,DK
+l7C,How LIKELY do you think it is that each of the following things COULD cause you serious harm in the next TWO years? Violent crime,99,Refused
+l7D,"How LIKELY do you think it is that each of the following things COULD cause you serious harm in the next TWO years? Severe weather events, such as floods or violent storms",1,Very likely
+l7D,"How LIKELY do you think it is that each of the following things COULD cause you serious harm in the next TWO years? Severe weather events, such as floods or violent storms",2,Somewhat likely
+l7D,"How LIKELY do you think it is that each of the following things COULD cause you serious harm in the next TWO years? Severe weather events, such as floods or violent storms",3,Not likely at all
+l7D,"How LIKELY do you think it is that each of the following things COULD cause you serious harm in the next TWO years? Severe weather events, such as floods or violent storms",98,DK
+l7D,"How LIKELY do you think it is that each of the following things COULD cause you serious harm in the next TWO years? Severe weather events, such as floods or violent storms",99,Refused
+l7E,How LIKELY do you think it is that each of the following things COULD cause you serious harm in the next TWO years? Electrical power lines,1,Very likely
+l7E,How LIKELY do you think it is that each of the following things COULD cause you serious harm in the next TWO years? Electrical power lines,2,Somewhat likely
+l7E,How LIKELY do you think it is that each of the following things COULD cause you serious harm in the next TWO years? Electrical power lines,3,Not likely at all
+l7E,How LIKELY do you think it is that each of the following things COULD cause you serious harm in the next TWO years? Electrical power lines,98,DK
+l7E,How LIKELY do you think it is that each of the following things COULD cause you serious harm in the next TWO years? Electrical power lines,99,Refused
+l7F,"How LIKELY do you think it is that each of the following things COULD cause you serious harm in the next TWO years? Household appliances, such as a washing machine, dryer, or refrigerator",1,Very likely
+l7F,"How LIKELY do you think it is that each of the following things COULD cause you serious harm in the next TWO years? Household appliances, such as a washing machine, dryer, or refrigerator",2,Somewhat likely
+l7F,"How LIKELY do you think it is that each of the following things COULD cause you serious harm in the next TWO years? Household appliances, such as a washing machine, dryer, or refrigerator",3,Not likely at all
+l7F,"How LIKELY do you think it is that each of the following things COULD cause you serious harm in the next TWO years? Household appliances, such as a washing machine, dryer, or refrigerator",98,DK
+l7F,"How LIKELY do you think it is that each of the following things COULD cause you serious harm in the next TWO years? Household appliances, such as a washing machine, dryer, or refrigerator",99,Refused
+l7G,How LIKELY do you think it is that each of the following things COULD cause you serious harm in the next TWO years? Mental health issues,1,Very likely
+l7G,How LIKELY do you think it is that each of the following things COULD cause you serious harm in the next TWO years? Mental health issues,2,Somewhat likely
+l7G,How LIKELY do you think it is that each of the following things COULD cause you serious harm in the next TWO years? Mental health issues,3,Not likely at all
+l7G,How LIKELY do you think it is that each of the following things COULD cause you serious harm in the next TWO years? Mental health issues,98,DK
+l7G,How LIKELY do you think it is that each of the following things COULD cause you serious harm in the next TWO years? Mental health issues,99,Refused
+l8A,"Have you or someone you PERSONALLY know, EXPERIENCED serious harm from any of the following things in the past TWO years? Eating food",1,Yes
+l8A,"Have you or someone you PERSONALLY know, EXPERIENCED serious harm from any of the following things in the past TWO years? Eating food",2,No
+l8A,"Have you or someone you PERSONALLY know, EXPERIENCED serious harm from any of the following things in the past TWO years? Eating food",98,DK
+l8A,"Have you or someone you PERSONALLY know, EXPERIENCED serious harm from any of the following things in the past TWO years? Eating food",99,Refused
+l8B,"Have you or someone you PERSONALLY know, EXPERIENCED serious harm from any of the following things in the past TWO years? Drinking water",1,Yes
+l8B,"Have you or someone you PERSONALLY know, EXPERIENCED serious harm from any of the following things in the past TWO years? Drinking water",2,No
+l8B,"Have you or someone you PERSONALLY know, EXPERIENCED serious harm from any of the following things in the past TWO years? Drinking water",98,DK
+l8B,"Have you or someone you PERSONALLY know, EXPERIENCED serious harm from any of the following things in the past TWO years? Drinking water",99,Refused
+l8C,"Have you or someone you PERSONALLY know, EXPERIENCED serious harm from any of the following things in the past TWO years? Violent crime",1,Yes
+l8C,"Have you or someone you PERSONALLY know, EXPERIENCED serious harm from any of the following things in the past TWO years? Violent crime",2,No
+l8C,"Have you or someone you PERSONALLY know, EXPERIENCED serious harm from any of the following things in the past TWO years? Violent crime",98,DK
+l8C,"Have you or someone you PERSONALLY know, EXPERIENCED serious harm from any of the following things in the past TWO years? Violent crime",99,Refused
+l8D,"Have you or someone you PERSONALLY know, EXPERIENCED serious harm from any of the following things in the past TWO years? Severe weather events, such as floods or violent storms",1,Yes
+l8D,"Have you or someone you PERSONALLY know, EXPERIENCED serious harm from any of the following things in the past TWO years? Severe weather events, such as floods or violent storms",2,No
+l8D,"Have you or someone you PERSONALLY know, EXPERIENCED serious harm from any of the following things in the past TWO years? Severe weather events, such as floods or violent storms",98,DK
+l8D,"Have you or someone you PERSONALLY know, EXPERIENCED serious harm from any of the following things in the past TWO years? Severe weather events, such as floods or violent storms",99,Refused
+l8E,"Have you or someone you PERSONALLY know, EXPERIENCED serious harm from any of the following things in the past TWO years? Electrical power lines",1,Yes
+l8E,"Have you or someone you PERSONALLY know, EXPERIENCED serious harm from any of the following things in the past TWO years? Electrical power lines",2,No
+l8E,"Have you or someone you PERSONALLY know, EXPERIENCED serious harm from any of the following things in the past TWO years? Electrical power lines",98,DK
+l8E,"Have you or someone you PERSONALLY know, EXPERIENCED serious harm from any of the following things in the past TWO years? Electrical power lines",99,Refused
+l8F,"Have you or someone you PERSONALLY know, EXPERIENCED serious harm from any of the following things in the past TWO years? Household appliances, such as a washing machine, dryer, or refrigerator",1,Yes
+l8F,"Have you or someone you PERSONALLY know, EXPERIENCED serious harm from any of the following things in the past TWO years? Household appliances, such as a washing machine, dryer, or refrigerator",2,No
+l8F,"Have you or someone you PERSONALLY know, EXPERIENCED serious harm from any of the following things in the past TWO years? Household appliances, such as a washing machine, dryer, or refrigerator",98,DK
+l8F,"Have you or someone you PERSONALLY know, EXPERIENCED serious harm from any of the following things in the past TWO years? Household appliances, such as a washing machine, dryer, or refrigerator",99,Refused
+l8G,"Have you or someone you PERSONALLY know, EXPERIENCED serious harm from any of the following things in the past TWO years? Mental health issues",1,Yes
+l8G,"Have you or someone you PERSONALLY know, EXPERIENCED serious harm from any of the following things in the past TWO years? Mental health issues",2,No
+l8G,"Have you or someone you PERSONALLY know, EXPERIENCED serious harm from any of the following things in the past TWO years? Mental health issues",98,DK
+l8G,"Have you or someone you PERSONALLY know, EXPERIENCED serious harm from any of the following things in the past TWO years? Mental health issues",99,Refused
+l9A,How likely do you think it is that any of the following things could happen to you in the next TWO years? Being in a traffic accident,0,Not likely at all
+l9A,How likely do you think it is that any of the following things could happen to you in the next TWO years? Being in a traffic accident,1,1
+l9A,How likely do you think it is that any of the following things could happen to you in the next TWO years? Being in a traffic accident,2,2
+l9A,How likely do you think it is that any of the following things could happen to you in the next TWO years? Being in a traffic accident,3,3
+l9A,How likely do you think it is that any of the following things could happen to you in the next TWO years? Being in a traffic accident,4,4
+l9A,How likely do you think it is that any of the following things could happen to you in the next TWO years? Being in a traffic accident,5,5
+l9A,How likely do you think it is that any of the following things could happen to you in the next TWO years? Being in a traffic accident,6,6
+l9A,How likely do you think it is that any of the following things could happen to you in the next TWO years? Being in a traffic accident,7,7
+l9A,How likely do you think it is that any of the following things could happen to you in the next TWO years? Being in a traffic accident,8,8
+l9A,How likely do you think it is that any of the following things could happen to you in the next TWO years? Being in a traffic accident,9,9
+l9A,How likely do you think it is that any of the following things could happen to you in the next TWO years? Being in a traffic accident,10,Very likely
+l9A,How likely do you think it is that any of the following things could happen to you in the next TWO years? Being in a traffic accident,98,DK
+l9A,How likely do you think it is that any of the following things could happen to you in the next TWO years? Being in a traffic accident,99,Refused
+l9B,How likely do you think it is that any of the following things could happen to you in the next TWO years? Being physically attacked by someone,0,Not likely at all
+l9B,How likely do you think it is that any of the following things could happen to you in the next TWO years? Being physically attacked by someone,1,1
+l9B,How likely do you think it is that any of the following things could happen to you in the next TWO years? Being physically attacked by someone,2,2
+l9B,How likely do you think it is that any of the following things could happen to you in the next TWO years? Being physically attacked by someone,3,3
+l9B,How likely do you think it is that any of the following things could happen to you in the next TWO years? Being physically attacked by someone,4,4
+l9B,How likely do you think it is that any of the following things could happen to you in the next TWO years? Being physically attacked by someone,5,5
+l9B,How likely do you think it is that any of the following things could happen to you in the next TWO years? Being physically attacked by someone,6,6
+l9B,How likely do you think it is that any of the following things could happen to you in the next TWO years? Being physically attacked by someone,7,7
+l9B,How likely do you think it is that any of the following things could happen to you in the next TWO years? Being physically attacked by someone,8,8
+l9B,How likely do you think it is that any of the following things could happen to you in the next TWO years? Being physically attacked by someone,9,9
+l9B,How likely do you think it is that any of the following things could happen to you in the next TWO years? Being physically attacked by someone,10,Very likely
+l9B,How likely do you think it is that any of the following things could happen to you in the next TWO years? Being physically attacked by someone,98,DK
+l9B,How likely do you think it is that any of the following things could happen to you in the next TWO years? Being physically attacked by someone,99,Refused
+l9C,How likely do you think it is that any of the following things could happen to you in the next TWO years? Being in an airplane accident,0,Not likely at all
+l9C,How likely do you think it is that any of the following things could happen to you in the next TWO years? Being in an airplane accident,1,1
+l9C,How likely do you think it is that any of the following things could happen to you in the next TWO years? Being in an airplane accident,2,2
+l9C,How likely do you think it is that any of the following things could happen to you in the next TWO years? Being in an airplane accident,3,3
+l9C,How likely do you think it is that any of the following things could happen to you in the next TWO years? Being in an airplane accident,4,4
+l9C,How likely do you think it is that any of the following things could happen to you in the next TWO years? Being in an airplane accident,5,5
+l9C,How likely do you think it is that any of the following things could happen to you in the next TWO years? Being in an airplane accident,6,6
+l9C,How likely do you think it is that any of the following things could happen to you in the next TWO years? Being in an airplane accident,7,7
+l9C,How likely do you think it is that any of the following things could happen to you in the next TWO years? Being in an airplane accident,8,8
+l9C,How likely do you think it is that any of the following things could happen to you in the next TWO years? Being in an airplane accident,9,9
+l9C,How likely do you think it is that any of the following things could happen to you in the next TWO years? Being in an airplane accident,10,Very likely
+l9C,How likely do you think it is that any of the following things could happen to you in the next TWO years? Being in an airplane accident,98,DK
+l9C,How likely do you think it is that any of the following things could happen to you in the next TWO years? Being in an airplane accident,99,Refused
+l9D,How likely do you think it is that any of the following things could happen to you in the next TWO years? Drowning,0,Not likely at all
+l9D,How likely do you think it is that any of the following things could happen to you in the next TWO years? Drowning,1,1
+l9D,How likely do you think it is that any of the following things could happen to you in the next TWO years? Drowning,2,2
+l9D,How likely do you think it is that any of the following things could happen to you in the next TWO years? Drowning,3,3
+l9D,How likely do you think it is that any of the following things could happen to you in the next TWO years? Drowning,4,4
+l9D,How likely do you think it is that any of the following things could happen to you in the next TWO years? Drowning,5,5
+l9D,How likely do you think it is that any of the following things could happen to you in the next TWO years? Drowning,6,6
+l9D,How likely do you think it is that any of the following things could happen to you in the next TWO years? Drowning,7,7
+l9D,How likely do you think it is that any of the following things could happen to you in the next TWO years? Drowning,8,8
+l9D,How likely do you think it is that any of the following things could happen to you in the next TWO years? Drowning,9,9
+l9D,How likely do you think it is that any of the following things could happen to you in the next TWO years? Drowning,10,Very likely
+l9D,How likely do you think it is that any of the following things could happen to you in the next TWO years? Drowning,98,DK
+l9D,How likely do you think it is that any of the following things could happen to you in the next TWO years? Drowning,99,Refused
+l9E,How likely do you think it is that any of the following things could happen to you in the next TWO years? Being struck by lightning,0,Not likely at all
+l9E,How likely do you think it is that any of the following things could happen to you in the next TWO years? Being struck by lightning,1,1
+l9E,How likely do you think it is that any of the following things could happen to you in the next TWO years? Being struck by lightning,2,2
+l9E,How likely do you think it is that any of the following things could happen to you in the next TWO years? Being struck by lightning,3,3
+l9E,How likely do you think it is that any of the following things could happen to you in the next TWO years? Being struck by lightning,4,4
+l9E,How likely do you think it is that any of the following things could happen to you in the next TWO years? Being struck by lightning,5,5
+l9E,How likely do you think it is that any of the following things could happen to you in the next TWO years? Being struck by lightning,6,6
+l9E,How likely do you think it is that any of the following things could happen to you in the next TWO years? Being struck by lightning,7,7
+l9E,How likely do you think it is that any of the following things could happen to you in the next TWO years? Being struck by lightning,8,8
+l9E,How likely do you think it is that any of the following things could happen to you in the next TWO years? Being struck by lightning,9,9
+l9E,How likely do you think it is that any of the following things could happen to you in the next TWO years? Being struck by lightning,10,Very likely
+l9E,How likely do you think it is that any of the following things could happen to you in the next TWO years? Being struck by lightning,98,DK
+l9E,How likely do you think it is that any of the following things could happen to you in the next TWO years? Being struck by lightning,99,Refused
+l10,"In general, do you wear a seatbelt if you are in a motorized vehicle and one is available?",1,Yes
+l10,"In general, do you wear a seatbelt if you are in a motorized vehicle and one is available?",2,No
+l10,"In general, do you wear a seatbelt if you are in a motorized vehicle and one is available?",98,DK
+l10,"In general, do you wear a seatbelt if you are in a motorized vehicle and one is available?",99,Refused
+l11,Are you able to swim without any assistance at all?,1,Yes
+l11,Are you able to swim without any assistance at all?,2,No
+l11,Are you able to swim without any assistance at all?,98,DK
+l11,Are you able to swim without any assistance at all?,99,Refused
+l12,"Do you think that 10% is bigger than 1 out of 10, smaller than 1 out of 10, or the same as 1 out of 10? If you do not know, please just say so.",1,10% is bigger than 1 out of 10
+l12,"Do you think that 10% is bigger than 1 out of 10, smaller than 1 out of 10, or the same as 1 out of 10? If you do not know, please just say so.",2,10% is smaller than 1 out of 10
+l12,"Do you think that 10% is bigger than 1 out of 10, smaller than 1 out of 10, or the same as 1 out of 10? If you do not know, please just say so.",3,10% is the same as 1 out of 10
+l12,"Do you think that 10% is bigger than 1 out of 10, smaller than 1 out of 10, or the same as 1 out of 10? If you do not know, please just say so.",98,DK
+l12,"Do you think that 10% is bigger than 1 out of 10, smaller than 1 out of 10, or the same as 1 out of 10? If you do not know, please just say so.",99,Refused
+l13A,"Suppose you wanted to find out if the food you eat is safe. Would you look to any of the following sources for information, or not? Friends or family",1,Yes
+l13A,"Suppose you wanted to find out if the food you eat is safe. Would you look to any of the following sources for information, or not? Friends or family",2,No
+l13A,"Suppose you wanted to find out if the food you eat is safe. Would you look to any of the following sources for information, or not? Friends or family",97,Does not apply
+l13A,"Suppose you wanted to find out if the food you eat is safe. Would you look to any of the following sources for information, or not? Friends or family",98,DK
+l13A,"Suppose you wanted to find out if the food you eat is safe. Would you look to any of the following sources for information, or not? Friends or family",99,Refused
+l13B,"Suppose you wanted to find out if the food you eat is safe. Would you look to any of the following sources for information, or not? Medical professionals, such as your local doctor or nurse",1,Yes
+l13B,"Suppose you wanted to find out if the food you eat is safe. Would you look to any of the following sources for information, or not? Medical professionals, such as your local doctor or nurse",2,No
+l13B,"Suppose you wanted to find out if the food you eat is safe. Would you look to any of the following sources for information, or not? Medical professionals, such as your local doctor or nurse",97,Does not apply
+l13B,"Suppose you wanted to find out if the food you eat is safe. Would you look to any of the following sources for information, or not? Medical professionals, such as your local doctor or nurse",98,DK
+l13B,"Suppose you wanted to find out if the food you eat is safe. Would you look to any of the following sources for information, or not? Medical professionals, such as your local doctor or nurse",99,Refused
+l13C,"Suppose you wanted to find out if the food you eat is safe. Would you look to any of the following sources for information, or not? Newspapers, television or radio",1,Yes
+l13C,"Suppose you wanted to find out if the food you eat is safe. Would you look to any of the following sources for information, or not? Newspapers, television or radio",2,No
+l13C,"Suppose you wanted to find out if the food you eat is safe. Would you look to any of the following sources for information, or not? Newspapers, television or radio",97,Does not apply
+l13C,"Suppose you wanted to find out if the food you eat is safe. Would you look to any of the following sources for information, or not? Newspapers, television or radio",98,DK
+l13C,"Suppose you wanted to find out if the food you eat is safe. Would you look to any of the following sources for information, or not? Newspapers, television or radio",99,Refused
+l13D,"Suppose you wanted to find out if the food you eat is safe. Would you look to any of the following sources for information, or not? The Internet/social media",1,Yes
+l13D,"Suppose you wanted to find out if the food you eat is safe. Would you look to any of the following sources for information, or not? The Internet/social media",2,No
+l13D,"Suppose you wanted to find out if the food you eat is safe. Would you look to any of the following sources for information, or not? The Internet/social media",97,Does not apply
+l13D,"Suppose you wanted to find out if the food you eat is safe. Would you look to any of the following sources for information, or not? The Internet/social media",98,DK
+l13D,"Suppose you wanted to find out if the food you eat is safe. Would you look to any of the following sources for information, or not? The Internet/social media",99,Refused
+l13E,"Suppose you wanted to find out if the food you eat is safe. Would you look to any of the following sources for information, or not? [INSERT government agency responsible for providing food safety information]",1,Yes
+l13E,"Suppose you wanted to find out if the food you eat is safe. Would you look to any of the following sources for information, or not? [INSERT government agency responsible for providing food safety information]",2,No
+l13E,"Suppose you wanted to find out if the food you eat is safe. Would you look to any of the following sources for information, or not? [INSERT government agency responsible for providing food safety information]",97,Does not apply
+l13E,"Suppose you wanted to find out if the food you eat is safe. Would you look to any of the following sources for information, or not? [INSERT government agency responsible for providing food safety information]",98,DK
+l13E,"Suppose you wanted to find out if the food you eat is safe. Would you look to any of the following sources for information, or not? [INSERT government agency responsible for providing food safety information]",99,Refused
+l13F,"Suppose you wanted to find out if the food you eat is safe. Would you look to any of the following sources for information, or not? The packaging or label on the food",1,Yes
+l13F,"Suppose you wanted to find out if the food you eat is safe. Would you look to any of the following sources for information, or not? The packaging or label on the food",2,No
+l13F,"Suppose you wanted to find out if the food you eat is safe. Would you look to any of the following sources for information, or not? The packaging or label on the food",97,Does not apply
+l13F,"Suppose you wanted to find out if the food you eat is safe. Would you look to any of the following sources for information, or not? The packaging or label on the food",98,DK
+l13F,"Suppose you wanted to find out if the food you eat is safe. Would you look to any of the following sources for information, or not? The packaging or label on the food",99,Refused
+l13G,"Suppose you wanted to find out if the food you eat is safe. Would you look to any of the following sources for information, or not? A famous person you like",1,Yes
+l13G,"Suppose you wanted to find out if the food you eat is safe. Would you look to any of the following sources for information, or not? A famous person you like",2,No
+l13G,"Suppose you wanted to find out if the food you eat is safe. Would you look to any of the following sources for information, or not? A famous person you like",97,Does not apply
+l13G,"Suppose you wanted to find out if the food you eat is safe. Would you look to any of the following sources for information, or not? A famous person you like",98,DK
+l13G,"Suppose you wanted to find out if the food you eat is safe. Would you look to any of the following sources for information, or not? A famous person you like",99,Refused
+l13H,"Suppose you wanted to find out if the food you eat is safe. Would you look to any of the following sources for information, or not? Local religious leaders",1,Yes
+l13H,"Suppose you wanted to find out if the food you eat is safe. Would you look to any of the following sources for information, or not? Local religious leaders",2,No
+l13H,"Suppose you wanted to find out if the food you eat is safe. Would you look to any of the following sources for information, or not? Local religious leaders",97,Does not apply
+l13H,"Suppose you wanted to find out if the food you eat is safe. Would you look to any of the following sources for information, or not? Local religious leaders",98,DK
+l13H,"Suppose you wanted to find out if the food you eat is safe. Would you look to any of the following sources for information, or not? Local religious leaders",99,Refused
+l14,"Considering the sources of information you would access, which one would you trust MOST to provide information about food safety?",1,Friends or family
+l14,"Considering the sources of information you would access, which one would you trust MOST to provide information about food safety?",2,"Medical professionals, such as your local doctor or nurse"
+l14,"Considering the sources of information you would access, which one would you trust MOST to provide information about food safety?",3,"Newspapers, television or radio"
+l14,"Considering the sources of information you would access, which one would you trust MOST to provide information about food safety?",4,The Internet/social media
+l14,"Considering the sources of information you would access, which one would you trust MOST to provide information about food safety?",5,INSERT country-specific relevant government agency responsible for providing food safety information]
+l14,"Considering the sources of information you would access, which one would you trust MOST to provide information about food safety?",6,The packaging or label on the food
+l14,"Considering the sources of information you would access, which one would you trust MOST to provide information about food safety?",7,A famous person you like
+l14,"Considering the sources of information you would access, which one would you trust MOST to provide information about food safety?",8,Local religious leaders
+l14,"Considering the sources of information you would access, which one would you trust MOST to provide information about food safety?",9,Would trust none of them
+l14,"Considering the sources of information you would access, which one would you trust MOST to provide information about food safety?",10,Some other source
+l14,"Considering the sources of information you would access, which one would you trust MOST to provide information about food safety?",98,Dont know
+l14,"Considering the sources of information you would access, which one would you trust MOST to provide information about food safety?",99,Refused
+l15,"In general, do you think the government should require businesses to adopt safety procedures and rules, or not?",1,Yes
+l15,"In general, do you think the government should require businesses to adopt safety procedures and rules, or not?",2,No
+l15,"In general, do you think the government should require businesses to adopt safety procedures and rules, or not?",98,DK
+l15,"In general, do you think the government should require businesses to adopt safety procedures and rules, or not?",99,Refused
+l16A,"In general, in your opinion does the government do a good job ensuring that the following are safe, or not? The food you buy",1,Yes
+l16A,"In general, in your opinion does the government do a good job ensuring that the following are safe, or not? The food you buy",2,No
+l16A,"In general, in your opinion does the government do a good job ensuring that the following are safe, or not? The food you buy",98,DK
+l16A,"In general, in your opinion does the government do a good job ensuring that the following are safe, or not? The food you buy",99,Refused
+l16B,"In general, in your opinion does the government do a good job ensuring that the following are safe, or not? The water you drink",1,Yes
+l16B,"In general, in your opinion does the government do a good job ensuring that the following are safe, or not? The water you drink",2,No
+l16B,"In general, in your opinion does the government do a good job ensuring that the following are safe, or not? The water you drink",98,DK
+l16B,"In general, in your opinion does the government do a good job ensuring that the following are safe, or not? The water you drink",99,Refused
+l16C,"In general, in your opinion does the government do a good job ensuring that the following are safe, or not? Powerlines in the city or area where you live",1,Yes
+l16C,"In general, in your opinion does the government do a good job ensuring that the following are safe, or not? Powerlines in the city or area where you live",2,No
+l16C,"In general, in your opinion does the government do a good job ensuring that the following are safe, or not? Powerlines in the city or area where you live",98,DK
+l16C,"In general, in your opinion does the government do a good job ensuring that the following are safe, or not? Powerlines in the city or area where you live",99,Refused
+l17A,"Suppose you lost a small bag that contained items of great financial value to you that had your name and address written on it. If it were found by each of the following people, in general, how likely is it that it would be returned to you with all of its contents? A neighbour",1,Very likely
+l17A,"Suppose you lost a small bag that contained items of great financial value to you that had your name and address written on it. If it were found by each of the following people, in general, how likely is it that it would be returned to you with all of its contents? A neighbour",2,Somewhat likely
+l17A,"Suppose you lost a small bag that contained items of great financial value to you that had your name and address written on it. If it were found by each of the following people, in general, how likely is it that it would be returned to you with all of its contents? A neighbour",3,Not likely at all
+l17A,"Suppose you lost a small bag that contained items of great financial value to you that had your name and address written on it. If it were found by each of the following people, in general, how likely is it that it would be returned to you with all of its contents? A neighbour",98,DK
+l17A,"Suppose you lost a small bag that contained items of great financial value to you that had your name and address written on it. If it were found by each of the following people, in general, how likely is it that it would be returned to you with all of its contents? A neighbour",99,Refused
+l17B,"Suppose you lost a small bag that contained items of great financial value to you that had your name and address written on it. If it were found by each of the following people, in general, how likely is it that it would be returned to you with all of its contents? A stranger",1,Very likely
+l17B,"Suppose you lost a small bag that contained items of great financial value to you that had your name and address written on it. If it were found by each of the following people, in general, how likely is it that it would be returned to you with all of its contents? A stranger",2,Somewhat likely
+l17B,"Suppose you lost a small bag that contained items of great financial value to you that had your name and address written on it. If it were found by each of the following people, in general, how likely is it that it would be returned to you with all of its contents? A stranger",3,Not likely at all
+l17B,"Suppose you lost a small bag that contained items of great financial value to you that had your name and address written on it. If it were found by each of the following people, in general, how likely is it that it would be returned to you with all of its contents? A stranger",98,DK
+l17B,"Suppose you lost a small bag that contained items of great financial value to you that had your name and address written on it. If it were found by each of the following people, in general, how likely is it that it would be returned to you with all of its contents? A stranger",99,Refused
+l17C,"Suppose you lost a small bag that contained items of great financial value to you that had your name and address written on it. If it were found by each of the following people, in general, how likely is it that it would be returned to you with all of its contents? The police",1,Very likely
+l17C,"Suppose you lost a small bag that contained items of great financial value to you that had your name and address written on it. If it were found by each of the following people, in general, how likely is it that it would be returned to you with all of its contents? The police",2,Somewhat likely
+l17C,"Suppose you lost a small bag that contained items of great financial value to you that had your name and address written on it. If it were found by each of the following people, in general, how likely is it that it would be returned to you with all of its contents? The police",3,Not likely at all
+l17C,"Suppose you lost a small bag that contained items of great financial value to you that had your name and address written on it. If it were found by each of the following people, in general, how likely is it that it would be returned to you with all of its contents? The police",98,DK
+l17C,"Suppose you lost a small bag that contained items of great financial value to you that had your name and address written on it. If it were found by each of the following people, in general, how likely is it that it would be returned to you with all of its contents? The police",99,Refused
+l18,How likely do you think it is that you could be injured while working in the next TWO years?,0,Not likely at all
+l18,How likely do you think it is that you could be injured while working in the next TWO years?,1,1
+l18,How likely do you think it is that you could be injured while working in the next TWO years?,2,2
+l18,How likely do you think it is that you could be injured while working in the next TWO years?,3,3
+l18,How likely do you think it is that you could be injured while working in the next TWO years?,4,4
+l18,How likely do you think it is that you could be injured while working in the next TWO years?,5,5
+l18,How likely do you think it is that you could be injured while working in the next TWO years?,6,6
+l18,How likely do you think it is that you could be injured while working in the next TWO years?,7,7
+l18,How likely do you think it is that you could be injured while working in the next TWO years?,8,8
+l18,How likely do you think it is that you could be injured while working in the next TWO years?,9,9
+l18,How likely do you think it is that you could be injured while working in the next TWO years?,10,Very likely
+l18,How likely do you think it is that you could be injured while working in the next TWO years?,98,DK
+l18,How likely do you think it is that you could be injured while working in the next TWO years?,99,Refused
+l19,Have you EVER been seriously injured while working?,1,Yes
+l19,Have you EVER been seriously injured while working?,2,No
+l19,Have you EVER been seriously injured while working?,98,DK
+l19,Have you EVER been seriously injured while working?,99,Refused
+l20A,Are any of the following a source of risk to your personal safety WHILE YOU ARE WORKING? Operating equipment or heavy machinery,1,Yes
+l20A,Are any of the following a source of risk to your personal safety WHILE YOU ARE WORKING? Operating equipment or heavy machinery,2,No
+l20A,Are any of the following a source of risk to your personal safety WHILE YOU ARE WORKING? Operating equipment or heavy machinery,98,DK
+l20A,Are any of the following a source of risk to your personal safety WHILE YOU ARE WORKING? Operating equipment or heavy machinery,99,Refused
+l20B,Are any of the following a source of risk to your personal safety WHILE YOU ARE WORKING? Fire,1,Yes
+l20B,Are any of the following a source of risk to your personal safety WHILE YOU ARE WORKING? Fire,2,No
+l20B,Are any of the following a source of risk to your personal safety WHILE YOU ARE WORKING? Fire,98,DK
+l20B,Are any of the following a source of risk to your personal safety WHILE YOU ARE WORKING? Fire,99,Refused
+l20C,Are any of the following a source of risk to your personal safety WHILE YOU ARE WORKING? Exposure to chemicals or biological substances,1,Yes
+l20C,Are any of the following a source of risk to your personal safety WHILE YOU ARE WORKING? Exposure to chemicals or biological substances,2,No
+l20C,Are any of the following a source of risk to your personal safety WHILE YOU ARE WORKING? Exposure to chemicals or biological substances,98,DK
+l20C,Are any of the following a source of risk to your personal safety WHILE YOU ARE WORKING? Exposure to chemicals or biological substances,99,Refused
+l20D,Are any of the following a source of risk to your personal safety WHILE YOU ARE WORKING? Physical harassment or violence,1,Yes
+l20D,Are any of the following a source of risk to your personal safety WHILE YOU ARE WORKING? Physical harassment or violence,2,No
+l20D,Are any of the following a source of risk to your personal safety WHILE YOU ARE WORKING? Physical harassment or violence,98,DK
+l20D,Are any of the following a source of risk to your personal safety WHILE YOU ARE WORKING? Physical harassment or violence,99,Refused
+l20E,Are any of the following a source of risk to your personal safety WHILE YOU ARE WORKING? Tripping or falling,1,Yes
+l20E,Are any of the following a source of risk to your personal safety WHILE YOU ARE WORKING? Tripping or falling,2,No
+l20E,Are any of the following a source of risk to your personal safety WHILE YOU ARE WORKING? Tripping or falling,98,DK
+l20E,Are any of the following a source of risk to your personal safety WHILE YOU ARE WORKING? Tripping or falling,99,Refused
+l21A,Have you or has anyone you work with experienced injury or harm from any of the following WHILE WORKING in the past TWO years? Operating equipment or heavy machinery,1,Yes
+l21A,Have you or has anyone you work with experienced injury or harm from any of the following WHILE WORKING in the past TWO years? Operating equipment or heavy machinery,2,No
+l21A,Have you or has anyone you work with experienced injury or harm from any of the following WHILE WORKING in the past TWO years? Operating equipment or heavy machinery,98,DK
+l21A,Have you or has anyone you work with experienced injury or harm from any of the following WHILE WORKING in the past TWO years? Operating equipment or heavy machinery,99,Refused
+l21B,Have you or has anyone you work with experienced injury or harm from any of the following WHILE WORKING in the past TWO years? Fire,1,Yes
+l21B,Have you or has anyone you work with experienced injury or harm from any of the following WHILE WORKING in the past TWO years? Fire,2,No
+l21B,Have you or has anyone you work with experienced injury or harm from any of the following WHILE WORKING in the past TWO years? Fire,98,DK
+l21B,Have you or has anyone you work with experienced injury or harm from any of the following WHILE WORKING in the past TWO years? Fire,99,Refused
+l21C,Have you or has anyone you work with experienced injury or harm from any of the following WHILE WORKING in the past TWO years? Exposure to chemicals or biological substances,1,Yes
+l21C,Have you or has anyone you work with experienced injury or harm from any of the following WHILE WORKING in the past TWO years? Exposure to chemicals or biological substances,2,No
+l21C,Have you or has anyone you work with experienced injury or harm from any of the following WHILE WORKING in the past TWO years? Exposure to chemicals or biological substances,98,DK
+l21C,Have you or has anyone you work with experienced injury or harm from any of the following WHILE WORKING in the past TWO years? Exposure to chemicals or biological substances,99,Refused
+l21D,Have you or has anyone you work with experienced injury or harm from any of the following WHILE WORKING in the past TWO years? Physical harassment or violence,1,Yes
+l21D,Have you or has anyone you work with experienced injury or harm from any of the following WHILE WORKING in the past TWO years? Physical harassment or violence,2,No
+l21D,Have you or has anyone you work with experienced injury or harm from any of the following WHILE WORKING in the past TWO years? Physical harassment or violence,98,DK
+l21D,Have you or has anyone you work with experienced injury or harm from any of the following WHILE WORKING in the past TWO years? Physical harassment or violence,99,Refused
+l21E,Have you or has anyone you work with experienced injury or harm from any of the following WHILE WORKING in the past TWO years? Tripping or falling,1,Yes
+l21E,Have you or has anyone you work with experienced injury or harm from any of the following WHILE WORKING in the past TWO years? Tripping or falling,2,No
+l21E,Have you or has anyone you work with experienced injury or harm from any of the following WHILE WORKING in the past TWO years? Tripping or falling,98,DK
+l21E,Have you or has anyone you work with experienced injury or harm from any of the following WHILE WORKING in the past TWO years? Tripping or falling,99,Refused
+l22,Do you agree or disagree with the following statement? You are free to report any safety problems you notice to your employer without fear of punishment,1,Agree
+l22,Do you agree or disagree with the following statement? You are free to report any safety problems you notice to your employer without fear of punishment,2,Disagree
+l22,Do you agree or disagree with the following statement? You are free to report any safety problems you notice to your employer without fear of punishment,98,DK
+l22,Do you agree or disagree with the following statement? You are free to report any safety problems you notice to your employer without fear of punishment,99,Refused
+l23,"Other than yourself, who do you feel is MOST responsible for your safety while you are working?",1,Your employer
+l23,"Other than yourself, who do you feel is MOST responsible for your safety while you are working?",2,The trade or labour union
+l23,"Other than yourself, who do you feel is MOST responsible for your safety while you are working?",3,The government
+l23,"Other than yourself, who do you feel is MOST responsible for your safety while you are working?",4,No one else is responsible
+l23,"Other than yourself, who do you feel is MOST responsible for your safety while you are working?",98,DK
+l23,"Other than yourself, who do you feel is MOST responsible for your safety while you are working?",99,Refused
+l24A,"Do you think each of the following CARE about your safety while you are working, yes or no? If the person or group does not apply to you, please say so. Your co-workers",1,Yes
+l24A,"Do you think each of the following CARE about your safety while you are working, yes or no? If the person or group does not apply to you, please say so. Your co-workers",2,No
+l24A,"Do you think each of the following CARE about your safety while you are working, yes or no? If the person or group does not apply to you, please say so. Your co-workers",97,Does not apply
+l24A,"Do you think each of the following CARE about your safety while you are working, yes or no? If the person or group does not apply to you, please say so. Your co-workers",98,DK
+l24A,"Do you think each of the following CARE about your safety while you are working, yes or no? If the person or group does not apply to you, please say so. Your co-workers",99,Refused
+l24B,"Do you think each of the following CARE about your safety while you are working, yes or no? If the person or group does not apply to you, please say so. Your boss or supervisor",1,Yes
+l24B,"Do you think each of the following CARE about your safety while you are working, yes or no? If the person or group does not apply to you, please say so. Your boss or supervisor",2,No
+l24B,"Do you think each of the following CARE about your safety while you are working, yes or no? If the person or group does not apply to you, please say so. Your boss or supervisor",97,Does not apply
+l24B,"Do you think each of the following CARE about your safety while you are working, yes or no? If the person or group does not apply to you, please say so. Your boss or supervisor",98,DK
+l24B,"Do you think each of the following CARE about your safety while you are working, yes or no? If the person or group does not apply to you, please say so. Your boss or supervisor",99,Refused
+l24C,"Do you think each of the following CARE about your safety while you are working, yes or no? If the person or group does not apply to you, please say so. The trade or labour union",1,Yes
+l24C,"Do you think each of the following CARE about your safety while you are working, yes or no? If the person or group does not apply to you, please say so. The trade or labour union",2,No
+l24C,"Do you think each of the following CARE about your safety while you are working, yes or no? If the person or group does not apply to you, please say so. The trade or labour union",97,Does not apply
+l24C,"Do you think each of the following CARE about your safety while you are working, yes or no? If the person or group does not apply to you, please say so. The trade or labour union",98,DK
+l24C,"Do you think each of the following CARE about your safety while you are working, yes or no? If the person or group does not apply to you, please say so. The trade or labour union",99,Refused
+l25,Do you think the safety rules at your place of work are a good thing to have or do they make your job more difficult to do?,1,A good thing
+l25,Do you think the safety rules at your place of work are a good thing to have or do they make your job more difficult to do?,2,Make your job more difficult to do
+l25,Do you think the safety rules at your place of work are a good thing to have or do they make your job more difficult to do?,3,Both
+l25,Do you think the safety rules at your place of work are a good thing to have or do they make your job more difficult to do?,97,Does not apply/No safety rules at work
+l25,Do you think the safety rules at your place of work are a good thing to have or do they make your job more difficult to do?,98,DK
+l25,Do you think the safety rules at your place of work are a good thing to have or do they make your job more difficult to do?,99,Refused
+l26,"Have you used the Internet, including social media, in the past 30 days?",1,Yes
+l26,"Have you used the Internet, including social media, in the past 30 days?",2,No
+l26,"Have you used the Internet, including social media, in the past 30 days?",98,DK
+l26,"Have you used the Internet, including social media, in the past 30 days?",99,Refused
+l27A,"When using the Internet or social media, do you worry about any of the following things happening to you? Online bullying, such as someone sending you a hateful message or comment through social media",1,Yes
+l27A,"When using the Internet or social media, do you worry about any of the following things happening to you? Online bullying, such as someone sending you a hateful message or comment through social media",2,No
+l27A,"When using the Internet or social media, do you worry about any of the following things happening to you? Online bullying, such as someone sending you a hateful message or comment through social media",98,DK
+l27A,"When using the Internet or social media, do you worry about any of the following things happening to you? Online bullying, such as someone sending you a hateful message or comment through social media",99,Refused
+l27B,"When using the Internet or social media, do you worry about any of the following things happening to you? Receiving false information, such as news or information which is not true",1,Yes
+l27B,"When using the Internet or social media, do you worry about any of the following things happening to you? Receiving false information, such as news or information which is not true",2,No
+l27B,"When using the Internet or social media, do you worry about any of the following things happening to you? Receiving false information, such as news or information which is not true",98,DK
+l27B,"When using the Internet or social media, do you worry about any of the following things happening to you? Receiving false information, such as news or information which is not true",99,Refused
+l27C,"When using the Internet or social media, do you worry about any of the following things happening to you? Fraud, such as someone stealing your bank information or your money",1,Yes
+l27C,"When using the Internet or social media, do you worry about any of the following things happening to you? Fraud, such as someone stealing your bank information or your money",2,No
+l27C,"When using the Internet or social media, do you worry about any of the following things happening to you? Fraud, such as someone stealing your bank information or your money",98,DK
+l27C,"When using the Internet or social media, do you worry about any of the following things happening to you? Fraud, such as someone stealing your bank information or your money",99,Refused
