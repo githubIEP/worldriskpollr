@@ -3,6 +3,6 @@ The goal of `wrp` is to provide you with easy, programmatic access to individual
 
 Lloyd’s Register Foundation teamed up with the Institute for Economics and Peace to examine the relationship between peace and perceptions of risk. You can see our findings in the 2021 Global Peace Index. This package was developed to enable further research on these important issues.
 
-Installation
-# install.packages("devtools")
+# Installation
+install.packages("devtools")
 devtools::install_github("githubIEP/wrp")
