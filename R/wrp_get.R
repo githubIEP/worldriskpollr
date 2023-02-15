@@ -13,7 +13,7 @@
 #' @export
 #'
 
-wrp_get <- function(geography = NULL, question = NULL) {
+wrp_get <- function(geography = NULL, question_number = NULL) {
 
   df <- wrp::wrp
   dict <- wrp::wrp_dictionary
@@ -27,22 +27,22 @@ wrp_get <- function(geography = NULL, question = NULL) {
                           geography == "region" ~ 7,
                           geography  == "income" ~ 234)
   }
-  if(is.null(question)){
+  if(is.null(question_number)){
     message("Please Select Survey Question")
     question = dict %>% filter(question) 
     tmp = menu(question$label) 
-    question = match(question$variable[tmp], dict$variable)
+    question_number = match(question$variable[tmp], dict$variable)
   }
   yr = match("year", dict$variable)
   wgt = ifelse(geography == 2, match("wgt", dict$variable), match("projectionWeight", dict$variable))
 
   disaggregation = dict %>% filter(disaggregator)
   
-  wrp_agg  = df[, c(geography, yr, wgt, question)] %>% filter(complete.cases(.)) %>%
+  wrp_agg  = df[, c(geography, yr, wgt, question_number)] %>% filter(complete.cases(.)) %>%
     mutate(None = "Aggregate") %>% relocate(None, .after = 1) %>%
     wrp_aggregate() %>% wrp_clean()
   wrp_dis = lapply(disaggregation$pos, function(i){
-    tmp = df[, c(geography, i, yr, wgt, question)] %>% filter(complete.cases(.))
+    tmp = df[, c(geography, i, yr, wgt, question_number)] %>% filter(complete.cases(.))
     tmp = tmp %>% wrp_aggregate() %>% wrp_clean()}) 
   wrp_dis = wrp_dis %>% bind_rows()
   wrp_agg = wrp_agg %>% rbind(wrp_dis)
