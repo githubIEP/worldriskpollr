@@ -13,46 +13,33 @@
 #' @export
 #'
 
-wrp_aggregate <- function(aggregation, survey_question, tagged = c(TRUE, FALSE)) {
+wrp_aggregate <- function() {
 
-  df <- wrp::wrp
-
-  if (tagged == TRUE) {
-
-    df <- df %>% mutate(across(where(is.labelled), to_factor))
-
-  }
-
+  df <- wrp
+  dict = wrp_dictionary
+  
+  message("Please Select Survey Question")
+  question = dict %>% filter(question) 
+  q = menu(question$label) 
+  q = match(question$variable[q], dict$variable)
+  disaggregation = dict %>% filter(disaggregator)
+  dis = menu(disaggregation$label)
+  dis = match(disaggregation$variable[dis], dict$variable)
+  yr = match("year", dict$variable)
+  wgt = ifelse(dis == 2, match("wgt", dict$variable), match("projectionWeight", dict$variable))
+  df = df[, c(dis, yr, wgt, q)] %>% filter(complete.cases(.))
+  names(df) = c("dis", "year", "wgt", "q")
   wrp_agg <- df %>%
-    rename(focus = survey_question) %>%
-    group_by(.data$year,
-             switch(aggregation,
-                    "country" = country,
-                    "iso3C" = iso3C,
-                    "year" = year,
-                    "globalRegion" = globalRegion,
-                    "region" = region,
-                    "government" = government,
-                    "countryIncomeLevel" = countryIncomeLevel,
-                    "age" = age,
-                    "gender" = gender,
-                    "education" = education,
-                    "incomeFeelings" = incomeFeelings,
-                    "income5" = income5,
-                    "urbanicity" = urbanicity,
-                    "householdSize" = householdSize,
-                    "childrenInHousehold" = childrenInHousehold),
-             .data$focus) %>%
-    summarise(weightedCount = case_when(aggregation == "country" ~ sum(.data$wgt),
-                                        TRUE ~ sum(.data$projectionWeight))) %>%
-    mutate(question = labelled::var_label(.data$focus)) %>%
-    rename(aggregation = "switch(...)", response = "focus") %>%
-    relocate(question, .before = response) %>%
-    ungroup()
-
-  labelled::var_label(wrp_agg$question) <- "Survey question"
-  labelled::var_label(wrp_agg$response) <- "Survey response"
-  labelled::var_label(wrp_agg$weightedCount) <- "Representative count of respondents"
+    group_by(dis, year, q) %>%
+    summarise(weightedCount = sum(.data$wgt)) %>%
+    #mutate(question = labelled::var_label(.data$q)) %>%
+    ungroup() %>%
+    group_by(dis, year) %>%
+    mutate(percentage = weightedCount / sum(weightedCount) * 100) %>%
+    ungroup() %>%
+    rename(response = q, disaggregation = dis) %>%
+    select(disaggregation, year, response, percentage) %>%
+    sjlabelled::label_to_colnames()
 
   wrp_agg
 
