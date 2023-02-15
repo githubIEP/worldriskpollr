@@ -1,10 +1,11 @@
 library(tidyverse)
 library(here)
 library(labelled)
-library(expss)
-
+library(sjlabelled)
+source("./data-raw/read_zip_online.R")
 # get raw data -----------------------------------------------------------------
-raw <- haven::read_sav("C:/Users/DavidHammond/Downloads/lrf_wrp_2021_full_data/lrf_wrp_2021_full_data.sav")
+
+raw <- read_zip_online("https://wrp.lrfoundation.org.uk/lrf_wrp_2021_full_data.zip", file.to.extract = 1)
 raw$projectionWeight = raw$PROJWT_2019
 raw$projectionWeight = ifelse(is.na(raw$projectionWeight), raw$PROJWT_2021, raw$projectionWeight)
 
@@ -18,8 +19,10 @@ wrp$countryIncomeLevel = as.character(wrp$countryIncomeLevel2019)
 wrp$countryIncomeLevel = ifelse(is.na(wrp$countryIncomeLevel), 
                                 as.character(wrp$countryIncomeLevel2021), wrp$countryIncomeLevel)
 wrp_dictionary = labelled::generate_dictionary(wrp) %>%
-  mutate(disaggregator = pos %in% c(2, 13:21, 234)) %>%
+  mutate(regional_disaggregate = pos %in% c(2,7,234)) %>%
+  mutate(disaggregator = pos %in% c(14:21)) %>%
   mutate(question = substr(variable, 1,1) == "q" | substr(variable, 1,2) == "vh")
+wrp_dictionary$label = ifelse(is.na(wrp_dictionary$label), "World Bank Income Levels", wrp_dictionary$label)
 
 # wrp = wrp %>% 
 # # change 2: convert variable labels to variable names ----
