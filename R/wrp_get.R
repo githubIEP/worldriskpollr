@@ -2,14 +2,19 @@
 #'
 #' Allows you to access aggregated data for a World Risk Poll question.
 #'
-#' @param aggregation string, a demographic category by which to aggregate
-#' @param survey_question string, the code for the survey question to focus on
-#' @param tagged logical, if TRUE, retrieve human-readable response and aggregations, if FALSE, retrieve dbl+lab
+#' @param geography string, a demographic category by which to aggregate, needs to be one of "country", "region" or "income"
+#' @param question_number number, the number code for the survey question to focus on
 #'
-#' @importFrom dplyr mutate rename group_by ungroup summarise relocate case_when bind_rows
-#' @importFrom labelled var_label
+#' @importFrom dplyr filter mutate rename group_by ungroup summarise relocate case_when bind_rows 
+#' @importFrom utils menu
+#' @importFrom stats complete.cases
+#' @importFrom rlang .data
 #'
 #' @return data frame with aggregated World Risk Poll question data
+#' 
+#' @examples wrp_get(geography = "country", question_number = 80)
+#' # To run interactively and select question
+#' # wrp_get() 
 #' @export
 #'
 
@@ -19,7 +24,7 @@ wrp_get <- function(geography = NULL, question_number = NULL) {
   dict <- wrp::wrp_dictionary
   if(is.null(geography)){
     message("Please Select Geography")
-    geography = dict %>% filter(regional_disaggregate)
+    geography = dict %>% filter(.data$regional_disaggregate)
     tmp = menu(geography$label)
     geography = match(geography$variable[tmp], dict$variable)
   }else{
@@ -36,7 +41,7 @@ wrp_get <- function(geography = NULL, question_number = NULL) {
   yr = match("year", dict$variable)
   wgt = ifelse(geography == 2, match("wgt", dict$variable), match("projectionWeight", dict$variable))
 
-  disaggregation = dict %>% filter(disaggregator)
+  disaggregation = dict %>% filter(.data$disaggregator)
   
   wrp_agg  = df[, c(geography, yr, wgt, question_number)] %>% filter(complete.cases(.)) %>%
     mutate(None = "Aggregate") %>% relocate(None, .after = 1) %>%

@@ -15,11 +15,7 @@ knitr::opts_chunk$set(
 ```
 
 ```{r setup, include = FALSE, message = FALSE, warning = FALSE}
-
 library(wrp)
-library(dplyr)
-library(stringr)
-
 ```
 
 # Installation
@@ -50,7 +46,7 @@ IEP created this package to provide you with easy, programmatic access to the Wo
 
 ## Country coverage
 
-The World Risk Poll surveyed people in `r wrp %>% distinct(country) %>% nrow()` countries, including countries with very low levels of peace where little or no official data exists, yet where reported risks are often high.
+The World Risk Poll surveyed people in 150 countries, including countries with very low levels of peace where little or no official data exists, yet where reported risks are often high.
 
 # Getting started
 
@@ -97,7 +93,7 @@ head(wrp_search("violence"))
 
 ## Getting aggregated World Risk Poll data using `wrp_get`
 
-The dataset is labeled to allow you to easily access the coded variables, the long titles for demographic variables and the full questions provided in the survey. You can access these labels using the process outlined in the [`labelled` package](https://cran.r-project.org/web/packages/labelled/vignettes/intro_labelled.html).
+The dataset is labeled to allow you to easily access the coded variables, the long titles for demographic variables and the full questions provided in the survey. 
 
 ```{r, message = FALSE, warning = FALSE}
 

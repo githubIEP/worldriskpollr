@@ -7,7 +7,7 @@
 wrp_aggregate(df)
 }
 \arguments{
-\item{df}{string, a demographic category by which to aggregate}
+\item{df}{data frame, a demographic category by which to aggregate}
 }
 \value{
 data frame with aggregated World Risk Poll question data

@@ -2,10 +2,10 @@
 #'
 #' Allows you to access aggregated data for a World Risk Poll question.
 #'
-#' @param df string, a demographic category by which to aggregate
+#' @param df data frame, a demographic category by which to aggregate
 #'
-#' @importFrom dplyr mutate rename group_by_at ungroup summarise select
-#' @importFrom sjlabelled label_to_colnames
+#' @importFrom dplyr mutate rename group_by_at ungroup summarise select mutate_if
+#' @importFrom janitor clean_names
 #'
 #' @return data frame with aggregated World Risk Poll question data
 #'
@@ -15,7 +15,7 @@ wrp_clean = function(df){
   names(df)[2] = "group"
   df$year = as.numeric(df$`Year of interview`)
   df = df %>% mutate_if(is.factor, as.character) %>%
-    janitor::clean_names("lower_camel") 
+    clean_names("lower_camel") 
   df = df[, c(1, 6, 2, 8, 7, 4, 5)]
   return(df)
 }

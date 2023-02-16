@@ -4,18 +4,21 @@
 \alias{wrp_get}
 \title{Get aggregated data for a question in the World Risk Poll}
 \usage{
-wrp_get(geography = NULL, question = NULL)
+wrp_get(geography = NULL, question_number = NULL)
 }
 \arguments{
-\item{aggregation}{string, a demographic category by which to aggregate}
+\item{geography}{string, a demographic category by which to aggregate, needs to be one of "country", "region" or "income"}
 
-\item{survey_question}{string, the code for the survey question to focus on}
-
-\item{tagged}{logical, if TRUE, retrieve human-readable response and aggregations, if FALSE, retrieve dbl+lab}
+\item{question_number}{number, the number code for the survey question to focus on}
 }
 \value{
 data frame with aggregated World Risk Poll question data
 }
 \description{
 Allows you to access aggregated data for a World Risk Poll question.
+}
+\examples{
+wrp_get(geography = "country", question_number = 80)
+# To run interactively and select question
+# wrp_get() 
 }

@@ -15,9 +15,12 @@ RoxygenNote: 7.2.3
 Imports: 
     magrittr,
     dplyr,
-    labelled,
-    ggplot2,
-    tidyr
+    tidyr,
+    sjlabelled,
+    janitor,
+    rlang,
+    stats,
+    utils
 Suggests: 
     knitr,
     rmarkdown

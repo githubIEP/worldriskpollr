@@ -7,15 +7,15 @@
 wrp_search(string = "violence")
 }
 \arguments{
-\item{aggregation}{string, a demographic category by which to aggregate}
-
-\item{survey_question}{string, the code for the survey question to focus on}
-
-\item{tagged}{logical, if TRUE, retrieve human-readable response and aggregations, if FALSE, retrieve dbl+lab}
+\item{string}{string, a search term to look for in the World Risk Poll questions}
 }
 \value{
-data frame with aggregated World Risk Poll question data
+data frame with World Risk Poll questions that contain the search term.
 }
 \description{
 Allows you to access aggregated data for a World Risk Poll question.
+}
+\examples{
+ 
+wrp = wrp_search(string = "violence")
 }
