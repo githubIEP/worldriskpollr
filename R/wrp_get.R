@@ -3,7 +3,7 @@
 #' Allows you to access aggregated data for a World Risk Poll question.
 #'
 #' @param geography string, a demographic category by which to aggregate, needs to be one of "country", "region" or "income"
-#' @param question_number number, the number code for the survey question to focus on
+#' @param question_uid string, the number code for the survey question to focus on
 #'
 #' @importFrom dplyr filter mutate rename group_by ungroup summarise relocate case_when bind_rows
 #' @importFrom utils menu
@@ -18,26 +18,21 @@
 #' @export
 #'
 
-wrp_get <- function(geography = NULL, question_number = NULL) {
+wrp_get <- function(geography, question_uid = NULL) {
   df <- wrp_data
   dict <- wrp_dictionary
-  if (is.null(geography)) {
-    message("Please Select Geography")
-    geography <- dict %>% filter(.data$regional_disaggregate)
-    tmp <- menu(geography$label)
-    geography <- match(geography$variable[tmp], dict$variable)
-  } else {
-    geography <- case_when(
-      geography == "country" ~ 2,
-      geography == "region" ~ 7,
-      geography == "income" ~ 234
-    )
-  }
-  if (is.null(question_number)) {
+  #error check that geograpy and questions are in dataset
+  geography <- case_when(
+    geography == "country" ~ regions$pos[1],
+    geography == "region" ~ regions$pos[2],
+    geography == "income" ~ regions$pos[3]
+ if (is.null(question_uid)) {
     message("Please Select Survey Question")
-    question <- dict %>% filter(question)
-    tmp <- menu(question$label)
-    question_number <- match(question$variable[tmp], dict$variable)
+    tmp <- menu(questions$label)
+    question_uid <- questions$pos[tmp]
+ }else{
+    question_uid = match(questions_uid, questions$WRP_UID)
+    questions_uid = questions$pos[questions_uid]
   }
   yr <- match("year", dict$variable)
   wgt <- ifelse(geography == 2, match("wgt", dict$variable), match("projectionWeight", dict$variable))

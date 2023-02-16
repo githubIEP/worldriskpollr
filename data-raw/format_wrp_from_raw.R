@@ -36,10 +36,18 @@ wrp_dictionary <- labelled::generate_dictionary(wrp) %>%
   mutate(disaggregator = pos %in% c(14:21)) %>%
   mutate(question = substr(variable, 1, 1) == "q" | substr(variable, 1, 2) == "vh")
 wrp_dictionary$label <- ifelse(is.na(wrp_dictionary$label), "World Bank Income Levels", wrp_dictionary$label)
-
+wrp_dictionary = wrp_dictionary[wrp_dictionary$regional_disaggregate | wrp_dictionary$disaggregator | wrp_dictionary$question,]
+wrp_dictionary$WRP_UID = NA
+wrp_dictionary$WRP_UID[wrp_dictionary$regional_disaggregate] = paste0("REG", 1:sum(wrp_dictionary$regional_disaggregate))
+wrp_dictionary$WRP_UID[wrp_dictionary$disaggregator] = paste0("DIS", 1:sum(wrp_dictionary$disaggregator))
+wrp_dictionary$WRP_UID[wrp_dictionary$question] = paste0("Q", 1:sum(wrp_dictionary$question))
+wrp_dictionary = wrp_dictionary %>% select(WRP_UID, pos, variable, label, levels)
+regions = wrp_dictionary[substr(wrp_dictionary$WRP_UID,1,3) == "REG",] 
+disaggregations = wrp_dictionary[substr(wrp_dictionary$WRP_UID,1,3) == "DIS",] 
+questions = wrp_dictionary[substr(wrp_dictionary$WRP_UID,1,1) == "Q",] 
 # wrp = wrp %>%
 # # change 2: convert variable labels to variable names ----
 #   sjlabelled::label_to_colnames()
 wrp_data <- wrp
-usethis::use_data(wrp_data, wrp_dictionary, overwrite = TRUE, internal = T, compress = "xz")
+usethis::use_data(wrp_data, wrp_dictionary, regions, disaggregations, questions, overwrite = TRUE, internal = T, compress = "xz")
 # usethis::use_data(wrp_dictionary, overwrite = TRUE, compress = "xz")

@@ -19,7 +19,8 @@ wrp_aggregate <- function(df) {
     summarise(weightedCount = sum(.data$wgt)) %>%
     ungroup() %>%
     group_by_at(c(1, 2)) %>%
-    mutate(percentage = .data$weightedCount / sum(.data$weightedCount) * 100) %>%
+    mutate(percentage = .data$weightedCount / 
+             sum(.data$weightedCount) * 100) %>%
     ungroup() %>%
     label_to_colnames() %>%
     select(-.data$weightedCount)

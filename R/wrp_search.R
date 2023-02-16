@@ -2,12 +2,11 @@
 #'
 #' Allows you to access aggregated data for a World Risk Poll question.
 #'
-#' @param string string, a search term to look for in the World Risk Poll questions
+#' @param string string, search term for the World Risk Poll questions
 #'
-#' @importFrom dplyr mutate rename group_by ungroup summarise relocate case_when bind_rows
 #' @importFrom tidyr unnest
 #'
-#' @return data frame with World Risk Poll questions that contain the search term.
+#' @return data frame with World Risk Poll questions containing the search term.
 #' @examples
 #' wrp <- wrp_search(string = "violence")
 #' @export
@@ -15,7 +14,8 @@
 
 wrp_search <- function(string = "violence") {
   dict <- wrp_dictionary %>% unnest(levels)
-  matches <- unique(c(grep(string, dict$label, ignore.case = TRUE), grep(string, dict$levels, ignore.case = TRUE)))
+  matches <- unique(c(grep(string, dict$label, ignore.case = TRUE), 
+                      grep(string, dict$levels, ignore.case = TRUE)))
   out <- dict[matches, c("pos", "label", "levels")]
   names(out) <- c("wrp_question_number", "question", "responses")
   if (nrow(out) == 0) {
