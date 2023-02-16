@@ -52,11 +52,7 @@ The World Risk Poll surveyed people in 150 countries, including countries with v
 
 The `wrp` package is designed to give you quick and easy access to all data collected through the World Risk Poll. `wrp` provides you with a labeled dataset of all World Risk Poll data. This wide dataset can then be manipulated to suit your enquiry.
 
-```{r}
 
-head(wrp::wrp)
-
-```
 
 ## Search the World Risk Poll with `wrp_search`
 

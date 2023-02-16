@@ -20,8 +20,8 @@
 
 wrp_get <- function(geography = NULL, question_number = NULL) {
 
-  df <- wrp::wrp
-  dict <- wrp::wrp_dictionary
+  df <- wrp_data
+  dict <- wrp_dictionary
   if(is.null(geography)){
     message("Please Select Geography")
     geography = dict %>% filter(.data$regional_disaggregate)
@@ -43,12 +43,14 @@ wrp_get <- function(geography = NULL, question_number = NULL) {
 
   disaggregation = dict %>% filter(.data$disaggregator)
   
-  wrp_agg  = df[, c(geography, yr, wgt, question_number)] %>% filter(complete.cases(.)) %>%
-    mutate(None = "Aggregate") %>% relocate(None, .after = 1) %>%
+  wrp_agg  = df[, c(geography, yr, wgt, question_number)] 
+  wrp_agg = wrp_agg[!is.na(wrp_agg[,4]),]  %>%
+    mutate(None = "Aggregate") 
+  wrp_agg = wrp_agg[,c(1,5,2,3,4)]  %>%
     wrp_aggregate() %>% wrp_clean()
   wrp_dis = lapply(disaggregation$pos, function(i){
-    tmp = df[, c(geography, i, yr, wgt, question_number)] %>% filter(complete.cases(.))
-    tmp = tmp %>% wrp_aggregate() %>% wrp_clean()}) 
+    tmp = df[, c(geography, i, yr, wgt, question_number)] 
+   tmp = tmp[!is.na(tmp[,5]),] %>% wrp_aggregate() %>% wrp_clean()}) 
   wrp_dis = wrp_dis %>% bind_rows()
   wrp_agg = wrp_agg %>% rbind(wrp_dis)
   return(wrp_agg)

@@ -39,6 +39,6 @@ wrp_dictionary$label = ifelse(is.na(wrp_dictionary$label), "World Bank Income Le
 # wrp = wrp %>%
 # # change 2: convert variable labels to variable names ----
 #   sjlabelled::label_to_colnames()
-
-usethis::use_data(wrp, overwrite = TRUE, compress = "xz")
-usethis::use_data(wrp_dictionary, overwrite = TRUE, compress = "xz")
+wrp_data = wrp
+usethis::use_data(wrp_data, wrp_dictionary, overwrite = TRUE, internal = T, compress = "xz")
+#usethis::use_data(wrp_dictionary, overwrite = TRUE, compress = "xz")

@@ -8,7 +8,6 @@ Description: Provides users with programmatic access to individual-level survey
   data from the World Risk Poll, conveniently packaged for consumption by R users.
 License: MIT + file LICENSE
 Encoding: UTF-8
-LazyData: true
 Depends: 
     R (>= 2.10)
 RoxygenNote: 7.2.3

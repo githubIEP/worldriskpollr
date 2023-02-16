@@ -15,7 +15,7 @@
 
 wrp_search <- function (string = "violence") 
 {
-  dict = wrp::wrp_dictionary %>% unnest(levels)
+  dict = wrp_dictionary %>% unnest(levels)
   matches = unique(c(grep(string, dict$label, ignore.case = TRUE), grep(string, dict$levels, ignore.case = TRUE)))
   out = dict[matches, c("pos", "label", "levels")]
   names(out) = c("wrp_question_number", "question", "responses")
