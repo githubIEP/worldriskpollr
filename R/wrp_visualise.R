@@ -13,12 +13,12 @@
 #' #' @return stacked bar chart of aggregated World Risk Poll question data
 #' #' @export
 #' #'
-#' 
+#'
 #' wrp_graph <- function(aggregation, survey_question) {
-#' 
+#'
 #'   df <- wrp::wrp_aggregate(aggregation, survey_question, TRUE) %>%
 #'     drop_na(aggregation)
-#' 
+#'
 #'   plot <- ggplot(df, aes(x = weightedCount, y = aggregation, fill = response)) +
 #'     geom_bar(stat = "identity", position = "fill") +
 #'     theme_minimal() +
@@ -33,13 +33,13 @@
 #'                                  "#c5b0d5", "#8c564b", "#c49c94", "#e377c2", "#f7b6d2",
 #'                                  "#7f7f7f", "#c7c7c7", "#bcbd22", "#dbdb8d", "#17becf",
 #'                                  "#9edae5"))
-#' 
+#'
 #'   print(df %>% distinct(question))
-#' 
+#'
 #'   show(plot)
-#' 
+#'
 #' }
-#' 
+#'
 #' #' Map the distribution of responses to chosen World Risk Poll questions
 #' #'
 #' #' Provides a map of the proportion of people in each country who responded to a
@@ -56,16 +56,16 @@
 #' #' @return map
 #' #' @export
 #' #'
-#' 
+#'
 #' wrp_map <- function(survey_question, survey_response) {
-#' 
+#'
 #'   wrp_df <- wrp_aggregate("country", survey_question, TRUE) %>%
 #'     group_by(year, aggregation) %>%
 #'     mutate(adm0_a3 = countrycode::countrycode(aggregation, "country.name", "iso3c", custom_match = c("Kosovo" = "KSV")),
 #'            pct = weightedCount / sum(weightedCount) * 100) %>%
 #'     filter(response == survey_response) %>%
 #'     ungroup()
-#' 
+#'
 #'   plot <- ne_countries(scale = "medium", returnclass = "sf") %>%
 #'     filter(sovereignt != "Antarctica") %>%
 #'     left_join(wrp_df) %>%
@@ -80,7 +80,7 @@
 #'          subtitle = paste0("Proportion of people in each country who responded \"", str_to_lower(survey_response), "\""),
 #'          fill = NULL) +
 #'     scale_fill_steps(low = "white", high = "#4F98D3")
-#' 
+#'
 #'   show(plot)
-#' 
+#'
 #' }
