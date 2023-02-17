@@ -6,7 +6,7 @@
 
 .get_regional_column <- function(geography = wrp_regions$WRP_UID) {
   stopifnot(
-    "`geography` must be either `country`, `regions` or `income`" =
+    "`geography` must be either `country` or `region`" =
       is.character(match.arg(geography))
   )
   geography <- wrp_regions$pos[match(geography, wrp_regions$WRP_UID)]

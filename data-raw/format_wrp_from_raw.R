@@ -32,8 +32,8 @@ wrp_data$countryIncomeLevel <- ifelse(is.na(wrp_data$countryIncomeLevel),
   as.character(wrp_data$countryIncomeLevel2021), wrp_data$countryIncomeLevel
 )
 wrp_dictionary <- labelled::generate_dictionary(wrp_data) %>%
-  mutate(regional_disaggregate = pos %in% c(2, 6, 233)) %>%
-  mutate(disaggregator = pos %in% c(3, 13:15, 17:19)) %>%
+  mutate(regional_disaggregate = pos %in% c(2, 6)) %>%
+  mutate(disaggregator = pos %in% c(3, 13:14, 17)) %>%
   mutate(question = substr(variable, 1, 1) == "q" |
            substr(variable, 1, 2) == "vh") %>%
   mutate(needed = variable %in% c("year", "wgt", "projectionWeight"))
@@ -52,7 +52,7 @@ wrp_weight_col <- match("wgt", wrp_dictionary$variable)
 wrp_projweight_col <- match("projectionWeight", wrp_dictionary$variable)
 wrp_dictionary$WRP_UID <- NA
 regional_ids <- c("country", "region", "income")
-wrp_dictionary$WRP_UID[wrp_dictionary$regional_disaggregate] <- regional_ids
+wrp_dictionary$WRP_UID[wrp_dictionary$regional_disaggregate] <- regional_ids[1:2]
 wrp_dictionary$WRP_UID[wrp_dictionary$disaggregator] <-
   paste0("DIS", 1:sum(wrp_dictionary$disaggregator))
 wrp_dictionary$WRP_UID[wrp_dictionary$question] <-
@@ -68,8 +68,8 @@ wrp_questions <- wrp_dictionary[substr(wrp_dictionary$WRP_UID, 1, 1) == "Q", ]
 wrp_questions$WRP_UID <- toupper(wrp_questions$variable)
 wrp_needed = wrp_dictionary[substr(wrp_dictionary$WRP_UID, 1, 4) == "NEED", ]
 #wrp_data = remove_all_labels(wrp_data)
-wrp_regions = wrp_regions %>% select(-label)
-wrp_disaggregations = wrp_disaggregations %>% select(-label)
+wrp_regions = wrp_regions %>% select(-levels)
+wrp_disaggregations = wrp_disaggregations %>% select(-levels)
 usethis::use_data(wrp_data,
                   wrp_year_col,
                   wrp_projweight_col,

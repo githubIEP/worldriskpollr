@@ -7,7 +7,8 @@
 .get_regional_column(geography = wrp_regions$WRP_UID)
 }
 \arguments{
-\item{geography}{string, a demographic category by which to aggregate, needs to be one of "country", "region" or "income"}
+\item{geography}{string, a demographic category by which to aggregate, needs
+to be one of "country", "region" or "income"}
 }
 \description{
 Get the column number for the geography selected
