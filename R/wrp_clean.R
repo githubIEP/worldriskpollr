@@ -14,10 +14,10 @@ wrp_clean <- function(df) {
   names(df)[1] <- "geography"
   names(df)[4] <- "response"
   names(df)[2] <- "group"
-  df$year <- as.numeric(df$`Year of interview`)
   df <- df %>%
     mutate_if(is.factor, as.character) %>%
-    clean_names("lower_camel")
-  df <- df[, c(1, 6, 2, 8, 7, 4, 5)]
+    clean_names("lower_camel") %>%
+    rename(year = yearOfInterview)
+  df <- df[, c(1, 6, 3, 7, 4, 5)]
   return(df)
 }

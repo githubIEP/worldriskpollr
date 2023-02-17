@@ -62,3 +62,27 @@ Covered in Note 1 - According to [Stackoverflow](https://stackoverflow.com/quest
 ❯ On fedora-clang-devel (r-devel) checking HTML version of manual ... NOTE Skipping checking HTML validation: no command 'tidy' found
 
 According to [Stackoverflow](https://stackoverflow.com/questions/74857062/rhub-cran-check-keeps-giving-html-note-on-fedora-test-no-command-tidy-found) this note can be ignored.
+
+## Second Submission
+
+### NOTE 1
+   Found the following (possibly) invalid URLs:
+     URL: http://visionofhumanity.org (moved to
+https://www.visionofhumanity.org/)
+       From: inst/doc/wrp_vignette.html
+       Status: 301
+       Message: Moved Permanently
+
+Please change http --> https, add trailing slashes, or follow moved
+content as appropriate.
+
+- Fixed
+
+### NOTE 2
+
+   Size of tarball: 8807987 bytes
+
+Not more than 5 MB for a CRAN package.
+
+- Reduced.
+Please fix and resubmit.

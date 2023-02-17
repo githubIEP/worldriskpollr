@@ -49,7 +49,7 @@ You can access more details and findings related to the World Risk poll [here](h
 
 ## Institute for Economics and Peace
 
-Lloyd's Register teamed up with the Institute for Economics and Peace (IEP) to explore the complex relationship between peace and people's perceptions of risk and their safety and security. You can see our latest findings in the annual release of the Global Peace Index In June. Further information about IEP can be found [here](http://visionofhumanity.org).
+Lloyd's Register teamed up with the Institute for Economics and Peace (IEP) to explore the complex relationship between peace and people's perceptions of risk and their safety and security. You can see our latest findings in the annual release of the Global Peace Index In June. Further information about IEP can be found [here](https://www.visionofhumanity.org/)).
 
 IEP created this package to provide you with easy, programmatic access to the World Risk Poll. We are responsible for maintaining it. We encourage you to reach out to us directly if you have any questions about the package or our broader work measuring trends in peace and security.
 

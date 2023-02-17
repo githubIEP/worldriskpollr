@@ -4,5 +4,5 @@
 #'
 
 .get_weight_column <- function(wrp_geography_col) {
-  ifelse(wrp_geography_col == 2, wrp_weight_col, wrp_projweight_col)
+  ifelse(wrp_geography_col == 1, wrp_weight_col, wrp_projweight_col)
 }
