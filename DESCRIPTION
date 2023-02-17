@@ -2,8 +2,10 @@ Package: worldriskpollr
 Type: Package
 Title: Aggregated Survey Data from the World Risk Poll'
 Version: 0.1.0
-Author: person("David", "Hammond", email = "dhammond@economicsandpeace.org", role = c("aut", "cre"))
-Maintainer: <dhammond@economicsandpeace.org>
+Date: 2023-02-17
+Authors@R: person("David", "Hammond", email = "dhammond@economicsandpeace.org", role = c("aut", "cre"))
+Author: David Hammond [aut, cre]
+Maintainer: David Hammond <dhammond@economicsandpeace.org>
 Description: Provides users with programmatic access to aggregated survey 
   data from the World Risk Poll, conveniently packaged for consumption by R users.
 URL: <https://wrp.lrfoundation.org.uk/data-resources/>
