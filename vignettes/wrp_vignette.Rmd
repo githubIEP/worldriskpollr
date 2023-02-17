@@ -20,9 +20,18 @@ library(worldriskpollr)
 
 # Installation
 
-You can install the worldRiskpoll package with:
+You can install the released version of worldriskpollr from [CRAN](https://CRAN.R-project.org) with:
 
-TO DO: add installation information.
+``` r
+install.packages("worldriskpollr")
+```
+
+And the development version from [GitHub](https://github.com/) with:
+
+``` r
+# install.packages("devtools")
+devtools::install_github("githubIEP/worldriskpollr")
+```
 
 # Introduction
 
@@ -40,47 +49,27 @@ You can access more details and findings related to the World Risk poll [here](h
 
 ## Institute for Economics and Peace
 
-Lloyd's Register teamed up with the Institute for Economics and Peace to explore the complex relationship between peace and people's perceptions of risk and their safety and security. You can see our latest findings in the upcoming 2021 Global Peace Index.
+Lloyd's Register teamed up with the Institute for Economics and Peace (IEP) to explore the complex relationship between peace and people's perceptions of risk and their safety and security. You can see our latest findings in the annual release of the Global Peace Index In June. Further information about IEP can be found [here](http://visionofhumanity.org).
 
 IEP created this package to provide you with easy, programmatic access to the World Risk Poll. We are responsible for maintaining it. We encourage you to reach out to us directly if you have any questions about the package or our broader work measuring trends in peace and security.
 
 ## Country coverage
 
-The World Risk Poll surveyed people in 150 countries, including countries with very low levels of peace where little or no official data exists, yet where reported risks are often high.
+The World Risk Poll surveyed people in 150 countries in total, including countries with very low levels of peace where little or no official data exists, yet where reported risks are often high.
 
 # Getting started
 
-The `wrp` package is designed to give you quick and easy access to all data collected through the World Risk Poll. `wrp` provides you with a labeled dataset of all World Risk Poll data. This wide dataset can then be manipulated to suit your enquiry.
-
-
+The `worldriskpollr` package is designed to give you quick and easy access to all data collected through the World Risk Poll. `worldriskpollr` provides you with an interactive package to interact and access aggregated survey data.
 
 ## Search the World Risk Poll with `wrp_search`
 
-The `wrp` package provides you with an easy function for aggregating the individual-level survey data to discover summaries by geographic and demographic factors. You can aggregate the following levels:
+To search for a question if interest, `worldriskpollr` provides `wrp_search` for users to enter a search term. If the search term is a match, `wrp_search` will return a data frame with the following columns.
 
--   country, respondent's country of residence;
+-   `wrp_question_uid`: The unique identifier for the question, needed to use the function `wrp_get`.
 
--   globalRegion, global region respondent lives in;
+-   `question`: The question in full.
 
--   year, global aggregate by year;
-
--   countryIncomeLevel, World Bank Income classification of country;
-
--   gender, respondent's gender;
-
--   education, respondent's highest level of education;
-
--   incomeFeelings, respondent's feelings about their household income;
-
--   income5, respondent's per capita income quintile;
-
--   urbanicity, respondent's residence: urban or rural;
-
--   householdSize, total number of people in the respondent's household;
-
--   childrenInHousehold, total number of children under 15 in the respondent's household.
-
-Provide the desired aggregation level to the `wrp_get` function as a string. You then need to provide the question code (also as a string) and determine whether you want the data to be returned as a numeric and labeled value or as a more human-readable character value.
+-   `responses`: The reponses given in the poll.
 
 ```{r, message = FALSE, warning = FALSE}
 head(wrp_search("violence"))
@@ -88,9 +77,48 @@ head(wrp_search("violence"))
 
 ## Getting aggregated World Risk Poll data using `wrp_get`
 
-The dataset is labeled to allow you to easily access the coded variables, the long titles for demographic variables and the full questions provided in the survey. 
+The `wrp_get` function provides users with a way of access aggregated data. Users can select which geographic region they would like to see the data at:
+
+-   `country`: data is aggregated to the national level
+
+-   `region`: data is aggregated to the national level
+
+-   `income`: data is aggregated based on World Bank Income classification of the country;
+
+The results will be disaggregated by the following groups:
+
+-   `gender`, respondent's gender;
+
+-   `education`, respondent's highest level of education;
+
+-   `incomeFeelings`, respondent's feelings about their household income;
+
+-   `income5`, respondent's per capita income quintile;
+
+-   `urbanicity`, respondent's residence: urban or rural;
+
+-   `householdSize`, total number of people in the respondent's household;
+
+-   `childrenInHousehold`, total number of children under 15 in the respondent's household.
+
+Users need to provide the desired aggregation level to `wrp_get` as a string. It is also necessary to provide a question code string, such as those provided returned in `wrp_search`. For example:
 
 ```{r, message = FALSE, warning = FALSE}
 head(wrp_get(geography = "country", wrp_question_uid = "Q1"))
 ```
 
+This returns a 6 column dataframe in tidy format with the following columns:
+
+-   `geography`: Lists the geography selected.
+
+-   `disaggregation`: The disaggregation used in the data results.
+
+-   `group`: the type of disaggregation
+
+-   `year`: year of results
+
+-   `question`: the question in full
+
+-   `response`: the response
+
+-   `percentage`: the percentage of respondents for each disaggregation that provided the relevant response.
