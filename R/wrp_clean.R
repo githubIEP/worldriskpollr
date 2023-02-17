@@ -4,7 +4,7 @@
 #'
 #' @param df data frame, a demographic category by which to aggregate
 #'
-#' @importFrom dplyr mutate rename group_by_at ungroup summarise select mutate_if
+#' @importFrom dplyr mutate mutate_if
 #' @importFrom janitor clean_names
 #'
 #' @return data frame with aggregated World Risk Poll question data

@@ -13,11 +13,13 @@
 #'
 
 wrp_search <- function(string = "violence") {
-  dict <- wrp_dictionary %>% unnest(levels)
-  matches <- unique(c(grep(string, dict$label, ignore.case = TRUE), 
-                      grep(string, dict$levels, ignore.case = TRUE)))
-  out <- dict[matches, c("pos", "label", "levels")]
-  names(out) <- c("wrp_question_number", "question", "responses")
+  dict <- wrp_questions %>% unnest(levels)
+  matches <- unique(c(
+    grep(string, dict$label, ignore.case = TRUE),
+    grep(string, dict$levels, ignore.case = TRUE)
+  ))
+  out <- dict[matches, c("WRP_UID", "label", "levels")]
+  names(out) <- c("wrp_question_uid", "question", "responses")
   if (nrow(out) == 0) {
     message("No instances of that search term in the World Risk Poll questions")
   }

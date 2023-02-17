@@ -80,7 +80,7 @@ The `wrp` package provides you with an easy function for aggregating the individ
 
 -   childrenInHousehold, total number of children under 15 in the respondent's household.
 
-Provide the desired aggregation level to the `wrp_aggregation` function as a string. You then need to provide the question code (also as a string) and determine whether you want the data to be returned as a numeric and labeled value or as a more human-readable character value.
+Provide the desired aggregation level to the `wrp_get` function as a string. You then need to provide the question code (also as a string) and determine whether you want the data to be returned as a numeric and labeled value or as a more human-readable character value.
 
 ```{r, message = FALSE, warning = FALSE}
 head(wrp_search("violence"))
@@ -91,7 +91,6 @@ head(wrp_search("violence"))
 The dataset is labeled to allow you to easily access the coded variables, the long titles for demographic variables and the full questions provided in the survey. 
 
 ```{r, message = FALSE, warning = FALSE}
-# Access the full question coded "L1"
-head(wrp_get(geography = "country", question_number = 80))
+head(wrp_get(geography = "country", wrp_question_uid = "Q1"))
 ```
 
