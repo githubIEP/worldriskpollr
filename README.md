@@ -1,12 +1,12 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# wrp
+# worldriskpollr
 
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of *wrp* is to provide you with easy, programmatic access to
+The goal of *worldriskpollr* is to provide you with easy, programmatic access to
 individual-level survey data from the World Risk Poll. Lloyd’s
 Register Foundation's World Risk Poll provides us with the first ever
 complete picture of the differences between people’s thoughts on, and
@@ -17,9 +17,7 @@ and help them feel safer.
 
 Lloyd’s Register Foundation teamed up with the Institute for Economics
 and Peace to examine the relationship between peace and perceptions of
-risk. You can see our findings in the forthcoming 2021 Global Peace Index report. This
-package was developed to enable further research on these important
-issues.
+risk. 
 
 ## Installation
 

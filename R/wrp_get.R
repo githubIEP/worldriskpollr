@@ -2,8 +2,10 @@
 #'
 #' Allows you to access aggregated data for a World Risk Poll question.
 #'
-#' @param geography string, a demographic category by which to aggregate, needs to be one of "country", "region" or "income"
-#' @param wrp_question_uid string, the number code for the survey question to focus on
+#' @param geography string, a demographic category by which to aggregate,
+#' needs to be one of "country", "region" or "income"
+#' @param wrp_question_uid string, the number code for the survey
+#' question to focus on
 #'
 #' @importFrom dplyr group_by ungroup summarise bind_rows arrange
 #' @importFrom utils menu
@@ -29,7 +31,8 @@ wrp_get <- function(geography = "country", wrp_question_uid = "Q1") {
     tmp <- tmp[!is.na(tmp[, 5]), ] %>%
       wrp_aggregate() %>%
       wrp_clean()
-  }) %>% bind_rows()
+  }) %>%
+    bind_rows()
   # Output summary
   message(paste("You have selected:", wrp_question_uid))
   message("This question asks:")

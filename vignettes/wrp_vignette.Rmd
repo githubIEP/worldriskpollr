@@ -69,7 +69,7 @@ To search for a question if interest, `worldriskpollr` provides `wrp_search` for
 
 -   `question`: The question in full.
 
--   `responses`: The reponses given in the poll.
+-   `responses`: The responses given in the poll.
 
 ```{r, message = FALSE, warning = FALSE}
 head(wrp_search("violence"))
@@ -101,7 +101,7 @@ The results will be disaggregated by the following groups:
 
 -   `childrenInHousehold`, total number of children under 15 in the respondent's household.
 
-Users need to provide the desired aggregation level to `wrp_get` as a string. It is also necessary to provide a question code string, such as those provided returned in `wrp_search`. For example:
+Users need to provide the desired aggregation level to `wrp_get` as a string. It is also necessary to provide a question code string, such as those provided returned in `wrp_search`. The use of `wrp_get` looks like:
 
 ```{r, message = FALSE, warning = FALSE}
 head(wrp_get(geography = "country", wrp_question_uid = "Q1"))
@@ -122,3 +122,17 @@ This returns a 6 column dataframe in tidy format with the following columns:
 -   `response`: the response
 
 -   `percentage`: the percentage of respondents for each disaggregation that provided the relevant response.
+
+So a standard use case stringing `wrp_search` and `wrp_get` together could look like:
+
+```{r, message = FALSE, warning = FALSE}
+# Search for a topic
+tmp <- wrp_search("violence")
+# Pick the question of interest
+tmp <- tmp[tmp$question ==
+             "Ever Experienced Physical Violence/Harassment at Work (all countries)", ]
+# Get the question code
+tmp <- unique(tmp$wrp_question_uid)
+# get the data
+head(wrp_get(geography = "country", wrp_question_uid = tmp))
+```
