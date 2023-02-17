@@ -2,23 +2,27 @@ Package: wrp
 Type: Package
 Title: Individual-level survey data from the World Risk Poll
 Version: 0.1.0
-Author: person("Harriet", "Goers", email = "hgoers@economicsandpeace.org", role = c("aut", "cre"))
-Maintainer: The package maintainer <hgoers@economicsandpeace.org>
+Author: person("David", "Hammond", email = "dhammond@economicsandpeace.org", role = c("aut", "cre"))
+Maintainer: The package maintainer <dhammond@economicsandpeace.org>
 Description: Provides users with programmatic access to individual-level survey 
   data from the World Risk Poll, conveniently packaged for consumption by R users.
 License: MIT + file LICENSE
 Encoding: UTF-8
-LazyData: true
 Depends: 
     R (>= 2.10)
-RoxygenNote: 7.1.1
+RoxygenNote: 7.2.3
 Imports: 
     magrittr,
     dplyr,
-    labelled,
-    ggplot2,
-    tidyr
+    tidyr,
+    sjlabelled,
+    janitor,
+    rlang,
+    stats,
+    utils
 Suggests: 
     knitr,
-    rmarkdown
+    rmarkdown,
+    testthat (>= 3.0.0)
 VignetteBuilder: knitr
+Config/testthat/edition: 3

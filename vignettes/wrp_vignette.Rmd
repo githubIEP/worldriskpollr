@@ -15,11 +15,7 @@ knitr::opts_chunk$set(
 ```
 
 ```{r setup, include = FALSE, message = FALSE, warning = FALSE}
-
 library(wrp)
-library(dplyr)
-library(stringr)
-
 ```
 
 # Installation
@@ -50,19 +46,15 @@ IEP created this package to provide you with easy, programmatic access to the Wo
 
 ## Country coverage
 
-The World Risk Poll surveyed people in `r wrp %>% distinct(country) %>% nrow()` countries, including countries with very low levels of peace where little or no official data exists, yet where reported risks are often high.
+The World Risk Poll surveyed people in 150 countries, including countries with very low levels of peace where little or no official data exists, yet where reported risks are often high.
 
 # Getting started
 
 The `wrp` package is designed to give you quick and easy access to all data collected through the World Risk Poll. `wrp` provides you with a labeled dataset of all World Risk Poll data. This wide dataset can then be manipulated to suit your enquiry.
 
-```{r}
 
-head(wrp::wrp)
 
-```
-
-## Aggregating the data with `wrp_aggregate`
+## Search the World Risk Poll with `wrp_search`
 
 The `wrp` package provides you with an easy function for aggregating the individual-level survey data to discover summaries by geographic and demographic factors. You can aggregate the following levels:
 
@@ -88,68 +80,17 @@ The `wrp` package provides you with an easy function for aggregating the individ
 
 -   childrenInHousehold, total number of children under 15 in the respondent's household.
 
-Provide the desired aggregation level to the `wrp_aggregation` function as a string. You then need to provide the question code (also as a string) and determine whether you want the data to be returned as a numeric and labeled value or as a more human-readable character value.
+Provide the desired aggregation level to the `wrp_get` function as a string. You then need to provide the question code (also as a string) and determine whether you want the data to be returned as a numeric and labeled value or as a more human-readable character value.
 
 ```{r, message = FALSE, warning = FALSE}
-
-head(wrp_aggregate("country", "l2", FALSE))
+head(wrp_search("violence"))
 ```
 
-## Accessing human-friendly variable labels
+## Getting aggregated World Risk Poll data using `wrp_get`
 
-The dataset is labeled to allow you to easily access the coded variables, the long titles for demographic variables and the full questions provided in the survey. You can access these labels using the process outlined in the [`labelled` package](https://cran.r-project.org/web/packages/labelled/vignettes/intro_labelled.html).
+The dataset is labeled to allow you to easily access the coded variables, the long titles for demographic variables and the full questions provided in the survey. 
 
 ```{r, message = FALSE, warning = FALSE}
-
-# Access the full question coded "L1"
-labelled::var_label(wrp$l1)
-
+head(wrp_get(geography = "country", wrp_question_uid = "Q1"))
 ```
 
-## Accessing human-friendly value labels
-
-The dataset is labeled to allow you to easily access the coded variables, including demographic information and responses. To convert the numeric factors to their human-readable labels, simply follow the processes outlined in the `labelled` package.
-
-```{r, message = FALSE, warning = FALSE}
-
-library(dplyr)
-
-wrp::wrp %>% 
-  mutate(across(starts_with("l"), labelled::to_factor)) %>% 
-  select(wpidRandom, l1, l2, l3A)
-
-```
-
-## Quick and easy visualisations
-
-The `wrp` package provides you with two functions to quickly and easily visualise the distribution of responses to survey questions at the aggregate level.
-
-### Get the whole picture
-
-The `wrp_graph` function creates a stacked bar chart of the proportion of people within a selected aggregation who provided each available response.
-
-The following graphs responses to the question *overall, compared to five years ago, do you feel more safe, less safe, or about as safe as you did five years ago?*
-
-```{r, message = FALSE, warning = FALSE, fig.dim = c(7, 8)}
-
-wrp_graph("globalRegion", "l2")
-
-```
-
-The following graphs responses to the question *have you or someone you PERSONALLY know, EXPERIENCED serious harm from any of the following things in the past TWO years? Eating food*
-
-```{r, message = FALSE, warning = FALSE, fig.dim = c(7, 6)}
-
-wrp_graph("countryIncomeLevel", "l8A")
-
-```
-
-### Comparing countries and regions
-
-The `wrp_map` function maps the proportion of people within each country who provided the selected response to the chosen question.
-
-```{r, message = FALSE, warning = FALSE, fig.dim = c(7, 5)}
-
-wrp_map("l3A", "Crime/violence/terrorism")
-
-```
