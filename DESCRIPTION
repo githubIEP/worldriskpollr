@@ -1,4 +1,4 @@
-Package: wrp
+Package: worldriskpollr
 Type: Package
 Title: Individual-level survey data from the World Risk Poll
 Version: 0.1.0
