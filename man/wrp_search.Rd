@@ -16,5 +16,5 @@ data frame with World Risk Poll questions containing the search term.
 Allows you to access aggregated data for a World Risk Poll question.
 }
 \examples{
-wrp <- wrp_search(string = "violence")
+wrp_search(string = "violence")
 }

@@ -1,11 +1,12 @@
 Package: worldriskpollr
 Type: Package
-Title: Individual-level survey data from the World Risk Poll
+Title: Aggregated Survey Data from the World Risk Poll'
 Version: 0.1.0
 Author: person("David", "Hammond", email = "dhammond@economicsandpeace.org", role = c("aut", "cre"))
-Maintainer: The package maintainer <dhammond@economicsandpeace.org>
-Description: Provides users with programmatic access to individual-level survey 
+Maintainer: <dhammond@economicsandpeace.org>
+Description: Provides users with programmatic access to aggregated survey 
   data from the World Risk Poll, conveniently packaged for consumption by R users.
+URL: <https://wrp.lrfoundation.org.uk/data-resources/>
 License: MIT + file LICENSE
 Encoding: UTF-8
 Depends: 
