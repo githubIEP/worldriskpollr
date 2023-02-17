@@ -11,6 +11,7 @@
 #'
 wrp_clean <- function(df) {
   df <- df %>% mutate(disaggregation = names(df)[2], question = names(df)[4])
+  names(df)[1] <- "geography"
   names(df)[4] <- "response"
   names(df)[2] <- "group"
   df$year <- as.numeric(df$`Year of interview`)

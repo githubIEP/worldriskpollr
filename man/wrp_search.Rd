@@ -7,15 +7,14 @@
 wrp_search(string = "violence")
 }
 \arguments{
-\item{string}{string, a search term to look for in the World Risk Poll questions}
+\item{string}{string, search term for the World Risk Poll questions}
 }
 \value{
-data frame with World Risk Poll questions that contain the search term.
+data frame with World Risk Poll questions containing the search term.
 }
 \description{
 Allows you to access aggregated data for a World Risk Poll question.
 }
 \examples{
- 
-wrp = wrp_search(string = "violence")
+wrp <- wrp_search(string = "violence")
 }

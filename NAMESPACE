@@ -2,6 +2,7 @@
 
 export(wrp_get)
 export(wrp_search)
+importFrom(dplyr,arrange)
 importFrom(dplyr,bind_rows)
 importFrom(dplyr,case_when)
 importFrom(dplyr,filter)
