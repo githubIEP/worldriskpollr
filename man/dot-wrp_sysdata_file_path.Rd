@@ -6,13 +6,6 @@
 \usage{
 .wrp_sysdata_file_path()
 }
-\arguments{
-\item{geography}{string, a demographic category by which to aggregate,
-needs to be one of "country", "region" or "income"}
-
-\item{wrp_question_uid}{string, the number code for the survey
-question to focus on}
-}
 \value{
 data frame with aggregated World Risk Poll question data
 }

@@ -2,10 +2,7 @@
 #'
 #' Allows you to access aggregated data for a World Risk Poll question.
 #'
-#' @param geography string, a demographic category by which to aggregate,
-#' needs to be one of "country", "region" or "income"
-#' @param wrp_question_uid string, the number code for the survey
-#' question to focus on
+#' @param envir environment of all processed World Risk Poll data
 #'
 #' @importFrom dplyr group_by ungroup summarise bind_rows arrange
 #' @importFrom utils menu
@@ -19,7 +16,7 @@
 
 
 .wrp_env <- function(envir = parent.frame()) {
-    load(.wrp_sysdata_file_path())
+    
     environment()
 }
 

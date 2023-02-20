@@ -2,10 +2,6 @@
 #'
 #' Allows you to access aggregated data for a World Risk Poll question.
 #'
-#' @param geography string, a demographic category by which to aggregate,
-#' needs to be one of "country", "region" or "income"
-#' @param wrp_question_uid string, the number code for the survey
-#' question to focus on
 #'
 #' @importFrom dplyr group_by ungroup summarise bind_rows arrange
 #' @importFrom utils menu
@@ -24,5 +20,6 @@
   if(!file.exists(.wrp_sysdata_file_path())){
    .wrp_cache(pkg_info) 
   }
-  return(.wrp_env())
+  wrp <- readRDS(.wrp_sysdata_file_path())
+  return(wrp)
 }

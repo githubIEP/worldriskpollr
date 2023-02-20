@@ -7,11 +7,7 @@
 .wrp_env(envir = parent.frame())
 }
 \arguments{
-\item{geography}{string, a demographic category by which to aggregate,
-needs to be one of "country", "region" or "income"}
-
-\item{wrp_question_uid}{string, the number code for the survey
-question to focus on}
+\item{envir}{environment of all processed World Risk Poll data}
 }
 \value{
 data frame with aggregated World Risk Poll question data

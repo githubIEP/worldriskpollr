@@ -18,11 +18,14 @@ Imports:
     magrittr,
     dplyr,
     tidyr,
+    labelled,
     sjlabelled,
     janitor,
     rlang,
     stats,
-    utils
+    utils,
+    haven,
+    pkgfilecache
 Suggests: 
     knitr,
     rmarkdown,
