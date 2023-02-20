@@ -9,16 +9,20 @@ download_optional_data <- function() {
   pkg_info = pkgfilecache::get_pkg_info("worldriskpollr");        # to identify the package using the cache
   
   # Replace these with your optional data files.
-  local_filenames = c("wrp.zip");    # How the files should be called in the local package file cache
+  filename = c("wrp.zip");    # How the files should be called in the local package file cache
   urls = c("https://wrp.lrfoundation.org.uk/lrf_wrp_2021_full_data.zip"); # Remote URLs where to download files from
-  cfiles = pkgfilecache::ensure_files_available(pkg_info, local_filenames, urls);
+  cfiles = pkgfilecache::ensure_files_available(pkg_info, filename, urls);
   cfiles$file_status = NULL;
-  unzip(pkgfilecache::get_filepath(pkg_info, filename, mustWork=mustWork), exdir = dirname(pkgfilecache::get_filepath(pkg_info, filename, mustWork=mustWork)))
+  unzip(pkgfilecache::get_filepath(pkg_info, filename, mustWork=TRUE), 
+        exdir = dirname(pkgfilecache::get_filepath(pkg_info, filename, mustWork=TRUE)))
+  process_wrp(pkg_info)
+  files = list.files(pkgfilecache::get_cache_dir(pkg_info), full.names = T)
+  files = files[!grepl('sysdata.rdata', files)]
+  file.remove(files)
   return(cfiles);
 }
 
-process_wrp <- function(){
-  pkg_info = pkgfilecache::get_pkg_info("worldriskpollr");   
+process_wrp <- function(pkg_info){
   raw <- haven::read_sav(pkgfilecache::get_filepath(pkg_info, "lrf_wrp_2021_full_data.sav", mustWork=mustWork))
   raw$projectionWeight <- raw$PROJWT_2019
   raw$projectionWeight <- ifelse(is.na(raw$projectionWeight),
@@ -72,26 +76,13 @@ process_wrp <- function(){
   wrp_disaggregations = wrp_disaggregations %>% select(-levels)
   # wrp_region_1st_nom = wrp_data %>% select(c(1,4,5, 103)) %>% distinct()
   # wrp_data = wrp_data %>% select(-c(5, 103)) 
-  objs = list(wrp_data,
-  wrp_year_col,
-  wrp_projweight_col,
-  wrp_weight_col,
-  wrp_regions,
-  wrp_disaggregations,
-  wrp_questions)
-  mapply(save, list = objs, file = pkgfilecache::get_cache_dir(pkg_info), MoreArgs = list(
-                                                                     compress = "xz"))
-  usethis::use_data(wrp_data,
-                    wrp_year_col,
-                    wrp_projweight_col,
-                    wrp_weight_col,
-                    wrp_regions,
-                    wrp_disaggregations,
-                    wrp_questions,
-                    overwrite = TRUE,
-                    internal = TRUE,
-                    compress = "xz",
-                    )
+  save(wrp_data,
+       wrp_year_col,
+       wrp_projweight_col,
+       wrp_weight_col,
+       wrp_regions,
+       wrp_disaggregations,
+       wrp_questions, file = file.path(pkgfilecache::get_cache_dir(pkg_info), "sysdata.rdata"))
 }
 #' @title Get file names available in package cache.
 #'
