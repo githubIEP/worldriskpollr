@@ -10,6 +10,6 @@
 \item{pkg_info}{Package info from pkgfilecache}
 }
 \description{
-Ensure that the optional data is available locally in the p
-ackage cache. Will try to download the data only if it is not available.
+Ensure that the optional data is available locally in the
+package cache. Will try to download the data only if it is not available.
 }
