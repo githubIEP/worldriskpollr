@@ -18,11 +18,8 @@
 #' @examples wrp_get(geography = "country", wrp_question_uid = "Q1")
 
 
-.wrp_check <- function() {
-  # Set up data frame
-  pkg_info = get_pkg_info("worldriskpollr");
-  if(!file.exists(.wrp_sysdata_file_path())){
-   .wrp_cache(pkg_info) 
-  }
-  return(.wrp_env())
+.wrp_env <- function(envir = parent.frame()) {
+    load(.wrp_sysdata_file_path())
+    environment()
 }
+
