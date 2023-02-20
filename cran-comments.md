@@ -171,3 +171,14 @@ dot-wrp_check 101.85   2.39  106.27
 Found the following files/directories:
   'lastMiKTeXException'
 
+## Submission 4
+
+This release failed on the following recurring note (with varying times for the three OS):
+
+Examples with CPU (user + system) or elapsed time > 10s
+                user system elapsed
+dot-wrp_check 126.82   3.14  130.62
+
+- The reason this NOTE kept on occurring was that the functions downloaded AND processed the data all at once. I know have the preprocessed data available on Github in the package's data-raw folder. This significantly reduces processing time and passes the <5 sec criteria on all systems.
+I thank you for your patience, this is the first submission to CRAN so took me a few days to understand the criteria and then find the most efficient ways of meeting them.
+

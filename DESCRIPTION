@@ -26,13 +26,11 @@ Imports:
     magrittr,
     dplyr,
     tidyr,
-    labelled,
     sjlabelled,
     janitor,
     rlang,
     stats,
-    utils,
-    haven
+    utils
 Suggests: 
     knitr,
     rmarkdown,
