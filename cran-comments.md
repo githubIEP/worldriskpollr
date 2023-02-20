@@ -121,7 +121,9 @@ Not more than 5 MB for a CRAN package.
 
 ## Third sumbission
 
-Thanks for the quick turnaround! Here is how I have addressed the comments:
+Thanks for the quick turnaround! I have amended and R CMD CHECK completes successfully.
+
+Here is how I have addressed the comments:
 
 ### Note 1
 If there are references describing the methods in your package, please
@@ -143,16 +145,16 @@ Size of tarball: 5108720 bytes
 Do you think it is possible to reduce the size a bit more? If so, please
 do it.
 
-I have amended the code so it accesses the large data file online, processes it, and then caches it to the users computer for use in the package.
-
-Also, running rhub::check_for_cran() regenerates the following NOTES that  i understand can be ignored for the reasons above.
+- I have amended the code so it accesses the large data file online, processes it, stores it in the package folder for loading in the functions. It also provides a function for the user to delete these files if so wished.
 
 ### Note 3
 
 Possibly misspelled words in DESCRIPTION:
   Lloyd's (11:45)
   
-This is not a mispelling.
+- This is not a mispelling.
+
+- Also, running rhub::check_for_cran() regenerates the following NOTES that I understand can be ignored for the reasons above.
 
 ### Note 4
 * checking CRAN incoming feasibility ... NOTE
