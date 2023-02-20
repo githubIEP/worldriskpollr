@@ -154,7 +154,7 @@ Possibly misspelled words in DESCRIPTION:
   
 - This is not a mispelling.
 
-- Also, running rhub::check_for_cran() regenerates the following NOTES that I understand can be ignored for the reasons above.
+- Also, running rhub::check_for_cran() regenerates the following NOTES that I understand can be ignored for the reasons stated above.
 
 ### Note 4
 * checking CRAN incoming feasibility ... NOTE
