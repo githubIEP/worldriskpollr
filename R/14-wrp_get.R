@@ -20,9 +20,9 @@
 wrp_get <- function(geography = "country", wrp_question_uid = "Q1") {
   # Set up data frame
   wrp <- .wrp_check()
-  wrp_geography_col <- .get_regional_column(geography)
-  wrp_question_col <- .get_question_column(wrp_question_uid)
-  wrp_wgt_col <- .get_weight_column(wrp_geography_col)
+  wrp_geography_col <- .get_regional_column(geography, wrp)
+  wrp_question_col <- .get_question_column(wrp_question_uid, wrp)
+  wrp_wgt_col <- .get_weight_column(wrp_geography_col, wrp)
   # Aggregate data using weights
   wrp_agg <- lapply(wrp$wrp_disaggregations$pos, function(i) {
     tmp <- wrp$wrp_data[, c(

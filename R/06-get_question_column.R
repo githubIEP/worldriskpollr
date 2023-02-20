@@ -1,13 +1,14 @@
 #' Get the column number for the question
 #'
-#' @param question_uid numeric reflecting which question has been selected
+#' @param wrp_question_uid numeric reflecting which question has been selected
+#' @param wrp, list, formatted World Risk Poll Questions
 #'
 
-.get_question_column <- function(question_uid = wrp$wrp_questions$WRP_UID) {
+.get_question_column <- function(wrp_question_uid, wrp) {
   stopifnot(
-    "`question_uid` must be a valid World Risk Poll question code" =
-      is.character(match.arg(question_uid))
+    "`wrp_question_uid` must be a valid World Risk Poll question code" =
+      is.character(match.arg(wrp_question_uid, choices = wrp$wrp_questions$WRP_UID))
   )
-  question_uid <- wrp$wrp_questions$pos[match(question_uid, wrp$wrp_questions$WRP_UID)]
-  return(question_uid)
+  wrp_question_uid <- wrp$wrp_questions$pos[match(wrp_question_uid, wrp$wrp_questions$WRP_UID)]
+  return(wrp_question_uid)
 }
