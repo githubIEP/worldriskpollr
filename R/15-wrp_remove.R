@@ -5,6 +5,5 @@
 #'
 #' @export
 wrp_remove <- function() {
-  pkg_info <- get_pkg_info("worldriskpollr")
-  file.remove(list.files(get_cache_dir(pkg_info), full.names = TRUE))
+  file.remove(list.files(.wrp_package_folder(), full.names = TRUE))
 }

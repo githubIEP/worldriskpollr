@@ -3,16 +3,12 @@
 #' @description Ensure that the optional data is available locally in the
 #' package cache. Will try to download the data only if it is not available.
 #'
-#' @param pkg_info Package info from pkgfilecache
-#'
-#' @importFrom pkgfilecache get_pkg_info ensure_files_available
-#' get_filepath get_cache_dir
 #' @importFrom haven read_sav is.labelled as_factor
 #' @importFrom labelled generate_dictionary
 #'
-.wrp_processing <- function(pkg_info) {
-  raw <- read_sav(pkgfilecache::get_filepath(pkg_info,
-                                             "lrf_wrp_2021_full_data.sav"))
+.wrp_processing <- function() {
+  raw <- read_sav(file.path(.wrp_package_folder(),
+                            "lrf_wrp_2021_full_data.sav"))
   raw$projectionWeight <- raw$PROJWT_2019
   raw$projectionWeight <- ifelse(is.na(raw$projectionWeight),
     raw$PROJWT_2021, raw$projectionWeight
@@ -32,12 +28,12 @@
       substr(.data$variable, 1, 2) == "vh") %>%
     mutate(needed = .data$variable %in% c("year", "wgt", "projectionWeight"))
   wrp_dictionary$label <- ifelse((wrp_dictionary$variable ==
-                                    "countryIncomeLevel"),
-    "World Bank Income Levels", wrp_dictionary$label
+    "countryIncomeLevel"),
+  "World Bank Income Levels", wrp_dictionary$label
   )
   wrp_dictionary$label <- ifelse((wrp_dictionary$variable ==
-                                    "projectionWeight"),
-    "projectionWeight", wrp_dictionary$label
+    "projectionWeight"),
+  "projectionWeight", wrp_dictionary$label
   )
   wrp_dictionary <- wrp_dictionary[wrp_dictionary$regional_disaggregate |
     wrp_dictionary$disaggregator |
@@ -64,7 +60,6 @@
     "DIS", ]
   wrp_questions <- wrp_dictionary[substr(wrp_dictionary$WRP_UID, 1, 1) == "Q", ]
   wrp_questions$WRP_UID <- toupper(wrp_questions$variable)
-  #wrp_needed <- wrp_dictionary[substr(wrp_dictionary$WRP_UID, 1, 4) == "NEED", ]
   wrp_regions <- wrp_regions %>% select(-.data$levels)
   wrp_disaggregations <- wrp_disaggregations %>% select(-.data$levels)
   wrp <- list(

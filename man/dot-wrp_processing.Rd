@@ -4,10 +4,7 @@
 \alias{.wrp_processing}
 \title{Processes World Risk Poll data for this package if required.}
 \usage{
-.wrp_processing(pkg_info)
-}
-\arguments{
-\item{pkg_info}{Package info from pkgfilecache}
+.wrp_processing()
 }
 \description{
 Ensure that the optional data is available locally in the

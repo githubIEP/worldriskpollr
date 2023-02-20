@@ -118,3 +118,29 @@ Not more than 5 MB for a CRAN package.
 
 -   Reduced internal data size and fixed, no more NOTE from R CMD check
     or rhub::check_for_cran()
+
+## Third sumbission
+
+Thanks for the quick turnaround! Here is how I have addressed the comments:
+
+### Note 1
+If there are references describing the methods in your package, please
+add these in the description field of your DESCRIPTION file in the form
+authors (year) <doi:...>
+authors (year) <arXiv:...>
+authors (year, ISBN:...)
+or if those are not available: <[https:...]https:...>
+with no space after 'doi:', 'arXiv:', 'https:' and angle brackets for
+auto-linking. (If you want to add a title as well please put it in
+quotes: "Title")
+
+
+- I have amended the DESCRIPTION file, added more context and references. I hope I have done this correctly.
+
+### Note 2
+A CRAN package should not be larger than 5 MB.
+Size of tarball: 5108720 bytes
+Do you think it is possible to reduce the size a bit more? If so, please
+do it.
+
+I have amended the code so it accesses the large data file online, processes it, and then caches it to the users computer for use in the package.

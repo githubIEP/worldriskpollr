@@ -8,9 +8,12 @@
   stopifnot(
     "`wrp_question_uid` must be a valid World Risk Poll question code" =
       is.character(match.arg(wrp_question_uid,
-                             choices = wrp$wrp_questions$WRP_UID))
+        choices = wrp$wrp_questions$WRP_UID
+      ))
   )
-  wrp_question_uid <- wrp$wrp_questions$pos[match(wrp_question_uid,
-                                                  wrp$wrp_questions$WRP_UID)]
+  wrp_question_uid <- wrp$wrp_questions$pos[match(
+    wrp_question_uid,
+    wrp$wrp_questions$WRP_UID
+  )]
   return(wrp_question_uid)
 }
