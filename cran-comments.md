@@ -144,3 +144,22 @@ Do you think it is possible to reduce the size a bit more? If so, please
 do it.
 
 I have amended the code so it accesses the large data file online, processes it, and then caches it to the users computer for use in the package.
+
+Also, running rhub::check_for_cran() regenerates the following NOTES that  i understand can be ignored for the reasons above.
+
+### Note 3
+
+* checking CRAN incoming feasibility ... NOTE
+Maintainer: 'David Hammond <dhammond@economicsandpeace.org>'
+
+### Note 4
+* checking examples ... [115s] NOTE
+Examples with CPU (user + system) or elapsed time > 5s
+                user system elapsed
+dot-wrp_check 101.85   2.39  106.27
+
+### Note 5
+* checking for detritus in the temp directory ... NOTE
+Found the following files/directories:
+  'lastMiKTeXException'
+
