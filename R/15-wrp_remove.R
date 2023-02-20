@@ -5,5 +5,5 @@
 #' @export
 wrp_remove <- function() {
   pkg_info = pkgfilecache::get_pkg_info("worldriskpollr");
-  return(pkgfilecache::erase_file_cache(pkg_info));
+  return(file.remove(list.files(get_cache_dir(pkg_info), full.names = T)));
 }

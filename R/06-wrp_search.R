@@ -13,9 +13,8 @@
 #'
 
 wrp_search <- function(string = "violence") {
-  .wrp_check()
-  load(.wrp_sysdata_file_path())
-  dict <- wrp_questions %>% unnest(levels)
+  wrp <<- .wrp_check()
+  dict <- wrp$wrp_questions %>% unnest(levels)
   matches <- unique(c(
     grep(string, dict$label, ignore.case = TRUE),
     grep(string, dict$levels, ignore.case = TRUE)

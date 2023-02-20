@@ -3,12 +3,13 @@
 #' @description Ensure that the optioanl data is available locally in the package cache. Will try to download the data only if it is not available.
 #' 
 #' @importFrom pkgfilecache get_pkg_info ensure_files_available get_filepath get_cache_dir
-#'
+#' @importFrom haven read_sav
+#' 
 #' @return Named list. The list has entries: "available": vector of strings. The names of the files that are available in the local file cache. You can access them using get_optional_data_file(). "missing": vector of strings. The names of the files that this function was unable to retrieve.
 #'
 
 .wrp_processing <- function(pkg_info){
-  raw <- haven::read_sav(pkgfilecache::get_filepath(pkg_info, "lrf_wrp_2021_full_data.sav", mustWork=mustWork))
+  raw <- read_sav(pkgfilecache::get_filepath(pkg_info, "lrf_wrp_2021_full_data.sav"))
   raw$projectionWeight <- raw$PROJWT_2019
   raw$projectionWeight <- ifelse(is.na(raw$projectionWeight),
                                  raw$PROJWT_2021, raw$projectionWeight)

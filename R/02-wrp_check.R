@@ -10,7 +10,7 @@
 #' @importFrom dplyr group_by ungroup summarise bind_rows arrange
 #' @importFrom utils menu
 #' @importFrom stats complete.cases
-#' @importFrom rlang .data
+#' @importFrom rlang .data env env_parent set_env
 #' @importFrom pkgfilecache get_pkg_info ensure_files_available get_filepath get_cache_dir
 #'
 #' @return data frame with aggregated World Risk Poll question data
@@ -24,5 +24,9 @@
   if(!file.exists(.wrp_sysdata_file_path())){
    .wrp_cache(pkg_info) 
   }
-  load(.wrp_sysdata_file_path(), .GlobalEnv)
+  f2 <- function(envir = parent.frame()) {
+    load(.wrp_sysdata_file_path())
+    environment()
+  }
+  return(f2())
 }
