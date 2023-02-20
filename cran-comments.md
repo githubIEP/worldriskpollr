@@ -149,16 +149,22 @@ Also, running rhub::check_for_cran() regenerates the following NOTES that  i und
 
 ### Note 3
 
+Possibly misspelled words in DESCRIPTION:
+  Lloyd's (11:45)
+  
+This is not a mispelling.
+
+### Note 4
 * checking CRAN incoming feasibility ... NOTE
 Maintainer: 'David Hammond <dhammond@economicsandpeace.org>'
 
-### Note 4
+### Note 5
 * checking examples ... [115s] NOTE
 Examples with CPU (user + system) or elapsed time > 5s
                 user system elapsed
 dot-wrp_check 101.85   2.39  106.27
 
-### Note 5
+### Note 6
 * checking for detritus in the temp directory ... NOTE
 Found the following files/directories:
   'lastMiKTeXException'
