@@ -14,7 +14,7 @@
 
 wrp_search <- function(string = "violence") {
   wrp <- .wrp_check()
-  dict <- wrp$wrp_questions %>% unnest(levels)
+  dict <- wrp$wrp_questions %>% unnest(.data$levels)
   matches <- unique(c(
     grep(string, dict$label, ignore.case = TRUE),
     grep(string, dict$levels, ignore.case = TRUE)
@@ -22,8 +22,7 @@ wrp_search <- function(string = "violence") {
   out <- NULL
   if (length(matches) == 0) {
     message("No instances of that search term in the World Risk Poll questions")
-
-  }else {
+  } else {
     out <- dict[matches, c("WRP_UID", "label", "levels")]
     names(out) <- c("wrp_question_uid", "question", "responses")
   }

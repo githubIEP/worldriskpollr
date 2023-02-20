@@ -2,7 +2,7 @@
 % Please edit documentation in R/04-wrp_check.R
 \name{.wrp_check}
 \alias{.wrp_check}
-\title{Get aggregated data for a question in the World Risk Poll}
+\title{GCheck World Risk Poll Data has previously been cached}
 \usage{
 .wrp_check()
 }

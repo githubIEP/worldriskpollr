@@ -1,9 +1,10 @@
 #' @title Delete all data in the package cache.
 #'
-#' @return integer. The return value of the unlink() call: 0 for success, 1 for failure. See the unlink() documentation for details.
+#' @return integer. The return value of the unlink() call: 0 for success,
+#' 1 for failure. See the unlink() documentation for details.
 #'
 #' @export
 wrp_remove <- function() {
-  pkg_info = get_pkg_info("worldriskpollr");
-  file.remove(list.files(get_cache_dir(pkg_info), full.names = T))
+  pkg_info <- get_pkg_info("worldriskpollr")
+  file.remove(list.files(get_cache_dir(pkg_info), full.names = TRUE))
 }

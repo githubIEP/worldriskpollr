@@ -2,7 +2,7 @@
 % Please edit documentation in R/01-wrp_sysdata.R
 \name{.wrp_sysdata_file_path}
 \alias{.wrp_sysdata_file_path}
-\title{Get aggregated data for a question in the World Risk Poll}
+\title{Package cache for World Risk Poll data}
 \usage{
 .wrp_sysdata_file_path()
 }
@@ -10,7 +10,7 @@
 data frame with aggregated World Risk Poll question data
 }
 \description{
-Allows you to access aggregated data for a World Risk Poll question.
+Caches the World Risk Poll data to your computer
 }
 \examples{
 wrp_get(geography = "country", wrp_question_uid = "Q1")

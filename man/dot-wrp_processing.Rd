@@ -2,16 +2,14 @@
 % Please edit documentation in R/03-wrp_processing.R
 \name{.wrp_processing}
 \alias{.wrp_processing}
-\title{Download optional data for this package if required.}
+\title{Processes World Risk Poll data for this package if required.}
 \usage{
 .wrp_processing(pkg_info)
 }
 \arguments{
 \item{pkg_info}{Package info from pkgfilecache}
 }
-\value{
-Named list. The list has entries: "available": vector of strings. The names of the files that are available in the local file cache. You can access them using get_optional_data_file(). "missing": vector of strings. The names of the files that this function was unable to retrieve.
-}
 \description{
-Ensure that the optioanl data is available locally in the package cache. Will try to download the data only if it is not available.
+Ensure that the optional data is available locally in the p
+ackage cache. Will try to download the data only if it is not available.
 }
