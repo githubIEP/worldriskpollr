@@ -9,7 +9,7 @@
   pkg_info <- get_pkg_info("worldriskpollr")
   message("Downloading the World Risk Poll Data...\n")
   filename <- c("wrp.zip")
-  url <- c("https://github.com/githubIEP/worldriskpollr/blob/master/data-raw/wrp.zip")
+  url <- c("https://wrp.lrfoundation.org.uk/lrf_wrp_2021_full_data.zip")
   download.file(url, file.path(get_cache_dir(pkg_info), filename), mode = "wb")
   unzip(file.path(get_cache_dir(pkg_info), filename),
     exdir = get_cache_dir(pkg_info)

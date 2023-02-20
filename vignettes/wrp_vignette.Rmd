@@ -14,10 +14,6 @@ knitr::opts_chunk$set(
 )
 ```
 
-```{r setup, include = FALSE, message = FALSE, warning = FALSE}
-library(worldriskpollr)
-```
-
 # Installation
 
 You can install the development version from [GitHub](https://github.com/) with:
@@ -26,6 +22,14 @@ You can install the development version from [GitHub](https://github.com/) with:
 # install.packages("devtools")
 #devtools::install_github("githubIEP/worldriskpollr")
 ```
+
+Once installed you can load the library using:
+
+```{r setup, include = FALSE, message = FALSE, warning = FALSE}
+library(worldriskpollr)
+```
+
+
 
 # Introduction
 
@@ -54,6 +58,8 @@ The World Risk Poll surveyed people in 150 countries in total, including countri
 # Getting started
 
 The `worldriskpollr` package is designed to give you quick and easy access to all data collected through the World Risk Poll. `worldriskpollr` provides you with an interactive package to interact and access aggregated survey data.
+
+Using the following functions, it will download and process the Wrold Risk Poll data into your package cahce memory, then extract questions of interest.
 
 ## Search the World Risk Poll with `wrp_search`
 
