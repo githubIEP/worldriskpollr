@@ -1,13 +1,7 @@
 #' Package cache for World Risk Poll data
 #'
 #' Caches the World Risk Poll data to your computer
-#'
-#'
-#' @importFrom dplyr group_by ungroup summarise bind_rows arrange
-#' @importFrom stats complete.cases
-#' @importFrom rlang .data
-#'
-#' @return folderpath to data
+#' @return folde rpath to data
 #'
 
 .wrp_package_folder <- function() {
@@ -21,12 +15,6 @@
 #' Package cache for World Risk Poll data
 #'
 #' Caches the World Risk Poll data to your computer
-#'
-#'
-#' @importFrom dplyr group_by ungroup summarise bind_rows arrange
-#' @importFrom stats complete.cases
-#' @importFrom rlang .data
-#'
 #' @return file path to data
 #'
 .wrp_sysdata_file_path <- function() {

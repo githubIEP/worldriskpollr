@@ -7,7 +7,7 @@
 .wrp_package_folder()
 }
 \value{
-folderpath to data
+folde rpath to data
 }
 \description{
 Caches the World Risk Poll data to your computer
