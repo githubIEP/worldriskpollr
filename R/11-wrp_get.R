@@ -23,7 +23,9 @@ wrp_get <- function(geography = "country", wrp_question_uid = "Q1") {
   wrp_geography_col <- .get_regional_column(geography)
   wrp_question_col <- .get_question_column(wrp_question_uid)
   wrp_wgt_col <- .get_weight_column(wrp_geography_col)
-  cores <- ifelse(Sys.info()[['sysname']]=="Windows", 1, min(detectCores(), 2))
+  cores <- detectCores()
+  cores <- ifelse(Sys.info()[["sysname"]] == "Windows", 1,
+                  min(cores, 2))
   # Aggregate data using weights
   wrp_agg <- mclapply(.pkgenv$wrp$wrp_disaggregations$pos, function(i) {
     tmp <- .pkgenv$wrp$wrp_data[, c(

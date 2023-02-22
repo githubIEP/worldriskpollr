@@ -7,8 +7,10 @@
 .get_regional_column <- function(geography) {
   stopifnot(
     "`geography` must be either `country` or `region`" =
-      is.character(match.arg(geography, choices = .pkgenv$wrp$wrp_regions$WRP_UID))
+      is.character(match.arg(geography, choices =
+                               .pkgenv$wrp$wrp_regions$WRP_UID))
   )
-  geography <- .pkgenv$wrp$wrp_regions$pos[match(geography, .pkgenv$wrp$wrp_regions$WRP_UID)]
+  geography <- .pkgenv$wrp$wrp_regions$pos[match(geography,
+                                                 .pkgenv$wrp$wrp_regions$WRP_UID)]
   return(geography)
 }
