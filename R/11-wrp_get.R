@@ -12,7 +12,7 @@
 #' @importFrom stats complete.cases
 #' @importFrom rlang .data
 #' @importFrom rlang .data env env_parent set_env
-#' @importFrom parallel mclapply
+#' @importFrom parallel mclapply detectCores
 #' @return data frame with aggregated World Risk Poll question data
 #'
 #' @examples wrp_get(geography = "country", wrp_question_uid = "Q1")
@@ -23,6 +23,7 @@ wrp_get <- function(geography = "country", wrp_question_uid = "Q1") {
   wrp_geography_col <- .get_regional_column(geography)
   wrp_question_col <- .get_question_column(wrp_question_uid)
   wrp_wgt_col <- .get_weight_column(wrp_geography_col)
+  cores <- ifelse(Sys.info()[['sysname']]=="Windows", 1, detectCores())
   # Aggregate data using weights
   wrp_agg <- mclapply(.pkgenv$wrp$wrp_disaggregations$pos, function(i) {
     tmp <- .pkgenv$wrp$wrp_data[, c(
@@ -32,7 +33,7 @@ wrp_get <- function(geography = "country", wrp_question_uid = "Q1") {
     tmp <- tmp[!is.na(tmp[, 5]), ] %>%
       wrp_aggregate() %>%
       wrp_clean()
-  }) %>%
+  }, mc.cores = cores) %>%
     bind_rows()
   # Output summary
   message(paste("You have selected:", wrp_question_uid))
