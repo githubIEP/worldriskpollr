@@ -184,5 +184,5 @@ dot-wrp_check 126.82   3.14  130.62
 This significantly reduces processing time and passes the <5 sec criteria on windows systems. However, I still get the NOTE on Fedora and Ubuntu. The implemented changes however reduces this from > 100s to 12-13s on these systems.
 
 I noted above that according to [Github](https://github.com/microsoft/LightGBM/issues/2988)
-this note is allowed. Despite this I have worked to reduce this as much as I can, the data this package uses is large so aggregating will take some time on slower machines. The NOTE does not appear when I run it on R CMD check on either windows or ubuntu.
+this note is allowed. Despite this I have worked to reduce this as much as I can, the data this package uses is large so aggregating will take some time on slower machines. The NOTE does not appear when I run it on R CMD check.
 
