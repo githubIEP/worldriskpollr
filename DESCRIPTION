@@ -1,7 +1,7 @@
 Package: worldriskpollr
 Type: Package
 Title: Aggregated Survey Data from the World Risk Poll
-Version: 0.6.0
+Version: 0.7.0
 Date: 2023-02-22
 Authors@R: person("David", "Hammond", email = "dhammond@economicsandpeace.org", role = c("aut", "cre"))
 Author: David Hammond [aut, cre]
