@@ -32,7 +32,8 @@ Imports:
     stats,
     utils,
     httr,
-    curl
+    curl,
+    parallel
 Suggests: 
     knitr,
     rmarkdown,

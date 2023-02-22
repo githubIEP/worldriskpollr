@@ -12,6 +12,7 @@
 #' @importFrom stats complete.cases
 #' @importFrom rlang .data
 #' @importFrom rlang .data env env_parent set_env
+#' @importFrom parallel mclapply
 #' @return data frame with aggregated World Risk Poll question data
 #'
 #' @examples wrp_get(geography = "country", wrp_question_uid = "Q1")
@@ -23,7 +24,7 @@ wrp_get <- function(geography = "country", wrp_question_uid = "Q1") {
   wrp_question_col <- .get_question_column(wrp_question_uid)
   wrp_wgt_col <- .get_weight_column(wrp_geography_col)
   # Aggregate data using weights
-  wrp_agg <- lapply(.pkgenv$wrp$wrp_disaggregations$pos, function(i) {
+  wrp_agg <- mclapply(.pkgenv$wrp$wrp_disaggregations$pos, function(i) {
     tmp <- .pkgenv$wrp$wrp_data[, c(
       wrp_geography_col, i, .pkgenv$wrp$wrp_year_col, wrp_wgt_col,
       wrp_question_col
