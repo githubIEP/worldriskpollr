@@ -2,7 +2,7 @@
 #'
 #' @param geography string, a demographic category by which to aggregate, needs
 #' to be one of "country", "region" or "income"
-#' @param wrp, list, formatted World Risk Poll Questions
+#' @param wrp list, formatted World Risk Poll Questions
 #'
 
 .get_regional_column <- function(geography, wrp) {

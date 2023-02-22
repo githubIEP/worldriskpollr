@@ -45,8 +45,8 @@ wrp_dictionary <- wrp_dictionary[wrp_dictionary$regional_disaggregate |
                                    wrp_dictionary$disaggregator |
                                    wrp_dictionary$question |
                                    wrp_dictionary$needed, ]
-wrp_data = wrp_data[,c(wrp_dictionary$pos)]
-wrp_dictionary$pos = match(wrp_dictionary$variable, names(wrp_data))
+wrp_data <- wrp_data[, c(wrp_dictionary$pos)]
+wrp_dictionary$pos <- match(wrp_dictionary$variable, names(wrp_data))
 wrp_year_col <- match("year", wrp_dictionary$variable)
 wrp_weight_col <- match("wgt", wrp_dictionary$variable)
 wrp_projweight_col <- match("projectionWeight", wrp_dictionary$variable)
@@ -66,10 +66,9 @@ wrp_disaggregations <- wrp_dictionary[substr(wrp_dictionary$WRP_UID, 1, 3) ==
                                         "DIS", ]
 wrp_questions <- wrp_dictionary[substr(wrp_dictionary$WRP_UID, 1, 1) == "Q", ]
 wrp_questions$WRP_UID <- toupper(wrp_questions$variable)
-wrp_needed = wrp_dictionary[substr(wrp_dictionary$WRP_UID, 1, 4) == "NEED", ]
-#wrp_data = remove_all_labels(wrp_data)
-wrp_regions = wrp_regions %>% select(-levels)
-wrp_disaggregations = wrp_disaggregations %>% select(-levels)
+wrp_needed <- wrp_dictionary[substr(wrp_dictionary$WRP_UID, 1, 4) == "NEED", ]
+wrp_regions <- wrp_regions %>% select(-levels)
+wrp_disaggregations <- wrp_disaggregations %>% select(-levels)
 wrp <- list(
   "wrp_data" = wrp_data,
   "wrp_year_col" = wrp_year_col,
