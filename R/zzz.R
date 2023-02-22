@@ -14,7 +14,7 @@
   temp <- tempfile()
   dl <- suppressWarnings(try(download.file(url, temp, mode = "wb",
                                            quiet = TRUE), silent = TRUE))
-  stopifnot("\nWorld Risk Poll download timed-out.\nPlease check your internet connection and reload the package with\n`library(worldriskpollr)`" =
+  stopifnot("\nWorld Risk Poll download timed-out.\n...Please check your internet connection and reload the package with\n`library(worldriskpollr)`" =
               class(dl) != "try-error")
   .pkgenv$wrp <- readRDS(temp)
   unlink(temp)
