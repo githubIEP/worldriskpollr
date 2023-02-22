@@ -4,12 +4,10 @@
 \alias{.get_question_column}
 \title{Get the column number for the question}
 \usage{
-.get_question_column(wrp_question_uid, wrp)
+.get_question_column(wrp_question_uid)
 }
 \arguments{
 \item{wrp_question_uid}{numeric reflecting which question has been selected}
-
-\item{wrp, }{list, formatted World Risk Poll Questions}
 }
 \description{
 Get the column number for the question

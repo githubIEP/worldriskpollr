@@ -4,12 +4,10 @@
 \alias{.get_weight_column}
 \title{Get the column number for the weights}
 \usage{
-.get_weight_column(wrp_geography_col, wrp)
+.get_weight_column(wrp_geography_col)
 }
 \arguments{
 \item{wrp_geography_col}{numeric reflecting which regions have been selected}
-
-\item{wrp, }{list, formatted World Risk Poll Questions}
 }
 \description{
 Get the column number for the weights

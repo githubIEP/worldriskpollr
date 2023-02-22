@@ -4,13 +4,11 @@
 \alias{.get_regional_column}
 \title{Get the column number for the geography selected}
 \usage{
-.get_regional_column(geography, wrp)
+.get_regional_column(geography)
 }
 \arguments{
 \item{geography}{string, a demographic category by which to aggregate, needs
 to be one of "country", "region" or "income"}
-
-\item{wrp, }{list, formatted World Risk Poll Questions}
 }
 \description{
 Get the column number for the geography selected
