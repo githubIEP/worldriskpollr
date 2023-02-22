@@ -13,7 +13,7 @@
 #'
 
 wrp_search <- function(string = "violence") {
-  wrp <- .wrp_check()
+  wrp <- .pkgenv$wrp #.wrp_check()
   dict <- wrp$wrp_questions %>% unnest(.data$levels)
   matches <- unique(c(
     grep(string, dict$label, ignore.case = TRUE),
