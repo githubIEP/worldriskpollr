@@ -11,7 +11,7 @@
 #' @importFrom utils menu
 #' @importFrom stats complete.cases
 #' @importFrom rlang .data
-#'
+#' @importFrom rlang .data env env_parent set_env
 #' @return data frame with aggregated World Risk Poll question data
 #'
 #' @examples wrp_get(geography = "country", wrp_question_uid = "Q1")
@@ -19,7 +19,7 @@
 
 wrp_get <- function(geography = "country", wrp_question_uid = "Q1") {
   # Set up data frame
-  wrp <- .pkgenv$wrp #.wrp_check()
+  wrp <- .pkgenv$wrp
   wrp_geography_col <- .get_regional_column(geography, wrp)
   wrp_question_col <- .get_question_column(wrp_question_uid, wrp)
   wrp_wgt_col <- .get_weight_column(wrp_geography_col, wrp)

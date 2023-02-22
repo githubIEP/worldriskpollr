@@ -142,9 +142,3 @@ tmp <- unique(tmp$wrp_question_uid)
 head(wrp_get(geography = "country", wrp_question_uid = tmp))
 ```
 
-## Removing World Risk Poll Data from your Computer
-
-If you want to remove all World Risk Poll files from your computer, you may run the following:
-```{r, message = FALSE, warning = FALSE}
-wrp_remove()
-```
