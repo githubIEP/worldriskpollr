@@ -3,7 +3,6 @@
 #' @importFrom curl has_internet
 
 .onLoad <- function(lib, pkg) {
-  options(timeout = 2*60)
   test <- has_internet()
   stopifnot("\nNo internet connection detected.\n...You need an active internet connection to use `worldriskpollr`.\n...Once connected, reload the package with `library(worldriskpollr)`" =
               test)

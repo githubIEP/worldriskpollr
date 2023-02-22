@@ -13,3 +13,7 @@
 # worldriskpollr 0.4.0
 
 -   Fourth release of worldriskpollr uses multicore processing to speed up operations. 
+
+# worldriskpollr 0.5.0
+
+-   Minor changes to the DESRIPTION
