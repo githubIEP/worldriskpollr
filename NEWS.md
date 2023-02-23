@@ -25,3 +25,7 @@
 # worldriskpollr 0.7.0
 
 -   Minor bug fixes on detectCores
+
+# worldriskpollr 0.8.0
+
+-   Minor tweaks for win dev
