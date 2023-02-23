@@ -6,7 +6,7 @@ Lloyd's Register Foundation teamed up with the Institute for Economics and Peace
 
 ## Installation
 
-You can install the development version from [GitHub](https://github.com/) with:
+You can install the most recent version from [GitHub](https://github.com/githubIEP/worldriskpollr/) with:
 
 ``` r
 # install.packages("devtools")
