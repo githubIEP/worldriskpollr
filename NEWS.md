@@ -32,4 +32,4 @@
 
 # worldriskpollr 0.9.0
 
--   Revert for working with win dev
+-   Added @noRD for non exported functions.
