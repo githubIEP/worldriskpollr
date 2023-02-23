@@ -181,24 +181,24 @@ Possibly misspelled words in DESCRIPTION: Lloyd's (11:45)
 The third release failed on the following recurring note (with varying
 times for the three OS):
 
-Examples with CPU (user + system) or elapsed time \> 10s user system
+- Examples with CPU (user + system) or elapsed time \> 10s user system
 elapsed dot-wrp_check 126.82 3.14 130.62
 
--   The reason this NOTE kept on occurring was that the functions
-    downloaded AND processed the data in real time. I now have the
-    preprocessed and compressed rda data available on Github in the
-    package's data-raw folder. I have experimented with compression and
-    found 'xz' the most efficient. The package loads this into the
-    package environment in the .onLoad() function. I have put 3
-    stopifnot() tests into the .onLoad() function. The first checks that
-    the computer is connected to the internet. If not, it asks the user
-    to re-try when they have a valid internet connection. The second
-    checks that the data file is available. If not, there is a message
-    to contact the maintainer. The third catches a timeout error and
-    informs the user to check their internet connection and try loading
-    the package again. I have set the timeout to be 120s.
+The reason this NOTE kept on occurring was that the functions
+downloaded AND processed the data in real time. I now have the
+preprocessed and compressed rda data available on Github in the
+package's data-raw folder. I have experimented with compression and
+found 'xz' the most efficient. The package loads this into the
+package environment in the .onLoad() function. I have put 3
+stopifnot() tests into the .onLoad() function. The first checks that
+the computer is connected to the internet. If not, it asks the user
+to re-try when they have a valid internet connection. The second
+checks that the data file is available. If not, there is a message
+to contact the maintainer. The third catches a timeout error and
+informs the user to check their internet connection and try loading
+the package again. 
 
-This significantly reduces processing time and passes the \<5 sec
+This significantly reduces processing time and passes the <5 sec
 criteria on windows systems. However, I still get the NOTE on Fedora and
 Ubuntu for the function wrp_get(). To address this I have used the
 function mclapply instead of base lapply to make use of multicore
