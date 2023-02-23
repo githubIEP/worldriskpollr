@@ -2,7 +2,7 @@
 #'
 #' @param geography string, a demographic category by which to aggregate, needs
 #' to be one of "country", "region" or "income"
-#'
+#' @noRd
 
 .get_regional_column <- function(geography) {
   stopifnot(

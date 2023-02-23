@@ -2,6 +2,7 @@
 #'
 #' @param wrp_question_uid numeric reflecting which question has been selected
 #'
+#' @noRd
 
 .get_question_column <- function(wrp_question_uid) {
   stopifnot(

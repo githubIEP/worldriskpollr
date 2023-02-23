@@ -1,7 +1,7 @@
 #' Wrapper function for question summaries
 #'
 #' @param question_summary data.frame, summarises selected question
-#'
+#' @noRd
 
 .print_question_summary <- function(question_summary) {
   if (nrow(question_summary) == 2) {

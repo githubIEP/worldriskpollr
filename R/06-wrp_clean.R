@@ -8,6 +8,7 @@
 #' @importFrom janitor clean_names
 #'
 #' @return data frame with aggregated World Risk Poll question data
+#' @noRd
 #'
 wrp_clean <- function(df) {
   df <- df %>% mutate(disaggregation = names(df)[2], question = names(df)[4])

@@ -9,7 +9,7 @@
 #' @importFrom rlang .data
 #'
 #' @return data frame with aggregated World Risk Poll question data
-#'
+#' @noRd
 wrp_aggregate <- function(df) {
   df <- df %>%
     group_by_at(c(1, 2, 3, 5)) %>%

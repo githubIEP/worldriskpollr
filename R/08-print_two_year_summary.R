@@ -1,7 +1,8 @@
 #' Prints question summary for two years
 #'
 #' @param question_summary data.frame, summarises selected question
-#'
+#' @noRd
+#' 
 .print_two_year_summary <- function(question_summary) {
   message(paste(
     "This questions was asked in",
