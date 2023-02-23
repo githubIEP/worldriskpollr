@@ -16,6 +16,12 @@ knitr::opts_chunk$set(
 
 # Installation
 
+The CRAN release version of `worldriskpollr` can be installed via:
+
+``` r
+install.packages("worldriskpollr")
+```
+
 You can install the development version from [GitHub](https://github.com/githubIEP/worldriskpollr/) with:
 
 ``` r

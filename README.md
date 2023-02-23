@@ -6,6 +6,12 @@ Lloyd's Register Foundation teamed up with the Institute for Economics and Peace
 
 ## Installation
 
+The CRAN release version of `worldriskpollr` can be installed via:
+
+``` r
+install.packages("worldriskpollr")
+```
+
 You can install the most recent version from [GitHub](https://github.com/githubIEP/worldriskpollr/) with:
 
 ``` r
