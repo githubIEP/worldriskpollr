@@ -29,3 +29,7 @@
 # worldriskpollr 0.8.0
 
 -   Minor tweaks for win dev
+
+# worldriskpollr 0.9.0
+
+-   Revert for working win dev
