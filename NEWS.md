@@ -32,4 +32,4 @@
 
 # worldriskpollr 0.9.0
 
--   Added @noRD for non exported functions.
+-   Added @noRd for non-exported functions.
