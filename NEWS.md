@@ -16,7 +16,7 @@
 
 # worldriskpollr 0.5.0
 
--   Minor changes to the DESRIPTION
+-   Minor changes to the DESCRIPTION
 
 # worldriskpollr 0.6.0
 

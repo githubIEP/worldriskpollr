@@ -203,9 +203,10 @@ criteria on windows systems. However, I still get the NOTE on Fedora and
 Ubuntu for the function wrp_get(). To address this I have used the
 function mclapply instead of base lapply to make use of multicore
 processing. This assigns 1 core on windows machines, and the minimum of 2 cores ([CRAN
-limit](https://stackoverflow.com/questions/50571325/r-cran-check-fail-when-using-parallel-functions)) or detectCores() (to account for machines that dont have 2 cores)
-on other OS's. While I still still can get the note on Ubuntu and Fedora
-on the checks, multicore processing will greatly reduces the processing
+limit](https://stackoverflow.com/questions/50571325/r-cran-check-fail-when-using-parallel-functions)) or detectCores() (to account for machines that don't have 2 cores) on other OS's. 
+
+Unfortunately this did not change the processing times in the NOTE for Ubuntu of Fedora. 
+However, multicore processing will greatly reduces the processing
 time on Ubuntu and Fedora user machines.
 
 I noted above that according to
