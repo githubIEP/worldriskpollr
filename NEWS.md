@@ -26,10 +26,6 @@
 
 -   Minor bug fixes on detectCores
 
-# worldriskpollr 0.8.0
-
--   Minor tweaks for win dev
-
-# worldriskpollr 0.9.0
+# worldriskpollr 0.7.1
 
 -   Added @noRd for non-exported functions.
