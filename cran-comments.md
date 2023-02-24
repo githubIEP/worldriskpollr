@@ -231,3 +231,7 @@ Done.
 
 The line `options(timeout = 2*60)` has been completely removed from .onLoad() in
 zzz.R.
+
+## Submission 6
+
+Upon release on CRAN, I noticed the pdf manual on CRAN had documentation of non-exported functions. I have added @noRd to the roxygen notes of each to remove these from the pdf.
