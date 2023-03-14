@@ -29,16 +29,20 @@ wrp_data <- raw %>%
 mutate_if(haven::is.labelled, haven::as_factor)
 wrp_data$countryIncomeLevel <- as.character(wrp_data$countryIncomeLevel2019)
 wrp_data$countryIncomeLevel <- ifelse(is.na(wrp_data$countryIncomeLevel),
-                                      as.character(wrp_data$countryIncomeLevel2021), wrp_data$countryIncomeLevel
-)
+                                      as.character(wrp_data$countryIncomeLevel2021), wrp_data$countryIncomeLevel)
+wrp_data$world <- "World"
 wrp_dictionary <- labelled::generate_dictionary(wrp_data) %>%
-  mutate(regional_disaggregate = pos %in% c(2, 6, 233)) %>%
+  mutate(regional_disaggregate = pos %in% c(2, 6, 233, 234)) %>%
   mutate(disaggregator = pos %in% c(3, 13:21)) %>%
   mutate(question = substr(variable, 1, 1) == "q" |
            substr(variable, 1, 2) == "vh") %>%
   mutate(needed = variable %in% c("year", "wgt", "projectionWeight"))
 wrp_dictionary$label <- ifelse((wrp_dictionary$variable == "countryIncomeLevel"),
                                "World Bank Income Levels", wrp_dictionary$label)
+wrp_dictionary$label <- ifelse((wrp_dictionary$variable == "projectionWeight"),
+                               "projectionWeight", wrp_dictionary$label)
+wrp_dictionary$label <- ifelse((wrp_dictionary$variable == "world"),
+                               "World", wrp_dictionary$label)
 wrp_dictionary$label <- ifelse((wrp_dictionary$variable == "projectionWeight"),
                                "projectionWeight", wrp_dictionary$label)
 wrp_dictionary <- wrp_dictionary[wrp_dictionary$regional_disaggregate |
@@ -51,7 +55,7 @@ wrp_year_col <- match("year", wrp_dictionary$variable)
 wrp_weight_col <- match("wgt", wrp_dictionary$variable)
 wrp_projweight_col <- match("projectionWeight", wrp_dictionary$variable)
 wrp_dictionary$WRP_UID <- NA
-regional_ids <- c("country", "region", "income")
+regional_ids <- c("country", "region", "income", "world")
 wrp_dictionary$WRP_UID[wrp_dictionary$regional_disaggregate] <- regional_ids
 wrp_dictionary$WRP_UID[wrp_dictionary$disaggregator] <-
   paste0("DIS", 1:sum(wrp_dictionary$disaggregator))
