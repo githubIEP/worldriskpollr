@@ -235,3 +235,23 @@ zzz.R.
 ## Submission 6
 
 Upon release on CRAN, I noticed the pdf manual on CRAN had documentation of non-exported functions. I have added @noRd to the roxygen notes of each to remove these from the pdf.
+
+## Submission 7
+
+My submission 6 was blocked because it was too soon after release, which was fine because the changes were aesthetic only.
+
+For submission 7 though, I have added new functionality that allows for world aggregation as per a user request. So this submission has the aesthetic submission from No. 6 and additional and tested functionality.
+
+It receives the same notes on timing from Ubuntu and Fedora as before.
+
+I alos noticed the following NOTE from [r-oldrel-windows-ix86+x86_64](https://cran.r-project.org/web/checks/check_results_worldriskpollr.html)
+
+Check: R code for possible problems
+Result: NOTE
+    Initiating curl with CURL_SSL_BACKEND: openssl
+Flavor: r-oldrel-windows-ix86+x86_64
+
+I googled this and can not find a solution. I also saw this note on other CRAN packages, so I am assuming this can be ignored.
+
+Thanks
+David
