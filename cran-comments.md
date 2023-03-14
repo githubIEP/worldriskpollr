@@ -244,7 +244,7 @@ For submission 7 though, I have added new functionality that allows for world ag
 
 It receives the same notes on timing from Ubuntu and Fedora as before.
 
-I alos noticed the following NOTE from [r-oldrel-windows-ix86+x86_64](https://cran.r-project.org/web/checks/check_results_worldriskpollr.html)
+I also noticed the following NOTE from [r-oldrel-windows-ix86+x86_64](https://cran.r-project.org/web/checks/check_results_worldriskpollr.html)
 
 Check: R code for possible problems
 Result: NOTE
@@ -253,5 +253,4 @@ Flavor: r-oldrel-windows-ix86+x86_64
 
 I googled this and can not find a solution. I also saw this note on other CRAN packages, so I am assuming this can be ignored.
 
-Thanks
-David
+Thanks again or your diligence.
