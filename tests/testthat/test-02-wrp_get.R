@@ -9,7 +9,7 @@ test_that("assess_wrp_get_income", {
 })
 
 test_that("assess_wrp_get_world", {
-  expected <- wrp_get(geography = "income", wrp_question_uid = "Q1")
+  expected <- wrp_get(geography = "world", wrp_question_uid = "Q1")
   expect_s3_class(expected, "data.frame")
 })
 
