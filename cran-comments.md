@@ -181,36 +181,36 @@ Possibly misspelled words in DESCRIPTION: Lloyd's (11:45)
 The third release failed on the following recurring note (with varying
 times for the three OS):
 
-- Examples with CPU (user + system) or elapsed time \> 10s user system
-elapsed dot-wrp_check 126.82 3.14 130.62
+-   Examples with CPU (user + system) or elapsed time \> 10s user system
+    elapsed dot-wrp_check 126.82 3.14 130.62
 
-The reason this NOTE kept on occurring was that the functions
-downloaded AND processed the data in real time. I now have the
-preprocessed and compressed rda data available on Github in the
-package's data-raw folder. I have experimented with compression and
-found 'xz' the most efficient. The package loads this into the
-package environment in the .onLoad() function. I have put 3
-stopifnot() tests into the .onLoad() function. The first checks that
-the computer is connected to the internet. If not, it asks the user
-to re-try when they have a valid internet connection. The second
-checks that the data file is available. If not, there is a message
-to contact the maintainer. The third catches a timeout error and
-informs the user to check their internet connection and try loading
-the package again. 
+The reason this NOTE kept on occurring was that the functions downloaded
+AND processed the data in real time. I now have the preprocessed and
+compressed rda data available on Github in the package's data-raw
+folder. I have experimented with compression and found 'xz' the most
+efficient. The package loads this into the package environment in the
+.onLoad() function. I have put 3 stopifnot() tests into the .onLoad()
+function. The first checks that the computer is connected to the
+internet. If not, it asks the user to re-try when they have a valid
+internet connection. The second checks that the data file is available.
+If not, there is a message to contact the maintainer. The third catches
+a timeout error and informs the user to check their internet connection
+and try loading the package again.
 
-This significantly reduces processing time and passes the <5 sec
-criteria on windows systems. 
+This significantly reduces processing time and passes the \<5 sec
+criteria on windows systems.
 
-However, I still get the NOTE on Fedora and
-Ubuntu for the function wrp_get(). To address this I have used the
-function mclapply instead of base lapply to make use of multicore
-processing. This assigns 1 core on windows machines, and the minimum of 2 cores ([CRAN
-limit](https://stackoverflow.com/questions/50571325/r-cran-check-fail-when-using-parallel-functions)) 
-or detectCores() (to account for machines that don't have 2 cores) on other OS's. 
+However, I still get the NOTE on Fedora and Ubuntu for the function
+wrp_get(). To address this I have used the function mclapply instead of
+base lapply to make use of multicore processing. This assigns 1 core on
+windows machines, and the minimum of 2 cores ([CRAN
+limit](https://stackoverflow.com/questions/50571325/r-cran-check-fail-when-using-parallel-functions))
+or detectCores() (to account for machines that don't have 2 cores) on
+other OS's.
 
-Unfortunately this did not change the processing times in the NOTE for Ubuntu of Fedora. 
-However, multicore processing will greatly reduces the processing
-time on Ubuntu and Fedora user machines.
+Unfortunately this did not change the processing times in the NOTE for
+Ubuntu of Fedora. However, multicore processing will greatly reduces the
+processing time on Ubuntu and Fedora user machines.
 
 I noted above that according to
 [Github](https://github.com/microsoft/LightGBM/issues/2988) this note is
@@ -229,28 +229,36 @@ Done.
 -   Please make sure that you do not change the user's options, par or
     working directory.
 
-The line `options(timeout = 2*60)` has been completely removed from .onLoad() in
-zzz.R.
+The line `options(timeout = 2*60)` has been completely removed from
+.onLoad() in zzz.R.
 
 ## Submission 6
 
-Upon release on CRAN, I noticed the pdf manual on CRAN had documentation of non-exported functions. I have added @noRd to the roxygen notes of each to remove these from the pdf.
+Upon release on CRAN, I noticed the pdf manual on CRAN had documentation
+of non-exported functions. I have added @noRd to the roxygen notes of
+each to remove these from the pdf.
 
 ## Submission 7
 
-My submission 6 was blocked because it was too soon after release, which was fine because the changes were aesthetic only.
+-   My submission 6 was blocked because it was too soon after release,
+    which was fine because the changes were aesthetic only.
 
-For submission 7 though, I have added new functionality that allows for world aggregation as per a user request. So this submission has the aesthetic submission from No. 6 and additional and tested functionality.
+-   For submission 7 though, I have added new functionality that allows
+    for world aggregation as per a user request. So this submission has
+    the aesthetic submission from No. 6 and additional functionality. I
+    have added testthat tests to check this new functionality and these
+    all pass on R CMD check.
 
-It receives the same notes on timing from Ubuntu and Fedora as before.
+-   On rhub::check_for_cran() the package receives the same notes on
+    timing from Ubuntu and Fedora as it did before.
 
-I also noticed the following NOTE from [r-oldrel-windows-ix86+x86_64](https://cran.r-project.org/web/checks/check_results_worldriskpollr.html)
+-   I also noticed the following NOTE from the CRAN results page
+    [r-oldrel-windows-ix86+x86_64](https://cran.r-project.org/web/checks/check_results_worldriskpollr.html)
 
-Check: R code for possible problems
-Result: NOTE
-    Initiating curl with CURL_SSL_BACKEND: openssl
-Flavor: r-oldrel-windows-ix86+x86_64
+Check: R code for possible problems Result: NOTE Initiating curl with
+CURL_SSL_BACKEND: openssl Flavor: r-oldrel-windows-ix86+x86_64
 
-I googled this and can not find a solution. I also saw this note on other CRAN packages, so I am assuming this can be ignored.
+-   I googled this and can not find a solution. I also saw this note on
+    other CRAN packages, so I am assuming this can be ignored.
 
 Thanks again or your diligence.
