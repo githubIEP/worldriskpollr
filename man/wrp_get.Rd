@@ -8,7 +8,7 @@ wrp_get(geography = "country", wrp_question_uid = "Q1")
 }
 \arguments{
 \item{geography}{string, a demographic category by which to aggregate,
-needs to be one of "country", "region" or "income"}
+needs to be one of "country", "region", "income" or "world"}
 
 \item{wrp_question_uid}{string, the number code for the survey
 question to focus on}

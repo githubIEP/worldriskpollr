@@ -111,6 +111,8 @@ The results will be disaggregated by the following groups:
 
 -   `childrenInHousehold`, total number of children under 15 in the respondent's household.
 
+-   `global`, statistics at the global level
+
 
 Users need to provide the desired aggregation level to `wrp_get` as a string. It is also necessary to provide a question code string, such as those provided returned in `wrp_search`. The use of `wrp_get` looks like:
 
@@ -133,6 +135,12 @@ This returns a 6 column dataframe in tidy format with the following columns:
 -   `response`: the response
 
 -   `percentage`: the percentage of respondents for each disaggregation that provided the relevant response.
+
+To explore global trends, the user could use:
+
+```{r, message = FALSE, warning = FALSE}
+head(wrp_get(geography = "world", wrp_question_uid = "Q1"))
+```
 
 So a standard use case stringing `wrp_search` and `wrp_get` together could look like:
 

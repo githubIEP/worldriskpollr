@@ -31,7 +31,7 @@ wrp_data$countryIncomeLevel <- as.character(wrp_data$countryIncomeLevel2019)
 wrp_data$countryIncomeLevel <- ifelse(is.na(wrp_data$countryIncomeLevel),
                                       as.character(wrp_data$countryIncomeLevel2021), wrp_data$countryIncomeLevel)
 wrp_data$world <- "World"
-wrp_data$world_disaggregator = "Global Statistic"
+wrp_data$global <- "Global Statistic"
 wrp_dictionary <- labelled::generate_dictionary(wrp_data) %>%
   mutate(regional_disaggregate = pos %in% c(2, 6, 233, 234)) %>%
   mutate(disaggregator = pos %in% c(3, 13:21, 235)) %>%
@@ -44,7 +44,7 @@ wrp_dictionary$label <- ifelse((wrp_dictionary$variable == "projectionWeight"),
                                "projectionWeight", wrp_dictionary$label)
 wrp_dictionary$label <- ifelse((wrp_dictionary$variable == "world"),
                                "World", wrp_dictionary$label)
-wrp_dictionary$label <- ifelse((wrp_dictionary$variable == "world_disaggregator"),
+wrp_dictionary$label <- ifelse((wrp_dictionary$variable == "global"),
                                "Global Statistic", wrp_dictionary$label)
 wrp_dictionary$label <- ifelse((wrp_dictionary$variable == "projectionWeight"),
                                "projectionWeight", wrp_dictionary$label)

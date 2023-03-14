@@ -29,3 +29,7 @@
 # worldriskpollr 0.7.1
 
 -   Added @noRd for non-exported functions.
+
+# worldriskpollr 0.7.2
+
+-   Added global aggregation capability
