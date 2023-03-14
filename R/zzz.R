@@ -15,6 +15,6 @@
                                            quiet = TRUE), silent = TRUE))
   stopifnot("\nWorld Risk Poll download timed-out.\n...Please check your internet connection and reload the package with\n`library(worldriskpollr)`" =
               class(dl) != "try-error")
-  .pkgenv$wrp <- readRDS(temp)
+  .pkgenv$wrp <- readRDS("./data-raw/sysdata.rda")
   unlink(temp)
 }
