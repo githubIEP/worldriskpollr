@@ -33,3 +33,7 @@
 # worldriskpollr 0.7.2
 
 -   Added global aggregation capability
+
+# worldriskpollr 0.7.3
+
+-   Allows users to select disaggregation

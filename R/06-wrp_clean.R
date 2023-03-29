@@ -19,6 +19,7 @@ wrp_clean <- function(df) {
     mutate_if(is.factor, as.character) %>%
     clean_names("lower_camel")
   names(df) <- gsub("yearOfInterview", "year", names(df))
-  df <- df[, c(1, 6, 2, 3, 7, 4, 5)]
+  df$year = as.numeric(df$year)
+  df <- df[, c(1, 5, 2, 3, 7, 4, 6)]
   return(df)
 }

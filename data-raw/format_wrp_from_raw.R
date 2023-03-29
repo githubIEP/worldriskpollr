@@ -34,7 +34,7 @@ wrp_data$world <- "World"
 wrp_data$global <- "Global Statistic"
 wrp_dictionary <- labelled::generate_dictionary(wrp_data) %>%
   mutate(regional_disaggregate = pos %in% c(2, 6, 233, 234)) %>%
-  mutate(disaggregator = pos %in% c(3, 13:21, 235)) %>%
+  mutate(disaggregator = pos %in% c(13:21)) %>%
   mutate(question = substr(variable, 1, 1) == "q" |
            substr(variable, 1, 2) == "vh") %>%
   mutate(needed = variable %in% c("year", "wgt", "projectionWeight"))
