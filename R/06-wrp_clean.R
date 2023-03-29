@@ -6,6 +6,7 @@
 #'
 #' @importFrom dplyr mutate mutate_if
 #' @importFrom janitor clean_names
+#' @importFrom labelled remove_attributes
 #'
 #' @return data frame with aggregated World Risk Poll question data
 #' @noRd
@@ -21,5 +22,6 @@ wrp_clean <- function(df) {
   names(df) <- gsub("yearOfInterview", "year", names(df))
   df$year = as.numeric(df$year)
   df <- df[, c(1, 5, 2, 3, 7, 4, 6)]
+  df <- df %>% remove_attributes("label")
   return(df)
 }

@@ -23,7 +23,7 @@
 #' @importFrom utils menu
 #' @importFrom stats complete.cases
 #' @importFrom rlang .data env env_parent set_env
-#' @importFrom sjlabelled get_label set_label set_label<-
+#' @importFrom sjlabelled get_label set_label set_label<- 
 #' 
 #' @return data frame with aggregated World Risk Poll question data
 #'
@@ -52,7 +52,7 @@ wrp_get <- function(geography = "country", wrp_question_uid = "Q1", disaggregati
   )]
   names(wrp_agg)[4] <- "wgt"
   names(wrp_agg)[2] <- "group"
-  if(get_label(wrp_agg$wp5) == get_label(wrp_agg$group)){ #TODO!!!
+  if(get_label(wrp_agg[, 1]) == get_label(wrp_agg$group)){ 
     set_label(wrp_agg$group) <- "Aggregate"
   }
   wrp_agg$disaggregation = ifelse(disaggregation == 0,  

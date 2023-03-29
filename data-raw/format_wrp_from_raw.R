@@ -30,8 +30,9 @@ mutate_if(haven::is.labelled, haven::as_factor)
 wrp_data$countryIncomeLevel <- as.character(wrp_data$countryIncomeLevel2019)
 wrp_data$countryIncomeLevel <- ifelse(is.na(wrp_data$countryIncomeLevel),
                                       as.character(wrp_data$countryIncomeLevel2021), wrp_data$countryIncomeLevel)
+set_label(wrp_data$countryIncomeLevel) <- "countryIncomeLevel"
 wrp_data$world <- "World"
-wrp_data$global <- "Global Statistic"
+set_label(wrp_data$world) <- "World"
 wrp_dictionary <- labelled::generate_dictionary(wrp_data) %>%
   mutate(regional_disaggregate = pos %in% c(2, 6, 233, 234)) %>%
   mutate(disaggregator = pos %in% c(13:21)) %>%
@@ -44,8 +45,8 @@ wrp_dictionary$label <- ifelse((wrp_dictionary$variable == "projectionWeight"),
                                "projectionWeight", wrp_dictionary$label)
 wrp_dictionary$label <- ifelse((wrp_dictionary$variable == "world"),
                                "World", wrp_dictionary$label)
-wrp_dictionary$label <- ifelse((wrp_dictionary$variable == "global"),
-                               "Global Statistic", wrp_dictionary$label)
+# wrp_dictionary$label <- ifelse((wrp_dictionary$variable == "global"),
+#                                "Global Statistic", wrp_dictionary$label)
 wrp_dictionary$label <- ifelse((wrp_dictionary$variable == "projectionWeight"),
                                "projectionWeight", wrp_dictionary$label)
 wrp_dictionary <- wrp_dictionary[wrp_dictionary$regional_disaggregate |
