@@ -20,7 +20,7 @@ test_that("assess_wrp_get_two_years", {
 
 
 test_that("assess_wrp_get_one_year", {
-  expected <- wrp_get(geography = "country", wrp_question_uid = "Q2_1")
+  expected <- wrp_get(geography = "country", wrp_question_uid = "Q2_1", disaggregation = 0)
   expect_s3_class(expected, "data.frame")
 })
 
