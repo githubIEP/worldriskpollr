@@ -7,30 +7,47 @@
 wrp_get(geography = "country", wrp_question_uid = "Q1", disaggregation = 0)
 }
 \arguments{
-\item{geography}{string, a demographic category by which to aggregate,
-needs to be one of "country", "region", "income" or "world"}
+\item{geography}{string, a demographic category by which to aggregate}
 
-\item{wrp_question_uid}{string, the number code for the survey
+\item{wrp_question_uid}{string, the code for the survey
 question to focus on}
 
-\item{disaggregation}{integer, one of the following:
-0: No disaggregation
-1: `age group`, respondent's age group;
-2: `gender`, respondent's gender;
-3: `education`, respondent's highest level of education;
-4: `incomeFeelings`, respondent's feelings about their household income;
-5: `income5`, respondent's per capita income quintile;
-6: `emp2010`: Employment Status
-7: `urbanicity`, respondent's residence: urban or rural;
-8: `householdSize`, total number of people in the respondent's household;
-9: `childrenInHousehold`, total number of children under 15 in the respondent's household.}
+\item{disaggregation}{integer within 0 to 9 (see details)}
 }
 \value{
-data frame with aggregated World Risk Poll question data
+A data frame with aggregated World Risk Poll question data
 }
 \description{
 Allows you to access aggregated data for a World Risk Poll question.
 }
+\details{
+The scope of the parameters for this function are 
+pre-defined by the World Risk Poll data set. 
+Entering parameters outside of these will result in an error message.
+
+
+\itemize{
+  \item \strong{`geography`}: Needs to be on of the following: "country", "region", "income", or "world".
+  \item \strong{`wrp_question_uid`}: The code for the survey question to focus on, see \code{\link{wrp_search}}
+  \item \strong{`disaggregation`}: The desired disaggregation is an integer between 0 and 9 to represent:
+  \itemize{
+   \item 0: \emph{No disaggregation}: aggregates to the selected geography;
+   \item 1: \emph{`age group`}: respondent's age group;
+   \item 2: \emph{`sex`}: respondent's sex;
+   \item 3: \emph{`education`}: respondent's highest level of education;
+   \item 4: \emph{`incomeFeelings`}: respondent's feelings about their household income;
+   \item 5: \emph{`income5`}: respondent's per capita income quintile;
+   \item 6: \emph{`emp2010`}: Employment Status
+   \item 7: \emph{`urbanicity`}: respondent's residence: urban or rural;
+   \item 8: \emph{`householdSize`}: total number of people in the respondent's household;
+   \item 9: \emph{`childrenInHousehold`}: total number of children under 15 in the respondent's household.
+  }
+  
+}
+}
 \examples{
 wrp_get(geography = "country", wrp_question_uid = "Q1", disaggregation = 0)
+}
+\seealso{
+\code{\link{wrp_search}}
 }

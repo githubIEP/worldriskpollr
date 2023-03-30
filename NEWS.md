@@ -37,3 +37,4 @@
 # worldriskpollr 0.7.3
 
 -   Allows users to select disaggregation
+-   Improved documentation on wrp_get()

@@ -266,7 +266,10 @@ Thanks again or your diligence.
 
 ## Submission 8
 
--   Added new functionality that allows user to select disaggregation. Requested by a number of         users. I have added testthat tests to check this new functionality and these
+-   Added new functionality that allows user to select disaggregation. Requested by a number of         users. 
+-   Improved the documentation of wrp_get with a @details section
+
+-   I have added testthat tests to check this new functionality and these
     all pass on R CMD check.
 
 -   On rhub::check_for_cran() this also solves the greater than 5 sec errors on all checks.
