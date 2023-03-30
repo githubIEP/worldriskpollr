@@ -15,7 +15,7 @@ question to focus on}
 \item{disaggregation}{integer within 0 to 9 (see details)}
 }
 \value{
-A data frame with aggregated World Risk Poll question data
+A data frame with aggregated World Risk Poll question data.
 }
 \description{
 Allows you to access aggregated data for a World Risk Poll question.
@@ -23,24 +23,25 @@ Allows you to access aggregated data for a World Risk Poll question.
 \details{
 The scope of the parameters for this function are 
 pre-defined by the World Risk Poll data set. 
-Entering parameters outside of these will result in an error message.
+
+Entering parameters outside of the follwoing will return an error message.
 
 
 \itemize{
-  \item \strong{`geography`}: Needs to be on of the following: "country", "region", "income", or "world".
-  \item \strong{`wrp_question_uid`}: The code for the survey question to focus on, see \code{\link{wrp_search}}
-  \item \strong{`disaggregation`}: The desired disaggregation is an integer between 0 and 9 to represent:
+  \item \strong{geography}: Needs to be on of the following: "country", "region", "income", or "world".
+  \item \strong{wrp_question_uid}: The code for the survey question to focus on, see \code{\link{wrp_search}}
+  \item \strong{disaggregation}: The desired disaggregation is an integer between 0 and 9 to represent:
   \itemize{
-   \item 0: \emph{No disaggregation}: aggregates to the selected geography;
-   \item 1: \emph{`age group`}: respondent's age group;
-   \item 2: \emph{`sex`}: respondent's sex;
-   \item 3: \emph{`education`}: respondent's highest level of education;
-   \item 4: \emph{`incomeFeelings`}: respondent's feelings about their household income;
-   \item 5: \emph{`income5`}: respondent's per capita income quintile;
-   \item 6: \emph{`emp2010`}: Employment Status
-   \item 7: \emph{`urbanicity`}: respondent's residence: urban or rural;
-   \item 8: \emph{`householdSize`}: total number of people in the respondent's household;
-   \item 9: \emph{`childrenInHousehold`}: total number of children under 15 in the respondent's household.
+   \item \strong{0: No disaggregation}: aggregates to the selected geography;
+   \item \strong{1: Age group}: respondent's age group;
+   \item \strong{2: Sex}: respondent's sex;
+   \item \strong{3: Education}: respondent's highest level of education;
+   \item \strong{4: Income Feelings}: respondent's feelings about their household income;
+   \item \strong{5: Income Quintiles}: respondent's per capita income quintile;
+   \item \strong{6: Employment}: respondent's employment Status
+   \item \strong{7: Residence}: respondent's residence: urban or rural;
+   \item \strong{8: Household Size}: total number of people in the respondent's household;
+   \item \strong{9: Children in Household}: total number of children under 15 in the respondent's household.
   }
   
 }
