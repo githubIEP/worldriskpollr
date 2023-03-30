@@ -31,7 +31,6 @@ Imports:
     janitor,
     rlang,
     stats,
-    utils,
     httr,
     curl
 Suggests: 

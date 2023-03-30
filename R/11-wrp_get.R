@@ -34,7 +34,6 @@
 #' @seealso \code{\link{wrp_search}}
 #'
 #' @importFrom dplyr group_by ungroup summarise bind_rows arrange
-#' @importFrom utils menu
 #' @importFrom stats complete.cases
 #' @importFrom rlang .data env env_parent set_env
 #' @importFrom sjlabelled get_label set_label set_label<-

@@ -21,8 +21,8 @@ A data frame with aggregated World Risk Poll question data.
 Allows you to access aggregated data for a World Risk Poll question.
 }
 \details{
-The scope of the parameters for this function are 
-pre-defined by the World Risk Poll data set. 
+The scope of the parameters for this function are
+pre-defined by the World Risk Poll data set.
 
 Entering parameters outside of the following will return an error message.
 
@@ -43,7 +43,6 @@ Entering parameters outside of the following will return an error message.
    \item \strong{8: Household Size}: total number of people in the respondent's household;
    \item \strong{9: Children in Household}: total number of children under 15 in the respondent's household.
   }
-  
 }
 }
 \examples{
