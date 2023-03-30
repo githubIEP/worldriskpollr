@@ -52,15 +52,12 @@ wrp_get <- function(geography = "country", wrp_question_uid = "Q1", disaggregati
   wrp_wgt_col <- .get_weight_column(wrp_geography_col)
   wrp_disagg_col <- .get_disagg_column(disaggregation)
   wrp_disagg_col <- ifelse(wrp_disagg_col == 0, wrp_geography_col, wrp_disagg_col)
-  #cores <- detectCores()
-  #cores <- ifelse(Sys.info()[["sysname"]] == "Windows", 1,
-  #                min(c(cores, 2)))
-  # Aggregate data using weights
-  # if (geography == "country") {
-  #   pos <- .pkgenv$wrp$wrp_disaggregations$pos[-length(.pkgenv$wrp$wrp_disaggregations$pos)]
-  # }else {
-  #   pos <- rev(.pkgenv$wrp$wrp_disaggregations$pos[-1])
-  # }
+  if(wrp_geography_col < 0 | 
+     wrp_question_col < 0 | 
+     wrp_disagg_col < 0){
+    message("worldriskpollr existed, please try again")
+    return(invisible(NULL))
+  }
   wrp_agg <- .pkgenv$wrp$wrp_data[, c(
     wrp_geography_col, wrp_disagg_col, .pkgenv$wrp$wrp_year_col, wrp_wgt_col,
     wrp_question_col

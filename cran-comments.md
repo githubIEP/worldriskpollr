@@ -271,6 +271,8 @@ Thanks again or your diligence.
 
 -   I have added testthat tests to check this new functionality and these
     all pass on R CMD check.
+    
+-   Also, implemented cleaner error handling to avoid stopifnot error breaks
 
 -   On rhub::check_for_cran() this also solves the greater than 5 sec errors on all checks.
 
