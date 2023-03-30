@@ -12,7 +12,7 @@
 #' @noRd
 wrp_aggregate <- function(df) {
   df <- df %>%
-    group_by_at(c(1, 2, 3, 5)) %>%
+    group_by_at(c(1, 2, 3, 5, 6)) %>%
     summarise(weightedCount = sum(.data$wgt)) %>%
     ungroup() %>%
     group_by_at(c(1, 2, 3)) %>%

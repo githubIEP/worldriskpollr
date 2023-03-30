@@ -4,21 +4,50 @@
 \alias{wrp_get}
 \title{Get aggregated data for a question in the World Risk Poll}
 \usage{
-wrp_get(geography = "country", wrp_question_uid = "Q1")
+wrp_get(geography = "country", wrp_question_uid = "Q1", disaggregation = 0)
 }
 \arguments{
-\item{geography}{string, a demographic category by which to aggregate,
-needs to be one of "country", "region", "income" or "world"}
+\item{geography}{string, a demographic category by which to aggregate}
 
-\item{wrp_question_uid}{string, the number code for the survey
+\item{wrp_question_uid}{string, the code for the survey
 question to focus on}
+
+\item{disaggregation}{integer within 0 to 9 (see details)}
 }
 \value{
-data frame with aggregated World Risk Poll question data
+A data frame with aggregated World Risk Poll question data.
 }
 \description{
 Allows you to access aggregated data for a World Risk Poll question.
 }
+\details{
+The scope of the parameters for this function are
+pre-defined by the World Risk Poll data set.
+
+Entering parameters outside of the following will return an error message.
+
+
+\itemize{
+  \item \strong{geography}: Needs to be on of the following: "country", "region", "income", or "world".
+  \item \strong{wrp_question_uid}: The code for the survey question to focus on, see \code{\link{wrp_search}}
+  \item \strong{disaggregation}: The desired disaggregation is an integer between 0 and 9 to represent:
+  \itemize{
+   \item \strong{0: No disaggregation}: aggregates to the selected geography;
+   \item \strong{1: Age group}: respondent's age group;
+   \item \strong{2: Sex}: respondent's sex;
+   \item \strong{3: Education}: respondent's highest level of education;
+   \item \strong{4: Income Feelings}: respondent's feelings about their household income;
+   \item \strong{5: Income Quintiles}: respondent's per capita income quintile;
+   \item \strong{6: Employment}: respondent's employment Status
+   \item \strong{7: Residence}: respondent's residence: urban or rural;
+   \item \strong{8: Household Size}: total number of people in the respondent's household;
+   \item \strong{9: Children in Household}: total number of children under 15 in the respondent's household.
+  }
+}
+}
 \examples{
-wrp_get(geography = "country", wrp_question_uid = "Q1")
+wrp_get(geography = "country", wrp_question_uid = "Q1", disaggregation = 0)
+}
+\seealso{
+\code{\link{wrp_search}}
 }

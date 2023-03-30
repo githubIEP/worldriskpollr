@@ -33,3 +33,12 @@
 # worldriskpollr 0.7.2
 
 -   Added global aggregation capability
+
+# worldriskpollr 0.7.3
+
+-   Allows users to select disaggregation
+-   Improved documentation on wrp_get()
+
+# worldriskpollr 0.7.4
+
+-   Cleaner error handling

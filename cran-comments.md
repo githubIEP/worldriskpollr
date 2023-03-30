@@ -262,3 +262,18 @@ CURL_SSL_BACKEND: openssl Flavor: r-oldrel-windows-ix86+x86_64
     other CRAN packages, so I am assuming this can be ignored.
 
 Thanks again or your diligence.
+
+
+## Submission 8
+
+-   Added new functionality that allows user to select disaggregation. Requested by a number of         users. 
+-   Improved the documentation of wrp_get with a @details section
+
+-   I have added testthat tests to check this new functionality and these
+    all pass on R CMD check.
+    
+-   Also, implemented cleaner error handling to avoid stopifnot error breaks
+
+-   On rhub::check_for_cran() this also solves the greater than 5 sec errors on all checks.
+
+
