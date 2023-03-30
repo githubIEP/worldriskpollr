@@ -10,7 +10,7 @@
 #' @details The scope of the parameters for this function are 
 #' pre-defined by the World Risk Poll data set. 
 #' 
-#' Entering parameters outside of the follwoing will return an error message.
+#' Entering parameters outside of the following will return an error message.
 #' 
 #' 
 #' \itemize{
