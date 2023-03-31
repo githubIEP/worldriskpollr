@@ -266,13 +266,16 @@ Thanks again or your diligence.
 
 ## Submission 8
 
--   Added new functionality that allows user to select disaggregation. Requested by a number of         users. 
--   Improved the documentation of wrp_get with a @details section
+-   Added new functionality that allows user to select disaggregation. This was a user request. 
+
+-   Adding this significantly improves processing time, from 12 sec (in the worst case) to consistently less than 1 sec. As a result, I no longer get the notes from rhub::check_for_cran() of "greater than 5 sec".
+
+-   Improved the documentation of wrp_get with a @details section.
 
 -   I have added testthat tests to check this new functionality and these
     all pass on R CMD check.
     
--   Also, implemented cleaner error handling to avoid stopifnot error breaks
+-   Also, implemented cleaner error handling to avoid stopifnot error breaks.
 
 -   On rhub::check_for_cran() this also solves the greater than 5 sec errors on all checks.
 
