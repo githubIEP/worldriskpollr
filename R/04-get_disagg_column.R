@@ -1,6 +1,7 @@
 #' Get the column number for the weights
 #'
-#' @param wrp_geography_col numeric reflecting which regions have been selected
+#' @param wrp_disagg_col numeric reflecting which disaggregation has been 
+#' selected.
 #'
 #' @noRd
 

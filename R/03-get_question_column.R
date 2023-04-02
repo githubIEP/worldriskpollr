@@ -1,6 +1,6 @@
 #' Get the column number for the question
 #'
-#' @param wrp_question_uid numeric reflecting which question has been selected
+#' @param wrp_question_uid string reflecting which question has been selected
 #'
 #' @noRd
 
