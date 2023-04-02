@@ -1,6 +1,6 @@
-#' Get the column number for the weights
+#' Get the column number for the disaggregation
 #'
-#' @param wrp_disagg_col numeric reflecting which disaggregation has been 
+#' @param wrp_disagg_col numeric reflecting which disaggregation has been
 #' selected.
 #'
 #' @noRd

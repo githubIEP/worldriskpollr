@@ -8,7 +8,7 @@
 #' @param disaggregation integer within 0 to 9 (see details)
 #'
 #' @details The scope of the parameters for this function are
-#' pre-defined by the World Risk Poll data set.
+#' defined by the World Risk Poll data set.
 #'
 #' Entering parameters outside of the following will return an error message.
 #'
