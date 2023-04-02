@@ -272,6 +272,8 @@ Thanks again or your diligence.
 
 -   Improved the documentation of wrp_get with a @details section.
 
+-   Updated the vignette with new functionality.
+
 -   I have added testthat tests to check this new functionality and these
     all pass on R CMD check.
     
