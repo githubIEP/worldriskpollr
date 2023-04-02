@@ -81,13 +81,15 @@ head(wrp_search("violence"))
 
 ## Getting aggregated World Risk Poll data using `wrp_get`
 
-The `wrp_get` function provides users with a way of access aggregated data. Users can select which geographic region they would like to see the data at:
+The `wrp_get` function provides users with a way of access aggregated data. The results are population weighted to the selected geography. Users can select which geographic region they would like to see the data at:
 
 -   `country`: data is aggregated to the national level;
 
 -   `region`: data is aggregated to the national level;
 
 -   `income`: data is aggregated based on World Bank Income classification of the country.
+
+-   `world`: data is aggregated to the global level.
 
 The user also needs to select the desired disaggregation:
 
@@ -124,11 +126,7 @@ This returns a 6 column dataframe in tidy format with the following columns:
 
 -   `percentage`: the percentage of respondents for each disaggregation that provided the relevant response.
 
-To explore global trends, the user could use:
 
-```{r, message = FALSE, warning = FALSE}
-head(wrp_get(geography = "world", wrp_question_uid = "Q1", disaggregation = 0))
-```
 
 # Standard Use Case
 

@@ -42,3 +42,7 @@
 # worldriskpollr 0.7.4
 
 -   Cleaner error handling
+
+# worldriskpollr 0.7.5
+
+-   Cleaner documentation

@@ -14,20 +14,26 @@
 #'
 #'
 #' \itemize{
-#'   \item \strong{geography}: Needs to be one of the following: `country`, `region`, `income`, or `world`.
+#'   \item \strong{geography}: Needs to be one of the following: 
+#'   \itemize{
+#'   \item \strong{`country`:} Aggregate to the country level.
+#'   \item \strong{`region`:} Aggregate to the Regional level
+#'   \item \strong{`income`:} Aggregate to World Bank Income levels.
+#'   \item \strong{`world`:} Aggregate to the global level. 
+#'   }
 #'   \item \strong{wrp_question_uid}: The code for the survey question to focus on, see \code{\link{wrp_search}}
 #'   \item \strong{disaggregation}: The desired disaggregation is an integer between 0 and 9 to represent:
 #'   \itemize{
-#'    \item \strong{0: No disaggregation}: aggregates to the selected geography;
-#'    \item \strong{1: Age group}: respondent's age group;
-#'    \item \strong{2: Sex}: respondent's sex;
-#'    \item \strong{3: Education}: respondent's highest level of education;
-#'    \item \strong{4: Income Feelings}: respondent's feelings about their household income;
-#'    \item \strong{5: Income Quintiles}: respondent's per capita income quintile;
-#'    \item \strong{6: Employment}: respondent's employment Status
-#'    \item \strong{7: Residence}: respondent's residence: urban or rural;
-#'    \item \strong{8: Household Size}: total number of people in the respondent's household;
-#'    \item \strong{9: Children in Household}: total number of children under 15 in the respondent's household.
+#'    \item \strong{0: No disaggregation:} aggregates to the selected geography;
+#'    \item \strong{1: Age group:} respondent's age group;
+#'    \item \strong{2: Sex:} respondent's sex;
+#'    \item \strong{3: Education:} respondent's highest level of education;
+#'    \item \strong{4: Income Feelings:} respondent's feelings about their household income;
+#'    \item \strong{5: Income Quintiles:} respondent's per capita income quintile;
+#'    \item \strong{6: Employment:} respondent's employment Status
+#'    \item \strong{7: Residence:} respondent's residence: urban or rural;
+#'    \item \strong{8: Household Size:} total number of people in the respondent's household;
+#'    \item \strong{9: Children in Household:} total number of children under 15 in the respondent's household.
 #'   }
 #'}
 #'
@@ -38,7 +44,7 @@
 #' @importFrom rlang .data env env_parent set_env
 #' @importFrom sjlabelled get_label set_label set_label<-
 #'
-#' @return A data frame with aggregated World Risk Poll question data.
+#' @return A data frame with aggregated World Risk Poll question data. The results are population weighted to the selected geography.
 #'
 #' @examples wrp_get(geography = "country", wrp_question_uid = "Q1", disaggregation = 0)
 #' @export
