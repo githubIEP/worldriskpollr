@@ -268,7 +268,7 @@ Thanks again or your diligence.
 
 -   Added new functionality that allows user to select disaggregation. This was a user request. 
 
--   Adding this significantly improves processing time, from 12 sec (in the worst case) to consistently less than 1 sec. 
+-   Adding this significantly improves processing time, from more than 5 sec to consistently less than 1 sec. 
 
 -   As a result, I no longer get the notes from rhub::check_for_cran() of "greater than 5 sec".
 
