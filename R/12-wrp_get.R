@@ -14,7 +14,7 @@
 #'
 #'
 #' \itemize{
-#'   \item \strong{geography}: Needs to be on of the following: "country", "region", "income", or "world".
+#'   \item \strong{geography}: Needs to be one of the following: `country`, `region`, `income`, or `world`.
 #'   \item \strong{wrp_question_uid}: The code for the survey question to focus on, see \code{\link{wrp_search}}
 #'   \item \strong{disaggregation}: The desired disaggregation is an integer between 0 and 9 to represent:
 #'   \itemize{
