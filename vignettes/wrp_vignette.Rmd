@@ -35,11 +35,9 @@ Once installed you can load the library using:
 library(worldriskpollr)
 ```
 
-
-
 # Introduction
 
-**The World Risk Poll is the first ever global study of worry and risk across the world. The poll was conducted by Gallup as part of its World Poll, and is based on interviews with over 150,000 people, including those living in places where little or no official data exists, yet where reported risks are often high.**
+The World Risk Poll is the first ever global study of worry and risk across the world. The poll was conducted by Gallup as part of its World Poll, and is based on interviews with over 150,000 people, including those living in places where little or no official data exists, yet where reported risks are often high.
 
 The World Risk Polls covers the biggest risks faced globally including new findings on subjects such as risks faced by women, safety of food, experience of serious injury and violence and harassment in the workplace, climate change, and online safety.
 
@@ -91,28 +89,18 @@ The `wrp_get` function provides users with a way of access aggregated data. User
 
 -   `income`: data is aggregated based on World Bank Income classification of the country.
 
-The results will be disaggregated by the following groups:
+The user also needs to select the desired disaggregation:
 
--   `national`, respondent's nation;
-
--   `age group`, respondent's age group;
-
--   `gender`, respondent's gender;
-
--   `education`, respondent's highest level of education;
-
--   `incomeFeelings`, respondent's feelings about their household income;
-
--   `income5`, respondent's per capita income quintile;
-
--   `urbanicity`, respondent's residence: urban or rural;
-
--   `householdSize`, total number of people in the respondent's household;
-
--   `childrenInHousehold`, total number of children under 15 in the respondent's household.
-
--   `global`, statistics at the global level
-
+-   `0: No disaggregation`: aggregates to the selected geography;
+-   `1: Age group`: respondent's age group;
+-   `2: Sex`: respondent's sex;
+-   `3: Education`: respondent's highest level of education;
+-   `4: Income Feelings`: respondent's feelings about their household income;
+-   `5: Income Quintiles`: respondent's per capita income quintile;
+-   `6: Employment`: respondent's employment Status
+-   `7: Residence`: respondent's residence: urban or rural;
+-   `8: Household Size`: total number of people in the respondent's household;
+-   `9: Children in Household`: total number of children under 15 in the respondent's household.
 
 Users need to provide the desired aggregation level to `wrp_get` as a string. It is also necessary to provide a question code string, such as those provided returned in `wrp_search`. The use of `wrp_get` looks like:
 
@@ -139,8 +127,10 @@ This returns a 6 column dataframe in tidy format with the following columns:
 To explore global trends, the user could use:
 
 ```{r, message = FALSE, warning = FALSE}
-head(wrp_get(geography = "country", wrp_question_uid = "Q1", disaggregation = 0))
+head(wrp_get(geography = "world", wrp_question_uid = "Q1", disaggregation = 0))
 ```
+
+# Standard Use Case
 
 So a standard use case stringing `wrp_search` and `wrp_get` together could look like:
 
@@ -155,4 +145,3 @@ tmp <- unique(tmp$wrp_question_uid)
 # get the data
 head(wrp_get(geography = "country", wrp_question_uid = tmp, disaggregation = 0))
 ```
-
