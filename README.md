@@ -1,4 +1,4 @@
-# worldriskpollr
+# worldriskpollr <img src="man/figures/logo.png" align="right" height="139"/>
 
 The goal of this package is to provide you with easy, programmatic access to individual-level survey data from the World Risk Poll provided by [Lloyd's Register Foundation (LRF)](https://www.lrfoundation.org.uk/).
 
