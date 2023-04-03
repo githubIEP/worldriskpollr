@@ -21,7 +21,7 @@ devtools::install_github("githubIEP/worldriskpollr")
 
 # Introduction
 
-The World Risk Poll is the first ever global study of worry and risk across the world. The poll was conducted by Gallup as part of its World Poll, and is based on interviews with over 150,000 people, including those living in places where little or no official data exists, yet where reported risks are often high.
+The World Risk Poll is the first ever global study of worry and risk across the world. Administered by [Lloyd's Register Foundation (LRF)](https://www.lrfoundation.org.uk/), the poll was conducted by Gallup as part of its World Poll, and is based on interviews with over 150,000 people, including those living in places where little or no official data exists, yet where reported risks are often high.
 
 The World Risk Poll covers the biggest risks faced globally including new findings on subjects such as risks faced by women, safety of food, experience of serious injury and violence and harassment in the workplace, climate change, and online safety.
 
@@ -33,15 +33,9 @@ The poll highlights discrepancies between people's perception of risk and the ac
 
 You can access more details and findings related to the World Risk poll [here](https://wrp.lrfoundation.org.uk/).
 
-## Institute for Economics and Peace
-
-Lloyd's Register teamed up with the Institute for Economics and Peace (IEP) to explore the complex relationship between peace and people's perceptions of risk and their safety and security. You can see our latest findings in the annual release of the Global Peace Index In June. Further information about IEP can be found [here](https://www.visionofhumanity.org/)).
+In 2023, the second Safety Perceptions Index Report was launched by LRF and the [Institute for Economics and Peace (IEP)](https://www.visionofhumanity.org). This report explores the complex relationship between peace and people's perceptions of risk and their safety and security. The report can be downloaded [here](https://www.visionofhumanity.org/wp-content/uploads/2023/02/SPI-2023-2.pdf).
 
 IEP created this package to provide you with easy, programmatic access to the World Risk Poll. We are responsible for maintaining it. We encourage you to reach out to us directly if you have any questions about the package or our broader work measuring trends in peace and security.
-
-## Country coverage
-
-The World Risk Poll surveyed people in 150 countries in total, including countries with very low levels of peace where little or no official data exists, yet where reported risks are often high.
 
 # Getting started
 
