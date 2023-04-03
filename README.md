@@ -19,7 +19,11 @@ You can install the most recent version from [GitHub](https://github.com/githubI
 devtools::install_github("githubIEP/worldriskpollr")
 ```
 
-g new findings on subjects such as risks faced by women, safety of food, experience of serious injury and violence and harassment in the workplace, climate change, and online safety.
+# Introduction
+
+The World Risk Poll is the first ever global study of worry and risk across the world. The poll was conducted by Gallup as part of its World Poll, and is based on interviews with over 150,000 people, including those living in places where little or no official data exists, yet where reported risks are often high.
+
+The World Risk Polls covers the biggest risks faced globally including new findings on subjects such as risks faced by women, safety of food, experience of serious injury and violence and harassment in the workplace, climate change, and online safety.
 
 The poll will enable businesses, regulators, governments and academics to work with communities to develop policies and actions that save lives and make people feel safer. This landmark piece of research will be undertaken at least four times over eight years and the weight of knowledge accumulated will contribute in a more significant way than any past research, to making the world a safer place.
 
